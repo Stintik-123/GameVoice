@@ -41,9 +41,12 @@ const state = {
 };
 
 const esc = s =>
-  String(s).replace(/[&<>"']/g, c =>
-    ({ '&': '&', '<': '<', '>': '>', '"': '"', "'": '&#39;' }[c])
-  );
+  String(s)
+    .replace(/&/g, '\x26' + 'amp;')
+    .replace(/</g, '\x26' + 'lt;')
+    .replace(/>/g, '\x26' + 'gt;')
+    .replace(/"/g, '\x26' + 'quot;')
+    .replace(/'/g, '\x26#39;');
 
 function on(el, ev, fn, opts) {
   if (el) el.addEventListener(ev, fn, opts);
