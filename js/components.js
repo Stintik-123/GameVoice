@@ -1,21 +1,29 @@
 (function () {
   'use strict';
 
-  function hashHue(str) {
-    let h = 0;
-    for (let i = 0; i < str.length; i++) {
-      h = (h * 31 + str.charCodeAt(i)) % 360;
-    }
-    return h;
-  }
+  const COVER_COLORS = {
+    cyberpunk: ['#3d1a28', '#1a1520'],
+    bg3: ['#1a2030', '#101418'],
+    hogwarts: ['#1a2840', '#0e1828'],
+    eldenring: ['#2a2410', '#1a1810'],
+    witcher: ['#1e2a18', '#141810'],
+    starfield: ['#12182a', '#0e1018'],
+    stalker: ['#2a2a14', '#141810'],
+    gow: ['#1a2830', '#101418'],
+    re4: ['#2a1410', '#141010'],
+    horizon: ['#143028', '#101818'],
+    alan: ['#181820', '#101014'],
+    metaphor: ['#2a1830', '#141018'],
+    hades: ['#301018', '#141010'],
+    rdr2: ['#302018', '#181410']
+  };
 
   function coverStyle(g) {
     if (g.cover) {
       return 'background-image:url(' + g.cover + ');background-size:cover;background-position:center;';
     }
-    const h = hashHue(g.id);
-    const h2 = (h + 40) % 360;
-    return 'background:linear-gradient(160deg,hsl(' + h + ',38%,22%),hsl(' + h2 + ',30%,10%));';
+    const c = COVER_COLORS[g.coverClass] || COVER_COLORS[g.id] || ['#2a2018', '#0f0c0a'];
+    return 'background:linear-gradient(160deg,' + c[0] + ',' + c[1] + ');';
   }
 
   function initialOf(g) {
@@ -55,26 +63,29 @@
   }
 
   function typeLabel(t) {
-    const map = {
-      text: 'текст',
-      voice: 'озвучка',
-      both: 'текст + озвучка',
-      subtitles: 'субтитры',
-      neuro: 'нейро-озвучка'
-    };
+    const map = { text: 'текст', voice: 'озвучка', both: 'текст + озвучка', subtitles: 'субтитры', neuro: 'нейро-озвучка' };
     return map[t] || t || '';
   }
 
-  function cardHTML(g, isFav) {
+  function numPad(n) {
+    const s = String(n);
+    return s.length < 3 ? '000'.slice(s.length) + s : s;
+  }
+
+  function cardHTML(g, isFav, index) {
     const rating = ratingOf(g);
     const count = translationCount(g);
     const favClass = isFav ? ' on' : '';
     const fullTitle = g.title + (g.subtitle ? ' ' + g.subtitle : '');
+    const num = numPad((index || 0) + 1);
     return '<article class="game-card" data-id="' + g.id + '" tabindex="0" role="button" aria-label="' + fullTitle + '">' +
       '<button class="game-card-fav' + favClass + '" type="button" data-fav="' + g.id + '" aria-label="В избранное">★</button>' +
       '<div class="game-card-cover" data-letter="' + initialOf(g) + '" style="' + coverStyle(g) + '"></div>' +
-      '<div class="game-card-title">' + fullTitle + '</div>' +
-      '<div class="game-card-meta">' + g.year + ' · ' + count + ' вар. · ★ ' + rating.toFixed(1) + '</div>' +
+      '<div class="game-card-body">' +
+        '<div class="game-card-num">№ ' + num + ' · ' + g.genre + ' · ' + g.year + '</div>' +
+        '<div class="game-card-title">' + fullTitle + '</div>' +
+        '<div class="game-card-meta">' + count + ' вар. · ★ ' + rating.toFixed(1) + '</div>' +
+      '</div>' +
       '</article>';
   }
 
@@ -83,6 +94,17 @@
       '<span class="mini-cover" style="' + coverStyle(g) + '">' + initialOf(g) + '</span>' +
       '<span class="mini-title">' + g.title + '</span>' +
       '</button>';
+  }
+
+  function topItemHTML(g, index) {
+    const rating = ratingOf(g);
+    const count = translationCount(g);
+    return '<li class="top-item" data-id="' + g.id + '" tabindex="0" role="button">' +
+      '<span class="top-num">' + (index + 1) + '</span>' +
+      '<span class="top-cover" style="' + coverStyle(g) + '">' + initialOf(g) + '</span>' +
+      '<span><span class="top-title">' + g.title + '</span><span class="top-sub">' + g.developer + ' · ' + count + ' вариантов</span></span>' +
+      '<span class="top-rating">★ ' + rating.toFixed(1) + '</span>' +
+      '</li>';
   }
 
   function translationHTML(g, t, idx, userRating) {
@@ -96,7 +118,7 @@
       '<span class="status-' + t.status + '">' + statusLabel(t.status) + '</span>' +
       '<span class="type-badge">' + typeLabel(t.type) + '</span>' +
       (t.version ? '<span>' + t.version + '</span>' : '') +
-      (t.updated ? '<span>обновлено ' + t.updated + '</span>' : '');
+      (t.updated ? '<span>' + t.updated + '</span>' : '');
     return '<article class="translation-card" data-key="' + rKey + '">' +
       '<div class="t-head">' +
         '<div>' +
@@ -129,12 +151,43 @@
     return '<div class="empty-state"><p>' + text + '</p></div>';
   }
 
+  function newsHTML() {
+    const items = [];
+    for (let i = 0; i < games.length; i++) {
+      const g = games[i];
+      for (let j = 0; j < g.translations.length; j++) {
+        const t = g.translations[j];
+        if (t.updated) {
+          items.push({ game: g, tr: t, date: t.updated });
+        }
+      }
+    }
+    items.sort(function (a, b) { return b.date.localeCompare(a.date); });
+    const top = items.slice(0, 6);
+    if (!top.length) {
+      return '<div class="empty-state"><p>Пока нет записей</p></div>';
+    }
+    return top.map(function (it) {
+      return '<article class="news-card" data-id="' + it.game.id + '">' +
+        '<div class="news-top">' +
+          '<span class="news-kind ' + it.tr.status + '">' + statusLabel(it.tr.status) + '</span>' +
+          '<span class="news-date">' + it.date + '</span>' +
+        '</div>' +
+        '<div class="news-game">' + it.game.title + '</div>' +
+        '<div class="news-tr">' + it.tr.name + '</div>' +
+        '<div class="news-author">' + it.tr.author + '</div>' +
+        '</article>';
+    }).join('');
+  }
+
   window.GV = {
     cardHTML: cardHTML,
     miniCardHTML: miniCardHTML,
+    topItemHTML: topItemHTML,
     translationHTML: translationHTML,
     statsHTML: statsHTML,
     emptyHTML: emptyHTML,
+    newsHTML: newsHTML,
     coverStyle: coverStyle,
     initialOf: initialOf,
     ratingOf: ratingOf,
