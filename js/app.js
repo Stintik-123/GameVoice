@@ -21,36 +21,45 @@
     history: store.get('gv_history', []),
     userRatings: store.get('gv_ratings', {}),
     view: store.get('gv_view', 'grid'),
-    filters: { chip: null, genre: '', status: '', platform: '', sort: 'rating' },
+    filters: store.get('gv_filters', { chip: null, genre: '', status: '', platform: '', sort: 'rating' }),
     query: '',
     heroId: null
   };
-
-  const translitMap = [
-    ['а', 'a'], ['б', 'b'], ['в', 'v'], ['г', 'g'], ['д', 'd'], ['е', 'e'], ['ё', 'e'],
-    ['ж', 'zh'], ['з', 'z'], ['и', 'i'], ['й', 'y'], ['к', 'k'], ['л', 'l'], ['м', 'm'],
-    ['н', 'n'], ['о', 'o'], ['п', 'p'], ['р', 'r'], ['с', 's'], ['т', 't'], ['у', 'u'],
-    ['ф', 'f'], ['х', 'h'], ['ц', 'c'], ['ч', 'ch'], ['ш', 'sh'], ['щ', 'sch'],
-    ['ъ', ''], ['ы', 'y'], ['ь', ''], ['э', 'e'], ['ю', 'yu'], ['я', 'ya']
-  ];
-
-  function translit(str) {
-    let out = String(str).toLowerCase();
-    for (let i = 0; i < translitMap.length; i++) {
-      out = out.split(translitMap[i][0]).join(translitMap[i][1]);
-    }
-    return out;
-  }
 
   function gameById(id) {
     for (let i = 0; i < games.length; i++) if (games[i].id === id) return games[i];
     return null;
   }
 
+  function escapeHTML(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function escapeRegExp(s) {
+    return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function highlight(text, q) {
+    const safe = escapeHTML(text);
+    if (!q || !q.trim()) return safe;
+    const re = new RegExp('(' + escapeRegExp(escapeHTML(q.trim())) + ')', 'gi');
+    return safe.replace(re, '<mark>$1</mark>');
+  }
+
   function matchesQuery(g, q) {
     if (!q) return true;
-    const hay = translit([g.title, g.subtitle || '', g.developer || '', g.genre || ''].concat(g.tags || []).join(' '));
-    return hay.indexOf(translit(q)) !== -1;
+    const needle = q.toLowerCase().trim();
+    const parts = [
+      g.title || '',
+      g.subtitle || '',
+      g.developer || '',
+      g.genre || '',
+      g.year || ''
+    ].concat(g.tags || []).concat(g.aliases || []);
+    const hay = parts.join(' ').toLowerCase();
+    return hay.indexOf(needle) !== -1;
   }
 
   function matchesFilters(g) {
@@ -83,12 +92,35 @@
     const count = $('#resultsCount');
     if (count) count.textContent = 'найдено: ' + list.length + ' из ' + games.length;
     if (wrap) {
-      wrap.innerHTML = list.length === 0
-        ? GV.emptyHTML('Ничего не найдено — попробуйте сбросить фильтры')
-        : list.map(function (g, i) { return GV.cardHTML(g, state.favorites.has(g.id), i); }).join('');
+      if (list.length === 0) {
+        wrap.innerHTML = '<div class="empty-state">' +
+          '<p>Ничего не найдено по запросу «' + escapeHTML(state.query || '') + '»</p>' +
+          '<p>Попробуйте другое название или сбросьте фильтры</p>' +
+          '</div>';
+      } else {
+        wrap.innerHTML = list.map(function (g, i) {
+          return GV.cardHTML(g, state.favorites.has(g.id), i, state.query);
+        }).join('');
+      }
     }
     const cw = $('#catalogWrap');
     if (cw) cw.dataset.view = state.view;
+    updateChipCounts();
+  }
+
+  function updateChipCounts() {
+    const counts = {
+      text: games.filter(function (g) { return g.translations.some(function (t) { return t.type === 'text'; }); }).length,
+      voice: games.filter(function (g) { return g.translations.some(function (t) { return t.type === 'voice'; }); }).length,
+      both: games.filter(function (g) { return g.translations.some(function (t) { return t.type === 'both'; }); }).length,
+      subtitles: games.filter(function (g) { return g.translations.some(function (t) { return t.type === 'subtitles'; }); }).length
+    };
+    $$('.chip[data-chip]').forEach(function (c) {
+      const type = c.dataset.chip;
+      const base = c.dataset.baseLabel || c.textContent.replace(/\s*\(\d+\)\s*$/, '').trim();
+      c.dataset.baseLabel = base;
+      c.textContent = base + ' (' + (counts[type] || 0) + ')';
+    });
   }
 
   function renderTop10() {
@@ -169,7 +201,7 @@
     }
     if (dots) {
       dots.innerHTML = games.map(function (gg) {
-        return '<button type="button" role="tab" aria-selected="' + (gg.id === g.id) + '" aria-label="' + gg.title + '"></button>';
+        return '<button type="button" role="tab" aria-selected="' + (gg.id === g.id) + '" aria-label="' + escapeHTML(gg.title) + '"></button>';
       }).join('');
       $$('#heroDots button').forEach(function (btn, i) {
         btn.addEventListener('click', function () { renderHero(games[i]); });
@@ -183,6 +215,22 @@
     renderHistory();
   }
 
+  function findSimilar(g, limit) {
+    const result = [];
+    for (let i = 0; i < games.length; i++) {
+      const other = games[i];
+      if (other.id === g.id) continue;
+      let score = 0;
+      if (other.genre === g.genre) score += 2;
+      const sharedTags = (other.tags || []).filter(function (t) { return (g.tags || []).indexOf(t) !== -1; }).length;
+      score += sharedTags;
+      if (other.developer === g.developer) score += 1;
+      if (score > 0) result.push({ game: other, score: score });
+    }
+    result.sort(function (a, b) { return b.score - a.score; });
+    return result.slice(0, limit || 4).map(function (r) { return r.game; });
+  }
+
   function openDetails(id, scroll) {
     const g = gameById(id);
     if (!g) return;
@@ -191,10 +239,25 @@
     const l = $('#translationsList');
     if (t) t.textContent = 'Варианты локализации — ' + g.title;
     if (l) {
-      l.innerHTML = g.translations.map(function (tr, i) {
+      let html = g.translations.map(function (tr, i) {
         const key = g.id + ':' + i;
         return GV.translationHTML(g, tr, i, state.userRatings[key] || 0);
       }).join('');
+
+      const similar = findSimilar(g, 4);
+      if (similar.length) {
+        html += '<div class="similar-block">' +
+          '<h3 class="similar-title">Смотрите также</h3>' +
+          '<div class="mini-grid">' +
+          similar.map(function (s) { return GV.miniCardHTML(s); }).join('') +
+          '</div></div>';
+      }
+
+      html += '<div class="share-row">' +
+        '<button class="btn" type="button" id="shareBtn">Поделиться ссылкой</button>' +
+        '</div>';
+
+      l.innerHTML = html;
     }
     $$('.rating-stars').forEach(function (box) {
       box.addEventListener('click', function (e) {
@@ -208,6 +271,27 @@
         });
       });
     });
+    const shareBtn = $('#shareBtn');
+    if (shareBtn) {
+      shareBtn.addEventListener('click', function () {
+        const url = location.origin + location.pathname + '#' + g.id;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(function () {
+            showToast('Ссылка скопирована');
+          }).catch(function () {
+            showToast('Не удалось скопировать');
+          });
+        } else {
+          const tmp = document.createElement('textarea');
+          tmp.value = url;
+          document.body.appendChild(tmp);
+          tmp.select();
+          try { document.execCommand('copy'); showToast('Ссылка скопирована'); }
+          catch (err) { showToast('Не удалось скопировать'); }
+          document.body.removeChild(tmp);
+        }
+      });
+    }
     pushHistory(g.id);
     if (location.hash !== '#' + g.id) history.replaceState(null, '', '#' + g.id);
     renderHero(g);
@@ -234,7 +318,7 @@
     lastFocused = document.activeElement;
     m.classList.add('open');
     const f = m.querySelector('button, input, select, textarea, a[href]');
-    (f || m).focus && (f || m).focus();
+    if (f && f.focus) f.focus();
   }
   function closeModal(m) {
     if (!m) return;
@@ -260,7 +344,7 @@
       return '<button type="button" data-id="' + x.id + '" class="' + (i === 0 ? 'active' : '') + '">' + x.label + '</button>';
     }).join('');
     const setF = function (id) {
-      f.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0" title="Трейлер ' + g.title + '" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+      f.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0" title="Трейлер ' + escapeHTML(g.title) + '" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
     };
     setF(all[0].id);
     $$('#videoTabs button').forEach(function (b) {
@@ -291,6 +375,20 @@
     if (ss) ss.innerHTML = '<option value="">Любой статус</option><option value="done">Готово</option><option value="progress">В работе</option><option value="abandoned">Заброшено</option>';
     if (ps) ps.innerHTML = '<option value="">Все платформы</option>' + platforms.map(function (p) { return '<option value="' + p + '">' + p.toUpperCase() + '</option>'; }).join('');
     if (so) so.innerHTML = '<option value="rating">Сначала рейтинг</option><option value="updated">Сначала обновлённые</option><option value="year">Сначала новые</option><option value="count">Больше вариантов</option><option value="alpha">По алфавиту</option>';
+
+    if (gs) gs.value = state.filters.genre || '';
+    if (ss) ss.value = state.filters.status || '';
+    if (ps) ps.value = state.filters.platform || '';
+    if (so) so.value = state.filters.sort || 'rating';
+
+    if (state.filters.chip) {
+      const cur = $('.chip[data-chip="' + state.filters.chip + '"]');
+      if (cur) cur.classList.add('active');
+    }
+  }
+
+  function saveFilters() {
+    store.set('gv_filters', state.filters);
   }
 
   function wireView() {
@@ -308,12 +406,13 @@
   }
 
   function wireChips() {
-    $$('.chip').forEach(function (c) {
+    $$('.chip[data-chip]').forEach(function (c) {
       c.addEventListener('click', function () {
         const on = !c.classList.contains('active');
-        $$('.chip').forEach(function (x) { x.classList.remove('active'); });
+        $$('.chip[data-chip]').forEach(function (x) { x.classList.remove('active'); });
         if (on) c.classList.add('active');
         state.filters.chip = on ? c.dataset.chip : null;
+        saveFilters();
         renderCatalog();
       });
     });
@@ -321,10 +420,10 @@
 
   function wireSelects() {
     const gs = $('#filterGenre'), ss = $('#filterStatus'), ps = $('#filterPlatform'), so = $('#sortBy');
-    if (gs) gs.addEventListener('change', function (e) { state.filters.genre = e.target.value; renderCatalog(); });
-    if (ss) ss.addEventListener('change', function (e) { state.filters.status = e.target.value; renderCatalog(); });
-    if (ps) ps.addEventListener('change', function (e) { state.filters.platform = e.target.value; renderCatalog(); });
-    if (so) so.addEventListener('change', function (e) { state.filters.sort = e.target.value; renderCatalog(); renderTop10(); });
+    if (gs) gs.addEventListener('change', function (e) { state.filters.genre = e.target.value; saveFilters(); renderCatalog(); });
+    if (ss) ss.addEventListener('change', function (e) { state.filters.status = e.target.value; saveFilters(); renderCatalog(); });
+    if (ps) ps.addEventListener('change', function (e) { state.filters.platform = e.target.value; saveFilters(); renderCatalog(); });
+    if (so) so.addEventListener('change', function (e) { state.filters.sort = e.target.value; saveFilters(); renderCatalog(); renderTop10(); });
   }
 
   function wireReset() {
@@ -333,10 +432,11 @@
     b.addEventListener('click', function () {
       state.filters = { chip: null, genre: '', status: '', platform: '', sort: 'rating' };
       state.query = '';
+      store.set('gv_filters', state.filters);
       const i = $('#searchInput'), c = $('#searchClear');
       if (i) i.value = '';
       if (c) c.hidden = true;
-      $$('.chip').forEach(function (x) { x.classList.remove('active'); });
+      $$('.chip[data-chip]').forEach(function (x) { x.classList.remove('active'); });
       $$('.selects select').forEach(function (s) { s.value = ''; });
       const so = $('#sortBy');
       if (so) so.value = 'rating';
@@ -354,7 +454,7 @@
       t = setTimeout(function () {
         state.query = i.value.trim();
         renderCatalog();
-      }, 120);
+      }, 80);
     });
     if (c) c.addEventListener('click', function () {
       i.value = ''; state.query = ''; c.hidden = true; renderCatalog(); i.focus();
