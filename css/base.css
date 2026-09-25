@@ -4,30 +4,31 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-h) + 12px);
+  scroll-padding-top: calc(var(--header-h) + 16px);
   -webkit-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--bg);
+  color: var(--text);
   font-family: var(--font-body);
   font-size: var(--fs-body);
-  line-height: 1.5;
+  line-height: 1.55;
   padding-bottom: env(safe-area-inset-bottom, 0px);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 800;
   margin: 0 0 .4em;
-  line-height: 1.12;
+  line-height: 1.15;
+  letter-spacing: -.02em;
 }
 
-h1 { font-size: var(--fs-h1); font-weight: 900; }
+h1 { font-size: var(--fs-h1); }
 h2 { font-size: var(--fs-h2); }
 h3 { font-size: var(--fs-h3); }
 
@@ -36,9 +37,7 @@ p {
   max-width: 68ch;
 }
 
-a {
-  color: inherit;
-}
+a { color: inherit; }
 
 img, svg, video {
   max-width: 100%;
@@ -58,13 +57,14 @@ button {
 }
 
 :focus-visible {
-  outline: 2px solid var(--red);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
+  border-radius: 4px;
 }
 
 ::selection {
-  background: var(--red);
-  color: var(--paper);
+  background: var(--accent);
+  color: #ffffff;
 }
 
 kbd {
@@ -72,12 +72,8 @@ kbd {
   font-size: .8em;
   padding: .15em .45em;
   border: 1px solid var(--line-strong);
-  border-radius: var(--radius-sm);
-  background: var(--paper-2);
-}
-
-.mono {
-  font-family: var(--font-mono);
+  border-radius: 6px;
+  background: var(--bg-3);
 }
 
 .sr-only {
