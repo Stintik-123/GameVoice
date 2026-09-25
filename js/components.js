@@ -101,9 +101,22 @@
     const favClass = isFav ? ' on' : '';
     const fullTitle = g.title + (g.subtitle ? ' ' + g.subtitle : '');
     const num = numPad((index || 0) + 1);
+    const hasCover = !!g.cover;
+    const coverCls = 'game-card-cover' + (hasCover ? ' has-cover' : '');
+    const hasVoice = (g.translations || []).some(function (t) {
+      return t.type === 'voice' || t.type === 'both';
+    });
+    const hasText = (g.translations || []).some(function (t) {
+      return t.type === 'text' || t.type === 'both';
+    });
+    const badges = [];
+    if (hasVoice) badges.push('<span class="card-badge voice">озвучка</span>');
+    if (hasText) badges.push('<span class="card-badge text">текст</span>');
     return '<article class="game-card" data-id="' + g.id + '" tabindex="0" role="button" aria-label="' + escapeHTML(fullTitle) + '">' +
       '<button class="game-card-fav' + favClass + '" type="button" data-fav="' + g.id + '" aria-label="В избранное">★</button>' +
-      '<div class="game-card-cover" data-letter="' + initialOf(g) + '" style="' + coverStyle(g) + '"></div>' +
+      '<div class="' + coverCls + '" data-letter="' + initialOf(g) + '" style="' + coverStyle(g) + '">' +
+        (badges.length ? '<div class="card-badges">' + badges.join('') + '</div>' : '') +
+      '</div>' +
       '<div class="game-card-body">' +
         '<div class="game-card-num">№ ' + num + ' · ' + escapeHTML(g.genre) + ' · ' + escapeHTML(g.year) + '</div>' +
         '<div class="game-card-title">' + highlight(fullTitle, query) + '</div>' +
@@ -113,83 +126,75 @@
   }
 
   function miniCardHTML(g) {
+    const coverCls = 'mini-cover' + (g.cover ? ' has-cover' : '');
     return '<button class="mini-card" type="button" data-id="' + g.id + '">' +
-      '<span class="mini-cover" style="' + coverStyle(g) + '">' + initialOf(g) + '</span>' +
+      '<span class="' + coverCls + '" style="' + coverStyle(g) + '">' + (g.cover ? '' : initialOf(g)) + '</span>' +
       '<span class="mini-title">' + escapeHTML(g.title) + '</span>' +
       '</button>';
   }
 
   function topItemHTML(g, index) {
     const rating = ratingOf(g);
-    const count = translationCount(g);
+    const coverCls = 'top-cover' + (g.cover ? ' has-cover' : '');
     return '<li class="top-item" data-id="' + g.id + '" tabindex="0" role="button">' +
       '<span class="top-num">' + (index + 1) + '</span>' +
-      '<span class="top-cover" style="' + coverStyle(g) + '">' + initialOf(g) + '</span>' +
-      '<span><span class="top-title">' + escapeHTML(g.title) + '</span><span class="top-sub">' + escapeHTML(g.developer) + ' · ' + count + ' вариантов</span></span>' +
+      '<span class="' + coverCls + '" style="' + coverStyle(g) + '">' + (g.cover ? '' : initialOf(g)) + '</span>' +
+      '<span class="top-info"><span class="top-title">' + escapeHTML(g.title) + '</span>' +
+      '<span class="top-sub">' + escapeHTML(g.developer) + ' · ' + translationCount(g) + ' вариантов</span></span>' +
       '<span class="top-rating">★ ' + rating.toFixed(1) + '</span>' +
       '</li>';
   }
 
   function translationHTML(g, t, idx, userRating) {
-    const rKey = g.id + ':' + idx;
-    const myRating = userRating || 0;
+    const key = g.id + ':' + idx;
     let stars = '';
     for (let n = 1; n <= 5; n++) {
-      stars += '<button type="button" data-n="' + n + '" class="' + (n <= myRating ? 'filled' : '') + '" aria-label="' + n + ' из 5">★</button>';
+      stars += '<button type="button" data-n="' + n + '" class="' + (n <= userRating ? 'filled' : '') + '">★</button>';
     }
-    const badges = '<span>' + escapeHTML(t.author) + '</span>' +
-      '<span class="status-' + t.status + '">' + statusLabel(t.status) + '</span>' +
-      '<span class="type-badge">' + typeLabel(t.type) + '</span>' +
-      (t.version ? '<span>' + escapeHTML(t.version) + '</span>' : '') +
-      (t.updated ? '<span>' + escapeHTML(t.updated) + '</span>' : '');
-    return '<article class="translation-card" data-key="' + rKey + '">' +
+    return '<article class="translation-card">' +
       '<div class="t-head">' +
-        '<div>' +
-          '<div class="t-name">' + escapeHTML(t.name) + '</div>' +
-          '<div class="t-badges">' + badges + '</div>' +
-        '</div>' +
-        '<div class="rating-stars" data-key="' + rKey + '" aria-label="Ваша оценка">' + stars + '</div>' +
+        '<div class="t-name">' + escapeHTML(t.name || '') + '</div>' +
+        '<div class="rating-stars" data-key="' + key + '">' + stars + '</div>' +
       '</div>' +
-      (t.body ? '<div class="t-body">' + t.body + '</div>' : '') +
-      (t.install || '') +
+      '<div class="t-badges">' +
+        '<span>' + escapeHTML(t.author || '') + '</span>' +
+        '<span class="status-' + t.status + '">' + statusLabel(t.status) + '</span>' +
+        '<span>' + typeLabel(t.type) + '</span>' +
+        (t.version ? '<span>' + escapeHTML(t.version) + '</span>' : '') +
+        (t.updated ? '<span>' + escapeHTML(t.updated) + '</span>' : '') +
+      '</div>' +
+      '<div class="t-body">' + (t.body || '') + '</div>' +
       '<div class="t-links">' + (t.links || '') + '</div>' +
+      (t.install || '') +
       '</article>';
   }
 
   function statsHTML() {
-    const total = games.length;
-    let withVoice = 0;
-    let done = 0;
-    for (let i = 0; i < games.length; i++) {
-      const g = games[i];
+    let withVoice = 0, done = 0;
+    games.forEach(function (g) {
       if (g.translations.some(function (t) { return t.type === 'voice' || t.type === 'both'; })) withVoice++;
       done += g.translations.filter(function (t) { return t.status === 'done'; }).length;
-    }
-    return '<div class="stat"><span class="stat-num">' + total + '</span><span class="stat-label">игр в каталоге</span></div>' +
+    });
+    return '<div class="stat"><span class="stat-num">' + games.length + '</span><span class="stat-label">игр в каталоге</span></div>' +
       '<div class="stat"><span class="stat-num">' + withVoice + '</span><span class="stat-label">с озвучкой</span></div>' +
       '<div class="stat"><span class="stat-num">' + done + '</span><span class="stat-label">готовых вариантов</span></div>';
   }
 
   function emptyHTML(text) {
-    return '<div class="empty-state"><p>' + escapeHTML(text) + '</p></div>';
+    return '<div class="empty-state"><p>' + escapeHTML(text || 'Пусто') + '</p></div>';
   }
 
   function newsHTML() {
     const items = [];
-    for (let i = 0; i < games.length; i++) {
-      const g = games[i];
-      for (let j = 0; j < g.translations.length; j++) {
-        const t = g.translations[j];
-        if (t.updated) {
-          items.push({ game: g, tr: t, date: t.updated });
-        }
-      }
-    }
+    games.forEach(function (g) {
+      (g.translations || []).forEach(function (t) {
+        if (!t.updated) return;
+        items.push({ game: g, tr: t, date: t.updated });
+      });
+    });
     items.sort(function (a, b) { return b.date.localeCompare(a.date); });
-    const top = items.slice(0, 6);
-    if (!top.length) {
-      return '<div class="empty-state"><p>Пока нет записей</p></div>';
-    }
+    const top = items.slice(0, 8);
+    if (!top.length) return emptyHTML('Пока нет новостей');
     return top.map(function (it) {
       return '<article class="news-card" data-id="' + it.game.id + '">' +
         '<div class="news-top">' +
@@ -197,15 +202,14 @@
           '<span class="news-date">' + escapeHTML(it.date) + '</span>' +
         '</div>' +
         '<div class="news-game">' + escapeHTML(it.game.title) + '</div>' +
-        '<div class="news-tr">' + escapeHTML(it.tr.name) + '</div>' +
-        '<div class="news-author">' + escapeHTML(it.tr.author) + '</div>' +
+        '<div class="news-tr">' + escapeHTML(it.tr.name || '') + '</div>' +
+        '<div class="news-author">' + escapeHTML(it.tr.author || '') + '</div>' +
         '</article>';
     }).join('');
   }
 
-  window.__gvHighlight = highlight;
-
   window.GV = {
+    coverStyle: coverStyle,
     cardHTML: cardHTML,
     miniCardHTML: miniCardHTML,
     topItemHTML: topItemHTML,
@@ -213,13 +217,9 @@
     statsHTML: statsHTML,
     emptyHTML: emptyHTML,
     newsHTML: newsHTML,
-    coverStyle: coverStyle,
-    initialOf: initialOf,
     ratingOf: ratingOf,
     translationCount: translationCount,
     lastUpdated: lastUpdated,
-    statusLabel: statusLabel,
-    typeLabel: typeLabel,
     escapeHTML: escapeHTML
   };
 })();
