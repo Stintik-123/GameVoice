@@ -14,7 +14,6 @@
   <meta property="og:image" content="https://stintik-123.github.io/GameVoice/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="manifest" href="manifest.webmanifest">
-  <!-- async CSS: preload + onload swap for faster FCP -->
   <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="css/style-b.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
@@ -45,11 +44,13 @@
       </nav>
       <div class="header-right">
         <div class="search">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
           </svg>
           <input type="text" id="searchInput" placeholder="Поиск игры, студии, тегов... ( / )" autocomplete="off" aria-label="Поиск по каталогу">
+          <button type="button" class="search-clear" id="searchClear" hidden aria-label="Очистить поиск">×</button>
         </div>
+        <button class="icon-btn" id="randomBtn" title="Случайная игра (R)" aria-label="Случайная игра">🎲</button>
         <button class="add-btn" id="addBtn" title="Предложить игру">+ Добавить</button>
         <button class="icon-btn" id="themeBtn" aria-label="Сменить тему">🌙</button>
         <button class="burger" id="burgerBtn" aria-label="Меню" aria-expanded="false">
@@ -103,7 +104,7 @@
     <section class="carousel-section" id="catalog">
       <div class="section-header">
         <h2>Игры</h2>
-        <span class="results-count" id="resultsCount"></span>
+        <span class="results-count" id="resultsCount" aria-live="polite"></span>
         <div class="header-controls">
           <div class="view-toggle" role="group" aria-label="Вид каталога">
             <button data-view="grid" class="active" title="Сетка" aria-label="Сетка">▦</button>
@@ -116,7 +117,7 @@
           </div>
         </div>
       </div>
-      <div class="filters-bar">
+      <div class="filters-bar filters-sticky">
         <div class="chips" id="chips">
           <button class="chip" data-chip="text">Текст</button>
           <button class="chip" data-chip="voice">Озвучка</button>
@@ -254,6 +255,8 @@
           <tr><td><kbd>/</kbd></td><td>Фокус на поиск</td></tr>
           <tr><td><kbd>?</kbd></td><td>Эта справка</td></tr>
           <tr><td><kbd>←</kbd> <kbd>→</kbd></td><td>Предыдущая / следующая игра</td></tr>
+          <tr><td><kbd>R</kbd></td><td>Случайная игра</td></tr>
+          <tr><td><kbd>G</kbd> <kbd>L</kbd> <kbd>C</kbd></td><td>Сетка / список / лента</td></tr>
           <tr><td><kbd>Esc</kbd></td><td>Закрыть модалку / меню</td></tr>
         </tbody>
       </table>
@@ -265,6 +268,6 @@
 
   <script src="js/data.js"></script>
   <script src="js/hero-video.js"></script>
-  <script src="js/app.js?v=20260925f"></script>
+  <script src="js/app.js?v=20260925g"></script>
 </body>
 </html>
