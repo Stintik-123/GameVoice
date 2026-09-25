@@ -18,6 +18,29 @@
     rdr2: ['#302018', '#181410']
   };
 
+  function escapeHTML(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function escapeRegExp(s) {
+    return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function highlight(text, q) {
+    const safe = escapeHTML(text);
+    if (!q || !q.trim()) return safe;
+    const escaped = escapeRegExp(q.trim());
+    if (!escaped) return safe;
+    try {
+      const re = new RegExp('(' + escaped + ')', 'gi');
+      return safe.replace(re, '<mark>$1</mark>');
+    } catch (e) {
+      return safe;
+    }
+  }
+
   function coverStyle(g) {
     if (g.cover) {
       return 'background-image:url(' + g.cover + ');background-size:cover;background-position:center;';
@@ -72,18 +95,18 @@
     return s.length < 3 ? '000'.slice(s.length) + s : s;
   }
 
-  function cardHTML(g, isFav, index) {
+  function cardHTML(g, isFav, index, query) {
     const rating = ratingOf(g);
     const count = translationCount(g);
     const favClass = isFav ? ' on' : '';
     const fullTitle = g.title + (g.subtitle ? ' ' + g.subtitle : '');
     const num = numPad((index || 0) + 1);
-    return '<article class="game-card" data-id="' + g.id + '" tabindex="0" role="button" aria-label="' + fullTitle + '">' +
+    return '<article class="game-card" data-id="' + g.id + '" tabindex="0" role="button" aria-label="' + escapeHTML(fullTitle) + '">' +
       '<button class="game-card-fav' + favClass + '" type="button" data-fav="' + g.id + '" aria-label="В избранное">★</button>' +
       '<div class="game-card-cover" data-letter="' + initialOf(g) + '" style="' + coverStyle(g) + '"></div>' +
       '<div class="game-card-body">' +
-        '<div class="game-card-num">№ ' + num + ' · ' + g.genre + ' · ' + g.year + '</div>' +
-        '<div class="game-card-title">' + fullTitle + '</div>' +
+        '<div class="game-card-num">№ ' + num + ' · ' + escapeHTML(g.genre) + ' · ' + escapeHTML(g.year) + '</div>' +
+        '<div class="game-card-title">' + highlight(fullTitle, query) + '</div>' +
         '<div class="game-card-meta">' + count + ' вар. · ★ ' + rating.toFixed(1) + '</div>' +
       '</div>' +
       '</article>';
@@ -92,7 +115,7 @@
   function miniCardHTML(g) {
     return '<button class="mini-card" type="button" data-id="' + g.id + '">' +
       '<span class="mini-cover" style="' + coverStyle(g) + '">' + initialOf(g) + '</span>' +
-      '<span class="mini-title">' + g.title + '</span>' +
+      '<span class="mini-title">' + escapeHTML(g.title) + '</span>' +
       '</button>';
   }
 
@@ -102,7 +125,7 @@
     return '<li class="top-item" data-id="' + g.id + '" tabindex="0" role="button">' +
       '<span class="top-num">' + (index + 1) + '</span>' +
       '<span class="top-cover" style="' + coverStyle(g) + '">' + initialOf(g) + '</span>' +
-      '<span><span class="top-title">' + g.title + '</span><span class="top-sub">' + g.developer + ' · ' + count + ' вариантов</span></span>' +
+      '<span><span class="top-title">' + escapeHTML(g.title) + '</span><span class="top-sub">' + escapeHTML(g.developer) + ' · ' + count + ' вариантов</span></span>' +
       '<span class="top-rating">★ ' + rating.toFixed(1) + '</span>' +
       '</li>';
   }
@@ -114,15 +137,15 @@
     for (let n = 1; n <= 5; n++) {
       stars += '<button type="button" data-n="' + n + '" class="' + (n <= myRating ? 'filled' : '') + '" aria-label="' + n + ' из 5">★</button>';
     }
-    const badges = '<span>' + t.author + '</span>' +
+    const badges = '<span>' + escapeHTML(t.author) + '</span>' +
       '<span class="status-' + t.status + '">' + statusLabel(t.status) + '</span>' +
       '<span class="type-badge">' + typeLabel(t.type) + '</span>' +
-      (t.version ? '<span>' + t.version + '</span>' : '') +
-      (t.updated ? '<span>' + t.updated + '</span>' : '');
+      (t.version ? '<span>' + escapeHTML(t.version) + '</span>' : '') +
+      (t.updated ? '<span>' + escapeHTML(t.updated) + '</span>' : '');
     return '<article class="translation-card" data-key="' + rKey + '">' +
       '<div class="t-head">' +
         '<div>' +
-          '<div class="t-name">' + t.name + '</div>' +
+          '<div class="t-name">' + escapeHTML(t.name) + '</div>' +
           '<div class="t-badges">' + badges + '</div>' +
         '</div>' +
         '<div class="rating-stars" data-key="' + rKey + '" aria-label="Ваша оценка">' + stars + '</div>' +
@@ -148,7 +171,7 @@
   }
 
   function emptyHTML(text) {
-    return '<div class="empty-state"><p>' + text + '</p></div>';
+    return '<div class="empty-state"><p>' + escapeHTML(text) + '</p></div>';
   }
 
   function newsHTML() {
@@ -171,14 +194,16 @@
       return '<article class="news-card" data-id="' + it.game.id + '">' +
         '<div class="news-top">' +
           '<span class="news-kind ' + it.tr.status + '">' + statusLabel(it.tr.status) + '</span>' +
-          '<span class="news-date">' + it.date + '</span>' +
+          '<span class="news-date">' + escapeHTML(it.date) + '</span>' +
         '</div>' +
-        '<div class="news-game">' + it.game.title + '</div>' +
-        '<div class="news-tr">' + it.tr.name + '</div>' +
-        '<div class="news-author">' + it.tr.author + '</div>' +
+        '<div class="news-game">' + escapeHTML(it.game.title) + '</div>' +
+        '<div class="news-tr">' + escapeHTML(it.tr.name) + '</div>' +
+        '<div class="news-author">' + escapeHTML(it.tr.author) + '</div>' +
         '</article>';
     }).join('');
   }
+
+  window.__gvHighlight = highlight;
 
   window.GV = {
     cardHTML: cardHTML,
@@ -194,6 +219,7 @@
     translationCount: translationCount,
     lastUpdated: lastUpdated,
     statusLabel: statusLabel,
-    typeLabel: typeLabel
+    typeLabel: typeLabel,
+    escapeHTML: escapeHTML
   };
 })();
