@@ -1,0 +1,36 @@
+# dependencies / tooling
+node_modules/
+package-lock.json
+.package-lock.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# build / temp / compressed blobs (не коммитить)
+*.bundle
+e0.txt
+e1.txt
+e2.txt
+e3.txt
+e4.txt
+e5.txt
+e6.txt
+e7.txt
+a0.txt
+a1.txt
+d0.txt
+d1.txt
+gv-data-a.txt
+app-part1.js
+app-part2.js
+app_decompressed.js
+app_full.js
+js_app_check.js
+
+# logs
+*.log
+npm-debug.log*
