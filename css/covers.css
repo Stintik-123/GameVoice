@@ -1,0 +1,37 @@
+/* Steam covers + hero buttons + badges */
+.game-card-cover.has-cover { background-color: #111; }
+.game-card-cover.has-cover::before { opacity: 0; content: none; }
+.game-card-cover.has-cover::after {
+  background-image: none;
+  background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,.65) 100%);
+  opacity: 1;
+}
+.card-badges {
+  position: absolute; left: 8px; bottom: 8px; z-index: 2;
+  display: flex; flex-wrap: wrap; gap: 4px;
+}
+.card-badge {
+  font-family: var(--font-mono); font-size: .58rem; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase;
+  padding: 3px 7px; border: 1px solid rgba(239,230,211,.45);
+  background: rgba(10,10,10,.72); color: #efe6d3;
+}
+.card-badge.voice { border-color: var(--red); background: rgba(193,39,45,.88); color: #fff; }
+.top-cover.has-cover, .mini-cover.has-cover {
+  background-size: cover !important; background-position: center !important;
+  color: transparent !important; font-size: 0 !important; overflow: hidden;
+}
+.hero-actions .btn {
+  border-color: rgba(239,230,211,.55);
+  background: rgba(239,230,211,.94);
+  color: #0a0a0a;
+  box-shadow: 3px 3px 0 rgba(0,0,0,.45);
+}
+.hero-actions .btn:hover { background: #fff; box-shadow: 5px 5px 0 rgba(193,39,45,.7); }
+.hero-actions .btn-primary {
+  background: var(--red); color: #efe6d3; border-color: rgba(239,230,211,.35);
+}
+.hero-actions .btn-primary:hover { background: var(--red-deep); color: #fff; }
+.hero-actions .btn[aria-pressed="true"] {
+  background: var(--red); color: #efe6d3; border-color: var(--red);
+}
