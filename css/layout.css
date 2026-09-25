@@ -223,8 +223,9 @@
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  background: var(--ink);
-  color: var(--paper);
+  /* Always dark cinematic hero — independent of light/dark theme */
+  background: #0a0a0a;
+  color: #efe6d3;
   border-bottom: 3px solid var(--ink);
 }
 
@@ -288,8 +289,8 @@
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--paper);
-  border: 2px dashed var(--paper);
+  color: #efe6d3;
+  border: 2px dashed #efe6d3;
   background: var(--red);
   padding: 6px 13px;
   margin-bottom: var(--sp-5);

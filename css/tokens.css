@@ -38,6 +38,23 @@
   --container: 1320px;
 }
 
+:root[data-theme="light"] {
+  color-scheme: light;
+  --paper: #efe6d3;
+  --paper-2: #faf3e3;
+  --paper-3: #ddd0b5;
+  --ink: #0a0a0a;
+  --ink-soft: #3a3a3a;
+  --ink-muted: #5a5a5a;
+  --line: rgba(10, 10, 10, .16);
+  --line-2: rgba(10, 10, 10, .32);
+  --line-strong: rgba(10, 10, 10, .48);
+  --red: #c1272d;
+  --red-deep: #8a1a1f;
+  --green: #2b6a3a;
+  --ochre: #a06a12;
+}
+
 :root[data-theme="dark"] {
   color-scheme: dark;
   --paper: #0f0c0a;
