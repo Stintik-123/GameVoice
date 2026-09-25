@@ -1,50 +1,54 @@
-/* GameVoice — muted YouTube trailer as hero background (desktop only) */
-(function () {
-  'use strict';
-  const $ = (s, r = document) => r.querySelector(s);
-  let bgVideoId = null;
-  let bgVideoTimer = null;
+/* ============================================================
+   GameVoice — hero-video.js
+   Ховер-превью для карточек каталога (муted, локальные .webm/.mp4).
 
-  function canPlay() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false;
-    if (window.matchMedia('(max-width: 768px)').matches) return false;
-    if (document.hidden) return false;
-    return true;
+   Сейчас в data.js ни у одной игры нет videoSrc/heroVideoSrc — Feliks
+   сказал, что пока временно используется YouTube (только в модалке
+   трейлера, по клику), а свои ролики планирует залить позже.
+   Этот файл НЕ трогает YouTube — он просто ждёт, пока у карточек
+   появится реальный videoSrc, и включает автопревью на ховере тогда.
+   Ничего не выдумывает и не подставляет вместо отсутствующего видео.
+   ============================================================ */
+
+(() => {
+  'use strict';
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let currentlyPlaying = null;
+
+  function attach(card, game) {
+    if (reduceMotion || !game || !game.videoSrc) return; // нет ассета — ничего не подключаем
+    const video = card.querySelector('.cover-video');
+    if (!video) return;
+    video.dataset.src = game.videoSrc;
+
+    card.addEventListener('mouseenter', () => {
+      if (currentlyPlaying && currentlyPlaying !== video) {
+        currentlyPlaying.pause();
+        currentlyPlaying.currentTime = 0;
+      }
+      if (!video.src) video.src = video.dataset.src;
+      video.play().catch(() => {});
+      currentlyPlaying = video;
+    });
+    card.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+      if (currentlyPlaying === video) currentlyPlaying = null;
+    });
   }
 
-  window.setHeroBackgroundVideo = function (vid) {
-    const box = $('#heroVideo');
-    if (!box) return;
-    clearTimeout(bgVideoTimer);
-    if (!vid || !canPlay()) {
-      box.innerHTML = '';
-      box.classList.remove('on');
-      bgVideoId = null;
-      return;
-    }
-    if (bgVideoId === vid && box.querySelector('iframe')) {
-      box.classList.add('on');
-      return;
-    }
-    bgVideoId = vid;
-    bgVideoTimer = setTimeout(() => {
-      box.innerHTML =
-        '<iframe src="https://www.youtube-nocookie.com/embed/' + vid +
-        '?autoplay=1&mute=1&controls=0&loop=1&playlist=' + vid +
-        '&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1" ' +
-        'title="" frameborder="0" allow="autoplay; encrypted-media" tabindex="-1"></iframe>';
-      box.classList.add('on');
-    }, 400);
-  };
+  // Re-scan the catalog every time app.js re-renders it (grid/list/carousel/favorites/history).
+  function scan() {
+    document.querySelectorAll('.game-card[data-id]').forEach(card => {
+      const game = (typeof games !== 'undefined' ? games : []).find(g => g.id === card.dataset.id);
+      attach(card, game);
+    });
+  }
 
-  document.addEventListener('visibilitychange', () => {
-    if (typeof window.__gvCurrentTrailer === 'string') {
-      window.setHeroBackgroundVideo(document.hidden ? null : window.__gvCurrentTrailer);
-    }
-  });
-  window.addEventListener('resize', () => {
-    if (typeof window.__gvCurrentTrailer === 'string') {
-      window.setHeroBackgroundVideo(window.__gvCurrentTrailer);
-    }
+  const observer = new MutationObserver(() => scan());
+  document.addEventListener('DOMContentLoaded', () => {
+    observer.observe(document.body, { childList: true, subtree: true });
+    scan();
   });
 })();
+
