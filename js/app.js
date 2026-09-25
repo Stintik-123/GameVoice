@@ -1,20 +1,14 @@
-/* GameVoice — gunzip loader (split b64) */
+/* GameVoice — split loader (p1+p2+p3) */
 (async function () {
   try {
-    const parts = await Promise.all(
-      ['js/app.b64a', 'js/app.b64b'].map(n =>
-        fetch(n + '?v=20260925h').then(r => {
-          if (!r.ok) throw new Error(n + ' ' + r.status);
-          return r.text();
-        })
-      )
-    );
-    const b64 = parts.join('').trim();
-    const bin = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
-    const text = await new Response(
-      new Blob([bin]).stream().pipeThrough(new DecompressionStream('gzip'))
-    ).text();
-    (0, eval)(text);
+    const names = ['js/app_p1.js', 'js/app_p2.js', 'js/app_p3.js'];
+    const parts = await Promise.all(names.map(n =>
+      fetch(n + '?v=20260925h').then(r => {
+        if (!r.ok) throw new Error(n + ' ' + r.status);
+        return r.text();
+      })
+    ));
+    (0, eval)(parts.join(''));
   } catch (e) {
     console.error('GameVoice load failed', e);
     var el = document.getElementById('carousel');
