@@ -3,7 +3,7 @@
   try {
     const parts = await Promise.all(
       ['js/app.b64a', 'js/app.b64b'].map(n =>
-        fetch(n + '?v=20260925g').then(r => {
+        fetch(n + '?v=20260925h').then(r => {
           if (!r.ok) throw new Error(n + ' ' + r.status);
           return r.text();
         })

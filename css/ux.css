@@ -73,3 +73,52 @@
   outline: 2px solid var(--stamp);
   outline-offset: 1px;
 }
+
+/* Carousel scroll hint */
+.catalog-carousel .carousel {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.catalog-carousel .game-card {
+  scroll-snap-align: start;
+}
+
+/* Smooth theme transition */
+html { transition: color-scheme 0.2s; }
+body, .header, .filters-sticky, .game-card, .modal {
+  transition: background-color 0.25s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  body, .header, .filters-sticky, .game-card, .modal { transition: none; }
+}
+
+/* Empty state polish */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: var(--text-muted);
+  font-family: var(--serif);
+}
+.empty-state p { margin: 0.5rem 0; }
+
+/* Hotkeys modal kbd */
+.hotkeys-list kbd,
+#hotkeysModal kbd {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  padding: 0.15em 0.45em;
+  border: 1px solid var(--rule);
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+/* Sticky filters blur on modern browsers */
+@supports (backdrop-filter: blur(8px)) {
+  .filters-sticky {
+    background: color-mix(in srgb, var(--bg-elevated) 88%, transparent);
+    backdrop-filter: blur(10px);
+  }
+}
