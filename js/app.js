@@ -1,12 +1,19 @@
-/* GameVoice — gunzip loader */
+/* GameVoice — gunzip loader (split b64) */
 (async function () {
   try {
-    const b64 = await fetch('js/app.b64?v=20260925g').then(r => {
-      if (!r.ok) throw new Error('app.b64 ' + r.status);
-      return r.text();
-    });
-    const bin = Uint8Array.from(atob(b64.trim()), c => c.charCodeAt(0));
-    const text = await new Response(new Blob([bin]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+    const parts = await Promise.all(
+      ['js/app.b64a', 'js/app.b64b'].map(n =>
+        fetch(n + '?v=20260925g').then(r => {
+          if (!r.ok) throw new Error(n + ' ' + r.status);
+          return r.text();
+        })
+      )
+    );
+    const b64 = parts.join('').trim();
+    const bin = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+    const text = await new Response(
+      new Blob([bin]).stream().pipeThrough(new DecompressionStream('gzip'))
+    ).text();
     (0, eval)(text);
   } catch (e) {
     console.error('GameVoice load failed', e);
