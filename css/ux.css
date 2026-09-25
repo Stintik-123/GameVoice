@@ -1,0 +1,75 @@
+/* ========== UX polish 2026-09 ========== */
+
+/* Search clear */
+.search { position: relative; }
+.search-clear {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 0;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-clear:hover {
+  color: var(--stamp);
+  border-color: var(--rule);
+  background: var(--bg-card);
+}
+.search input { padding-right: 26px; }
+
+/* List meta line */
+.game-card-meta {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0 10px 10px;
+  opacity: 0.85;
+}
+.catalog-grid .game-card-meta { display: none; }
+.catalog-carousel .game-card-meta { display: none; }
+.catalog-list .game-card-meta { display: block; }
+
+/* Sticky filters under header */
+.filters-sticky {
+  position: sticky;
+  top: 64px;
+  z-index: 40;
+  background: var(--bg-elevated);
+  box-shadow: 0 2px 0 var(--rule);
+}
+@media (max-width: 900px) {
+  .filters-sticky { top: 56px; }
+}
+
+/* Random button sits with header icons */
+#randomBtn { font-size: 1rem; }
+
+/* Nav active underline polish */
+.nav-link.active {
+  box-shadow: inset 0 -3px 0 var(--stamp);
+}
+
+/* Smooth card meta in list */
+.catalog-list .game-card-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+/* Focus ring for search clear */
+.search-clear:focus-visible {
+  outline: 2px solid var(--stamp);
+  outline-offset: 1px;
+}
