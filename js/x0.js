@@ -89,3 +89,4 @@ function gameRating(g) {
 function countLabel(g) {
   const n = g.translations.length;
   return n === 1 ? '1 вариант' : n < 5 ? n + ' варианта' : n + ' вариантов';
+
