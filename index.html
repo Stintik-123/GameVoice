@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/layout.css">
 <link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/covers.css">
 </head>
 <body>
 
@@ -28,7 +29,7 @@
     <a href="./" class="logo" aria-label="GameVoice — на главную">
       <span class="logo-mark" aria-hidden="true">GV</span>
       <span class="logo-text">
-        <span class="logo-name">GAMEVOICE</span>
+        <span class="logo-name">GameVoice</span>
         <span class="logo-tagline">выпуск · сентябрь 2026</span>
       </span>
     </a>
@@ -40,9 +41,9 @@
     </nav>
     <div class="header-right">
       <div class="search">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        <input type="text" id="searchInput" placeholder="Поиск игры, студии, тега" autocomplete="off" aria-label="Поиск по каталогу">
-        <button type="button" class="search-clear" id="searchClear" hidden aria-label="Очистить поиск">×</button>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="searchInput" placeholder="Поиск игры, студии, тегов…" autocomplete="off" aria-label="Поиск">
+        <button type="button" class="search-clear" id="searchClear" hidden aria-label="Очистить">×</button>
       </div>
       <button class="icon-btn" id="randomBtn" type="button" title="Случайная игра" aria-label="Случайная игра">🎲</button>
       <button class="add-btn" id="addBtn" type="button">+ Добавить</button>
@@ -52,7 +53,7 @@
   </div>
   <div class="mobile-menu" id="mobileMenu" hidden>
     <a href="#catalog" class="mm-link">Каталог</a>
-    <a href="#favoritesSection" class="mm-link">Избранное <span data-favcount-mirror>0</span></a>
+    <a href="#favoritesSection" class="mm-link">Избранное <span class="nav-count" data-favcount-mirror>0</span></a>
     <a href="#about" class="mm-link">О проекте</a>
     <button class="mm-link" id="faqBtnMobile" type="button">FAQ</button>
     <button class="mm-link" id="addBtnMobile" type="button">+ Предложить игру</button>
@@ -63,6 +64,7 @@
 
   <section class="hero" id="hero">
     <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-video" id="heroVideo" aria-hidden="true"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-badge" id="heroBadge"></div>
@@ -101,10 +103,10 @@
     </div>
     <div class="filters-bar filters-sticky">
       <div class="chips" id="chips">
-        <button class="chip" type="button" data-chip="text">Текст</button>
-        <button class="chip" type="button" data-chip="voice">Озвучка</button>
-        <button class="chip" type="button" data-chip="both">Текст + озвучка</button>
-        <button class="chip" type="button" data-chip="subtitles">Субтитры</button>
+        <button class="chip" data-chip="text" type="button">Текст</button>
+        <button class="chip" data-chip="voice" type="button">Озвучка</button>
+        <button class="chip" data-chip="both" type="button">Текст + озвучка</button>
+        <button class="chip" data-chip="subtitles" type="button">Субтитры</button>
       </div>
       <div class="selects">
         <select id="filterGenre" aria-label="Жанр"></select>
@@ -119,34 +121,29 @@
     </div>
   </section>
 
-  <section id="details">
-    <div class="section-header">
-      <h2 class="details-title" id="detailsTitle">Варианты локализации</h2>
-    </div>
+  <section class="details-section" id="details">
+    <h2 class="details-title" id="detailsTitle">Варианты локализации</h2>
     <div class="translations" id="translationsList"></div>
   </section>
 
-  <section id="favoritesSection" style="display:none">
+  <section class="mini-section" id="favoritesSection" style="display:none">
     <div class="section-header"><h2>Избранное</h2></div>
     <div class="mini-grid" id="favoritesGrid"></div>
   </section>
 
-  <section id="historySection" style="display:none">
+  <section class="mini-section" id="historySection" style="display:none">
     <div class="section-header"><h2>Недавно смотрели</h2></div>
     <div class="mini-grid" id="historyGrid"></div>
   </section>
 
-  <section id="newsSection">
-    <div class="section-header">
-      <h2>Новости переводов</h2>
-      <span class="results-count">обновления из каталога</span>
-    </div>
+  <section class="news-section" id="newsSection">
+    <div class="section-header"><h2>Новости переводов</h2></div>
     <div class="news-grid" id="newsGrid"></div>
   </section>
 
-  <section id="about">
-    <div class="section-header"><h2>О проекте</h2></div>
+  <section class="about-section" id="about">
     <div class="about-inner">
+      <h2>О проекте</h2>
       <div class="stats-row" id="statsRow"></div>
       <p>GameVoice — навигатор по русским локализациям и озвучкам. Мы не хостим файлы: только структурируем то, что уже лежит на Playground, Nexus, GitHub и сайтах студий.</p>
       <p>Рейтинг в «Топе» — из данных каталога, не голосование пользователей. Ваши личные оценки и избранное хранятся у вас в браузере и никуда не отправляются.</p>
@@ -158,11 +155,8 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <a href="./" class="logo footer-logo">
-        <span class="logo-mark" aria-hidden="true">GV</span>
-        <span class="logo-text"><span class="logo-name">GAMEVOICE</span></span>
-      </a>
-      <nav class="footer-nav" aria-label="Навигация в подвале">
+      <a href="./" class="logo"><span class="logo-mark">GV</span><span class="logo-text"><span class="logo-name">GameVoice</span></span></a>
+      <nav class="footer-nav">
         <a href="#catalog">Каталог</a>
         <a href="#about">О проекте</a>
         <a href="https://github.com/Stintik-123/GameVoice" target="_blank" rel="noopener">GitHub</a>
@@ -173,14 +167,14 @@
   </div>
 </footer>
 
-<div class="modal" id="trailerModal" role="dialog" aria-modal="true" aria-label="Трейлер игры">
-  <div class="modal-card modal-video">
-    <div class="modal-head">
+<div class="modal modal-video" id="trailerModal" role="dialog" aria-modal="true" aria-label="Трейлер">
+  <div class="video-card">
+    <div class="video-head">
       <h3 id="trailerTitle">Трейлер</h3>
       <button class="modal-x" data-close type="button" aria-label="Закрыть">✕</button>
     </div>
-    <div id="videoTabs" class="video-tabs"></div>
-    <div id="videoFrame" class="video-frame"></div>
+    <div id="videoTabs"></div>
+    <div id="videoFrame"></div>
   </div>
 </div>
 
@@ -188,22 +182,21 @@
   <div class="modal-card">
     <button class="modal-x" data-close type="button" aria-label="Закрыть">✕</button>
     <h3 id="addModalTitle">Предложить игру</h3>
-    <p class="modal-sub">Форма создаст черновик issue на GitHub — оттуда предложение дойдёт до редакторов.</p>
+    <p class="modal-sub">Откроется issue на GitHub.</p>
     <form id="addForm">
-      <label>Название игры *<input name="title" required placeholder="Например: Diablo IV"></label>
+      <label>Название *<input name="title" required placeholder="Diablo IV"></label>
       <label>Тип
         <select name="type">
           <option value="text">Текст</option>
           <option value="voice">Озвучка</option>
           <option value="both">Текст + озвучка</option>
           <option value="subtitles">Субтитры</option>
-          <option value="neuro">Нейро-озвучка</option>
         </select>
       </label>
-      <label>Автор / студия<input name="author" placeholder="GamesVoice, SynthVoiceRu…"></label>
-      <label>Ссылка на источник<input name="url" type="url" placeholder="https://www.playground.ru/…"></label>
-      <label>Комментарий<textarea name="comment" rows="3" placeholder="Что озвучено, версия, нюансы…"></textarea></label>
-      <button type="submit" class="btn btn-primary full">Сохранить и открыть GitHub Issue</button>
+      <label>Автор / студия<input name="author" placeholder="GamesVoice…"></label>
+      <label>Ссылка<input name="url" type="url" placeholder="https://…"></label>
+      <label>Комментарий<textarea name="comment" rows="3"></textarea></label>
+      <button type="submit" class="btn btn-primary full">Создать issue</button>
     </form>
   </div>
 </div>
@@ -212,11 +205,9 @@
   <div class="modal-card">
     <button class="modal-x" data-close type="button" aria-label="Закрыть">✕</button>
     <h3 id="faqTitle">Частые вопросы</h3>
-    <details><summary>Как установить русификатор?</summary><p>У каждого перевода своя инструкция — в карточке варианта, блок «Краткая установка». Обычно: скачать архив, распаковать в папку игры, запустить.</p></details>
-    <details><summary>Почему озвучка ставится поверх английской?</summary><p>Так устроено в большинстве игр: заменяются аудиофайлы. Если играет и русский, и английский — ищите версию «дубляж без оригинала» или приглушайте оригинал в настройках.</p></details>
-    <details><summary>Можно ли добавить свою озвучку в каталог?</summary><p>Да — кнопка «+ Добавить» откроет форму и создаст черновик issue на GitHub.</p></details>
-    <details><summary>Вы хостите файлы?</summary><p>Нет. GameVoice — только навигация по публичным источникам: Playground, Nexus Mods, GitHub, сайты студий.</p></details>
-    <details><summary>Оценки — это голосование посетителей?</summary><p>Нет. Это рейтинг из данных каталога. Ваши личные оценки хранятся только у вас в браузере.</p></details>
+    <details><summary>Как установить русификатор?</summary><p>У каждого перевода своя инструкция — в карточке варианта, блок «Краткая установка».</p></details>
+    <details><summary>Вы хостите файлы?</summary><p>Нет. Только навигация по публичным источникам.</p></details>
+    <details><summary>Оценки — голосование?</summary><p>Нет. Рейтинг из данных каталога. Личные оценки только у вас в браузере.</p></details>
   </div>
 </div>
 
@@ -224,6 +215,7 @@
 <button class="to-top" id="toTop" type="button" aria-label="Наверх">↑</button>
 
 <script src="js/data.js"></script>
+<script src="js/steam-covers.js"></script>
 <script src="js/components.js"></script>
 <script src="js/app.js"></script>
 </body>
