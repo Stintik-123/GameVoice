@@ -1,0 +1,105 @@
+:root {
+  color-scheme: light;
+
+  --paper: #f2ebe0;
+  --paper-2: #e8e0d0;
+  --paper-3: #ddd4c2;
+
+  --ink: #1b1712;
+  --ink-soft: rgba(27, 23, 18, .68);
+  --ink-muted: rgba(27, 23, 18, .45);
+
+  --line: rgba(27, 23, 18, .16);
+  --line-strong: rgba(27, 23, 18, .32);
+
+  --red: #9b1c1c;
+  --red-deep: #6e1414;
+
+  --green: #2b6a3a;
+  --ochre: #a06a12;
+  --grey-status: #7a7268;
+
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+
+  --radius-sm: 3px;
+  --radius: 5px;
+  --radius-lg: 10px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 2px 2px 0 var(--line-strong);
+  --shadow: 4px 4px 0 var(--line-strong);
+  --shadow-stamp: 5px 5px 0 var(--red);
+  --shadow-hover: 6px 6px 0 var(--line-strong);
+
+  --fs-h1: clamp(2rem, 5vw, 3.4rem);
+  --fs-h2: clamp(1.4rem, 3vw, 1.9rem);
+  --fs-h3: clamp(1.1rem, 2vw, 1.3rem);
+  --fs-body: 16px;
+  --fs-small: 14px;
+  --fs-meta: 12.5px;
+  --fs-tiny: 11px;
+
+  --header-h: 64px;
+  --tabbar-h: 64px;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Serif 4', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --container: 1240px;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --paper: #17130f;
+  --paper-2: #201a13;
+  --paper-3: #2a221a;
+
+  --ink: #f2ebe0;
+  --ink-soft: rgba(242, 235, 224, .68);
+  --ink-muted: rgba(242, 235, 224, .45);
+
+  --line: rgba(242, 235, 224, .16);
+  --line-strong: rgba(242, 235, 224, .32);
+
+  --red: #d1483f;
+  --red-deep: #f2665c;
+
+  --green: #5fbf78;
+  --ochre: #d9a03c;
+  --grey-status: #8a8278;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --paper: #17130f;
+    --paper-2: #201a13;
+    --paper-3: #2a221a;
+
+    --ink: #f2ebe0;
+    --ink-soft: rgba(242, 235, 224, .68);
+    --ink-muted: rgba(242, 235, 224, .45);
+
+    --line: rgba(242, 235, 224, .16);
+    --line-strong: rgba(242, 235, 224, .32);
+
+    --red: #d1483f;
+    --red-deep: #f2665c;
+
+    --green: #5fbf78;
+    --ochre: #d9a03c;
+    --grey-status: #8a8278;
+  }
+}
