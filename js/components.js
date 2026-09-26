@@ -1,23 +1,6 @@
 (function () {
   'use strict';
 
-  const COVER_COLORS = {
-    cyberpunk: ['#3d1a28', '#1a1520'],
-    bg3: ['#1a2030', '#101418'],
-    hogwarts: ['#1a2840', '#0e1828'],
-    eldenring: ['#2a2410', '#1a1810'],
-    witcher: ['#1e2a18', '#141810'],
-    starfield: ['#12182a', '#0e1018'],
-    stalker: ['#2a2a14', '#141810'],
-    gow: ['#1a2830', '#101418'],
-    re4: ['#2a1410', '#141010'],
-    horizon: ['#143028', '#101818'],
-    alan: ['#181820', '#101014'],
-    metaphor: ['#2a1830', '#141018'],
-    hades: ['#301018', '#141010'],
-    rdr2: ['#302018', '#181410']
-  };
-
   function escapeHTML(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
@@ -45,8 +28,7 @@
     if (g.cover) {
       return 'background-image:url(' + g.cover + ');background-size:cover;background-position:center;';
     }
-    const c = COVER_COLORS[g.coverClass] || COVER_COLORS[g.id] || ['#2a2018', '#0f0c0a'];
-    return 'background:linear-gradient(160deg,' + c[0] + ',' + c[1] + ');';
+    return '';
   }
 
   function initialOf(g) {
@@ -158,8 +140,8 @@
       '</div>' +
       '<div class="t-badges">' +
         '<span>' + escapeHTML(t.author || '') + '</span>' +
-        '<span class="status-' + t.status + '">' + statusLabel(t.status) + '</span>' +
-        '<span>' + typeLabel(t.type) + '</span>' +
+        '<span class="status-' + escapeHTML(t.status) + '">' + escapeHTML(statusLabel(t.status)) + '</span>' +
+        '<span class="type-badge">' + escapeHTML(typeLabel(t.type)) + '</span>' +
         (t.version ? '<span>' + escapeHTML(t.version) + '</span>' : '') +
         (t.updated ? '<span>' + escapeHTML(t.updated) + '</span>' : '') +
       '</div>' +
@@ -180,10 +162,6 @@
       '<div class="stat"><span class="stat-num">' + done + '</span><span class="stat-label">готовых вариантов</span></div>';
   }
 
-  function emptyHTML(text) {
-    return '<div class="empty-state"><p>' + escapeHTML(text || 'Пусто') + '</p></div>';
-  }
-
   function newsHTML() {
     const items = [];
     games.forEach(function (g) {
@@ -194,11 +172,11 @@
     });
     items.sort(function (a, b) { return b.date.localeCompare(a.date); });
     const top = items.slice(0, 8);
-    if (!top.length) return emptyHTML('Пока нет новостей');
+    if (!top.length) return '';
     return top.map(function (it) {
       return '<article class="news-card" data-id="' + it.game.id + '">' +
         '<div class="news-top">' +
-          '<span class="news-kind ' + it.tr.status + '">' + statusLabel(it.tr.status) + '</span>' +
+          '<span class="news-kind ' + escapeHTML(it.tr.status) + '">' + escapeHTML(statusLabel(it.tr.status)) + '</span>' +
           '<span class="news-date">' + escapeHTML(it.date) + '</span>' +
         '</div>' +
         '<div class="news-game">' + escapeHTML(it.game.title) + '</div>' +
@@ -215,7 +193,6 @@
     topItemHTML: topItemHTML,
     translationHTML: translationHTML,
     statsHTML: statsHTML,
-    emptyHTML: emptyHTML,
     newsHTML: newsHTML,
     ratingOf: ratingOf,
     translationCount: translationCount,
