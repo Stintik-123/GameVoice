@@ -40,6 +40,16 @@
     return 0;
   }
 
+  function pluralVariants(n) {
+    n = Math.abs(Number(n) || 0);
+    var m = n % 100;
+    var m1 = m % 10;
+    if (m > 10 && m < 20) return n + ' вариантов';
+    if (m1 > 1 && m1 < 5) return n + ' варианта';
+    if (m1 === 1) return n + ' вариант';
+    return n + ' вариантов';
+  }
+
   function translationCount(g) {
     return g.translations ? g.translations.length : 0;
   }
@@ -95,7 +105,7 @@
       '<div class="game-card-body">' +
         '<div class="game-card-num">№ ' + num + ' · ' + escapeHTML(g.genre) + ' · ' + escapeHTML(g.year) + '</div>' +
         '<div class="game-card-title">' + highlight(fullTitle, query) + '</div>' +
-        '<div class="game-card-meta">' + count + ' вар.</div>' +
+        '<div class="game-card-meta">' + pluralVariants(count) + '</div>' +
       '</div>' +
       '</article>';
   }
@@ -114,7 +124,7 @@
       '<span class="top-num">' + (index + 1) + '</span>' +
       '<span class="' + coverCls + '" style="' + coverStyle(g) + '">' + (g.cover ? '' : initialOf(g)) + '</span>' +
       '<span class="top-info"><span class="top-title">' + escapeHTML(g.title) + '</span>' +
-      '<span class="top-sub">' + escapeHTML(g.developer) + ' · ' + translationCount(g) + ' вариантов</span></span>' +
+      '<span class="top-sub">' + escapeHTML(g.developer) + ' · ' + pluralVariants(translationCount(g)) + '</span></span>' +
       '</li>';
   }
 
@@ -181,6 +191,7 @@
     newsHTML: newsHTML,
     ratingOf: ratingOf,
     translationCount: translationCount,
+    pluralVariants: pluralVariants,
     lastUpdated: lastUpdated,
     escapeHTML: escapeHTML
   };
