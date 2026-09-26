@@ -88,8 +88,8 @@
 
   let heroCarouselTimer = null;
   let heroHovering = false;
-  /* Desktop: muted YouTube trailer as hero background. Mobile: static poster only. */
-  const isDesktopVideo = window.matchMedia('(min-width: 900px) and (hover: hover) and (pointer: fine)').matches;
+  /* Desktop (>=900px): muted YouTube trailer as hero background. Mobile: static poster only. */
+  const isDesktopVideo = window.matchMedia('(min-width: 900px)').matches;
 
   function heroIndex() {
     for (let i = 0; i < games.length; i++) if (games[i].id === state.heroId) return i;
@@ -253,7 +253,6 @@
         btn.addEventListener('click', function () { renderHero(games[i]); startHeroCarousel(); });
       });
     }
-    /* Desktop: always show muted trailer behind content. Mobile: poster only. */
     if (isDesktopVideo) setHeroVideo(g);
     else clearHeroVideo();
     if (!fromCarousel) startHeroCarousel();
@@ -510,7 +509,6 @@
     if (gb) gb.addEventListener('click', function () { if (state.heroId) openDetails(state.heroId, true); });
     if (fb) fb.addEventListener('click', function () { if (state.heroId) toggleFavorite(state.heroId); });
     const hero = $('#hero');
-    /* Pause auto-rotate while user is reading/hovering the hero; trailer keeps playing on desktop. */
     if (hero) {
       hero.addEventListener('mouseenter', function () {
         heroHovering = true;
