@@ -3,7 +3,7 @@
 
   function escapeHTML(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      return { '&': '&', '<': '<', '>': '>', '"': '"', "'": '&#39;' }[c];
     });
   }
 
@@ -37,13 +37,7 @@
   }
 
   function ratingOf(g) {
-    if (!g.translations || !g.translations.length) return 0;
-    let max = 0;
-    for (let i = 0; i < g.translations.length; i++) {
-      const r = g.translations[i].rating || 0;
-      if (r > max) max = r;
-    }
-    return max;
+    return 0;
   }
 
   function translationCount(g) {
@@ -78,7 +72,6 @@
   }
 
   function cardHTML(g, isFav, index, query) {
-    const rating = ratingOf(g);
     const count = translationCount(g);
     const favClass = isFav ? ' on' : '';
     const fullTitle = g.title + (g.subtitle ? ' ' + g.subtitle : '');
@@ -102,7 +95,7 @@
       '<div class="game-card-body">' +
         '<div class="game-card-num">№ ' + num + ' · ' + escapeHTML(g.genre) + ' · ' + escapeHTML(g.year) + '</div>' +
         '<div class="game-card-title">' + highlight(fullTitle, query) + '</div>' +
-        '<div class="game-card-meta">' + count + ' вар. · ★ ' + rating.toFixed(1) + '</div>' +
+        '<div class="game-card-meta">' + count + ' вар.</div>' +
       '</div>' +
       '</article>';
   }
@@ -116,27 +109,19 @@
   }
 
   function topItemHTML(g, index) {
-    const rating = ratingOf(g);
     const coverCls = 'top-cover' + (g.cover ? ' has-cover' : '');
     return '<li class="top-item" data-id="' + g.id + '" tabindex="0" role="button">' +
       '<span class="top-num">' + (index + 1) + '</span>' +
       '<span class="' + coverCls + '" style="' + coverStyle(g) + '">' + (g.cover ? '' : initialOf(g)) + '</span>' +
       '<span class="top-info"><span class="top-title">' + escapeHTML(g.title) + '</span>' +
       '<span class="top-sub">' + escapeHTML(g.developer) + ' · ' + translationCount(g) + ' вариантов</span></span>' +
-      '<span class="top-rating">★ ' + rating.toFixed(1) + '</span>' +
       '</li>';
   }
 
   function translationHTML(g, t, idx, userRating) {
-    const key = g.id + ':' + idx;
-    let stars = '';
-    for (let n = 1; n <= 5; n++) {
-      stars += '<button type="button" data-n="' + n + '" class="' + (n <= userRating ? 'filled' : '') + '">★</button>';
-    }
     return '<article class="translation-card">' +
       '<div class="t-head">' +
         '<div class="t-name">' + escapeHTML(t.name || '') + '</div>' +
-        '<div class="rating-stars" data-key="' + key + '">' + stars + '</div>' +
       '</div>' +
       '<div class="t-badges">' +
         '<span>' + escapeHTML(t.author || '') + '</span>' +
