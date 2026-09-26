@@ -141,13 +141,6 @@
     });
   }
 
-  function renderTop10() {
-    const list = $('#top10List');
-    if (!list) return;
-    const sorted = games.slice().sort(function (a, b) { return GV.ratingOf(b) - GV.ratingOf(a); }).slice(0, 10);
-    list.innerHTML = sorted.map(function (g, i) { return GV.topItemHTML(g, i); }).join('');
-  }
-
   function renderNews() {
     const grid = $('#newsGrid');
     if (grid) grid.innerHTML = GV.newsHTML();
@@ -384,7 +377,7 @@
     const gs = $('#filterGenre'), ss = $('#filterStatus'), so = $('#sortBy');
     if (gs) gs.addEventListener('change', function (e) { state.filters.genre = e.target.value; saveFilters(); renderCatalog(); });
     if (ss) ss.addEventListener('change', function (e) { state.filters.status = e.target.value; saveFilters(); renderCatalog(); });
-    if (so) so.addEventListener('change', function (e) { state.filters.sort = e.target.value; saveFilters(); renderCatalog(); renderTop10(); });
+    if (so) so.addEventListener('change', function (e) { state.filters.sort = e.target.value; saveFilters(); renderCatalog(); });
   }
 
   function wireReset() {
@@ -470,14 +463,8 @@
     if (fb) fb.addEventListener('click', function () { if (state.heroId) toggleFavorite(state.heroId); });
     const hero = $('#hero');
     if (hero) {
-      hero.addEventListener('mouseenter', function () {
-        heroHovering = true;
-        stopHeroCarousel();
-      });
-      hero.addEventListener('mouseleave', function () {
-        heroHovering = false;
-        startHeroCarousel();
-      });
+      hero.addEventListener('mouseenter', function () { heroHovering = true; stopHeroCarousel(); });
+      hero.addEventListener('mouseleave', function () { heroHovering = false; startHeroCarousel(); });
     }
   }
 
@@ -557,7 +544,6 @@
   function init() {
     populateFilters();
     renderStats();
-    renderTop10();
     renderNews();
     renderFavorites();
     renderHistory();
