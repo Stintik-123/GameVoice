@@ -21,7 +21,7 @@
     history: store.get('gv_history', []),
     userRatings: store.get('gv_ratings', {}),
     view: store.get('gv_view', 'grid'),
-    filters: store.get('gv_filters', { chip: null, genre: '', status: '', sort: 'rating' }),
+    filters: store.get('gv_filters', { chip: null, genre: '', status: '', sort: 'updated' }),
     query: '',
     heroId: null
   };
@@ -56,11 +56,11 @@
   function sortGames(list) {
     const s = state.filters.sort;
     const copy = list.slice();
-    if (s === 'rating') copy.sort(function (a, b) { return GV.ratingOf(b) - GV.ratingOf(a); });
-    else if (s === 'updated') copy.sort(function (a, b) { return GV.lastUpdated(b).localeCompare(GV.lastUpdated(a)); });
+    if (s === 'updated') copy.sort(function (a, b) { return GV.lastUpdated(b).localeCompare(GV.lastUpdated(a)); });
     else if (s === 'year') copy.sort(function (a, b) { return (b.year || '').localeCompare(a.year || ''); });
     else if (s === 'count') copy.sort(function (a, b) { return GV.translationCount(b) - GV.translationCount(a); });
     else if (s === 'alpha') copy.sort(function (a, b) { return a.title.localeCompare(b.title, 'ru'); });
+    else copy.sort(function (a, b) { return GV.lastUpdated(b).localeCompare(GV.lastUpdated(a)); });
     return copy;
   }
 
@@ -192,7 +192,7 @@
     if (desc) desc.textContent = g.desc || '';
     if (meta) {
       const p = (g.platforms || []).join(' · ').toUpperCase();
-      meta.innerHTML = '<span>' + g.genre + '</span><span>' + g.year + '</span><span>' + GV.translationCount(g) + ' вариантов</span>' + (p ? '<span>' + p + '</span>' : '') + '<span><b>★ ' + GV.ratingOf(g).toFixed(1) + '</b></span>';
+      meta.innerHTML = '<span>' + g.genre + '</span><span>' + g.year + '</span><span>' + GV.translationCount(g) + ' вариантов</span>' + (p ? '<span>' + p + '</span>' : '');
     }
     if (tags) tags.innerHTML = (g.tags || []).map(function (t) { return '<span>#' + t + '</span>'; }).join('');
     if (bg) {
@@ -233,22 +233,8 @@
     if (title) title.textContent = 'Варианты локализации — ' + g.title;
     if (list) {
       list.innerHTML = g.translations.map(function (t, idx) {
-        return GV.translationHTML(g, t, idx, state.userRatings[g.id + ':' + idx] || 0);
+        return GV.translationHTML(g, t, idx, 0);
       }).join('');
-      $$('#translationsList .rating-stars').forEach(function (stars) {
-        stars.addEventListener('click', function (e) {
-          const btn = e.target.closest('button[data-n]');
-          if (!btn) return;
-          const n = parseInt(btn.dataset.n, 10);
-          const key = stars.dataset.key;
-          state.userRatings[key] = n;
-          store.set('gv_ratings', state.userRatings);
-          $$('#translationsList .rating-stars[data-key="' + key + '"] button').forEach(function (b) {
-            b.classList.toggle('filled', parseInt(b.dataset.n, 10) <= n);
-          });
-          showToast('Оценка сохранена');
-        });
-      });
     }
     pushHistory(g.id);
     if (location.hash !== '#' + g.id) history.replaceState(null, '', '#' + g.id);
@@ -338,8 +324,8 @@
     }
     const so = $('#sortBy');
     if (so) {
-      so.innerHTML = '<option value="rating">Сначала рейтинг</option><option value="updated">Сначала обновлённые</option><option value="year">Сначала новые</option><option value="count">Больше вариантов</option><option value="alpha">По алфавиту</option>';
-      so.value = state.filters.sort || 'rating';
+      so.innerHTML = '<option value="updated">Сначала обновлённые</option><option value="year">Сначала новые</option><option value="count">Больше вариантов</option><option value="alpha">По алфавиту</option>';
+      so.value = state.filters.sort || 'updated';
     }
     $$('#chips .chip').forEach(function (c) { c.classList.toggle('active', c.dataset.chip === state.filters.chip); });
     $$('.view-toggle button').forEach(function (b) { b.classList.toggle('active', b.dataset.view === state.view); });
@@ -384,7 +370,7 @@
     const b = $('#resetFilters');
     if (!b) return;
     b.addEventListener('click', function () {
-      state.filters = { chip: null, genre: '', status: '', sort: 'rating' };
+      state.filters = { chip: null, genre: '', status: '', sort: 'updated' };
       state.query = '';
       const si = $('#searchInput'); if (si) si.value = '';
       const sc = $('#searchClear'); if (sc) sc.hidden = true;
