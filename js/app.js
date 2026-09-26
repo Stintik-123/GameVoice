@@ -47,7 +47,14 @@
 
   function matchesFilters(g) {
     const f = state.filters;
-    if (f.chip && !g.translations.some(function (t) { return t.type === f.chip; })) return false;
+    if (f.chip) {
+      var chipOk = g.translations.some(function (t) {
+        if (f.chip === 'voice') return t.type === 'voice' || t.type === 'both';
+        if (f.chip === 'text') return t.type === 'text' || t.type === 'both';
+        return t.type === f.chip;
+      });
+      if (!chipOk) return false;
+    }
     if (f.genre && g.genre !== f.genre) return false;
     if (f.status && !g.translations.some(function (t) { return t.status === f.status; })) return false;
     return true;
@@ -128,8 +135,8 @@
 
   function updateChipCounts() {
     const counts = {
-      text: games.filter(function (g) { return g.translations.some(function (t) { return t.type === 'text'; }); }).length,
-      voice: games.filter(function (g) { return g.translations.some(function (t) { return t.type === 'voice'; }); }).length,
+      text: games.filter(function (g) { return g.translations.some(function (t) { return t.type === 'text' || t.type === 'both'; }); }).length,
+      voice: games.filter(function (g) { return g.translations.some(function (t) { return t.type === 'voice' || t.type === 'both'; }); }).length,
       both: games.filter(function (g) { return g.translations.some(function (t) { return t.type === 'both'; }); }).length,
       subtitles: games.filter(function (g) { return g.translations.some(function (t) { return t.type === 'subtitles'; }); }).length
     };
@@ -192,7 +199,7 @@
     if (desc) desc.textContent = g.desc || '';
     if (meta) {
       const p = (g.platforms || []).join(' · ').toUpperCase();
-      meta.innerHTML = '<span>' + g.genre + '</span><span>' + g.year + '</span><span>' + GV.translationCount(g) + ' вариантов</span>' + (p ? '<span>' + p + '</span>' : '');
+      meta.innerHTML = '<span>' + g.genre + '</span><span>' + g.year + '</span><span>' + GV.pluralVariants(GV.translationCount(g)) + '</span>' + (p ? '<span>' + p + '</span>' : '');
     }
     if (tags) tags.innerHTML = (g.tags || []).map(function (t) { return '<span>#' + t + '</span>'; }).join('');
     if (bg) {
@@ -407,6 +414,7 @@
     });
     document.addEventListener('keydown', function (e) {
       if (e.key !== 'Enter' && e.key !== ' ') return;
+      if (e.target.closest('[data-fav]')) return;
       const card = e.target.closest('.game-card[data-id], .top-item[data-id]');
       if (!card) return;
       e.preventDefault();
