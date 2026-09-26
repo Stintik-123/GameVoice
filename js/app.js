@@ -21,7 +21,7 @@
     history: store.get('gv_history', []),
     userRatings: store.get('gv_ratings', {}),
     view: store.get('gv_view', 'grid'),
-    filters: store.get('gv_filters', { chip: null, genre: '', status: '', platform: '', sort: 'rating' }),
+    filters: store.get('gv_filters', { chip: null, genre: '', status: '', sort: 'rating' }),
     query: '',
     heroId: null
   };
@@ -50,7 +50,6 @@
     if (f.chip && !g.translations.some(function (t) { return t.type === f.chip; })) return false;
     if (f.genre && g.genre !== f.genre) return false;
     if (f.status && !g.translations.some(function (t) { return t.status === f.status; })) return false;
-    if (f.platform && (g.platforms || []).indexOf(f.platform) === -1) return false;
     return true;
   }
 
@@ -331,10 +330,8 @@
 
   function populateFilters() {
     const genres = [];
-    const platforms = [];
     games.forEach(function (g) {
       if (g.genre && genres.indexOf(g.genre) === -1) genres.push(g.genre);
-      (g.platforms || []).forEach(function (p) { if (platforms.indexOf(p) === -1) platforms.push(p); });
     });
     const fg = $('#filterGenre');
     if (fg) {
@@ -345,11 +342,6 @@
     if (fs) {
       fs.innerHTML = '<option value="">Любой статус</option><option value="done">Готово</option><option value="progress">В работе</option><option value="abandoned">Заброшено</option>';
       fs.value = state.filters.status || '';
-    }
-    const fp = $('#filterPlatform');
-    if (fp) {
-      fp.innerHTML = '<option value="">Все платформы</option>' + platforms.map(function (p) { return '<option value="' + GV.escapeHTML(p) + '">' + GV.escapeHTML(p.toUpperCase()) + '</option>'; }).join('');
-      fp.value = state.filters.platform || '';
     }
     const so = $('#sortBy');
     if (so) {
@@ -389,10 +381,9 @@
   }
 
   function wireSelects() {
-    const gs = $('#filterGenre'), ss = $('#filterStatus'), ps = $('#filterPlatform'), so = $('#sortBy');
+    const gs = $('#filterGenre'), ss = $('#filterStatus'), so = $('#sortBy');
     if (gs) gs.addEventListener('change', function (e) { state.filters.genre = e.target.value; saveFilters(); renderCatalog(); });
     if (ss) ss.addEventListener('change', function (e) { state.filters.status = e.target.value; saveFilters(); renderCatalog(); });
-    if (ps) ps.addEventListener('change', function (e) { state.filters.platform = e.target.value; saveFilters(); renderCatalog(); });
     if (so) so.addEventListener('change', function (e) { state.filters.sort = e.target.value; saveFilters(); renderCatalog(); renderTop10(); });
   }
 
@@ -400,7 +391,7 @@
     const b = $('#resetFilters');
     if (!b) return;
     b.addEventListener('click', function () {
-      state.filters = { chip: null, genre: '', status: '', platform: '', sort: 'rating' };
+      state.filters = { chip: null, genre: '', status: '', sort: 'rating' };
       state.query = '';
       const si = $('#searchInput'); if (si) si.value = '';
       const sc = $('#searchClear'); if (sc) sc.hidden = true;
@@ -490,18 +481,6 @@
     }
   }
 
-  function wireRandom() {
-    const b = $('#randomBtn');
-    if (!b) return;
-    b.addEventListener('click', function () {
-      const g = games[Math.floor(Math.random() * games.length)];
-      if (!g) return;
-      renderHero(g);
-      const h = $('#hero');
-      if (h) h.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
-    });
-  }
-
   function updateThemeBtn() {
     const b = $('#themeBtn');
     if (!b) return;
@@ -542,11 +521,13 @@
     });
   }
 
-  function wireToTop() {
-    const b = $('#toTop');
+  function wireFabAdd() {
+    const b = $('#fabAdd');
     if (!b) return;
-    window.addEventListener('scroll', function () { b.classList.toggle('show', window.scrollY > 800); }, { passive: true });
-    b.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }); });
+    b.addEventListener('click', function () {
+      const m = $('#addModal');
+      if (m) openModal(m);
+    });
   }
 
   function wireHotkeys() {
@@ -590,10 +571,9 @@
     wireModals();
     wireAddForm();
     wireHero();
-    wireRandom();
     wireTheme();
     wireBurger();
-    wireToTop();
+    wireFabAdd();
     wireHotkeys();
     if (!handleDeepLink()) renderHero(games[0]);
   }
