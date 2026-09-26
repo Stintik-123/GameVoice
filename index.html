@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><text x='50' y='68' font-size='46' text-anchor='middle' fill='%23efe6d3' font-family='Courier New' font-weight='bold'>GV</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><text x='50' y='68' font-size='46' text-anchor='middle' fill='%23efe6d3' font-family='Courier%20New' font-weight='bold'>GV</text></svg>">
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/layout.css">
@@ -126,12 +126,12 @@
     <div class="translations" id="translationsList"></div>
   </section>
 
-  <section class="mini-section" id="favoritesSection" style="display:none">
+  <section class="mini-section" id="favoritesSection">
     <div class="section-header"><h2>Избранное</h2></div>
     <div class="mini-grid" id="favoritesGrid"></div>
   </section>
 
-  <section class="mini-section" id="historySection" style="display:none">
+  <section class="mini-section" id="historySection">
     <div class="section-header"><h2>Недавно смотрели</h2></div>
     <div class="mini-grid" id="historyGrid"></div>
   </section>
@@ -214,9 +214,9 @@
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <button class="to-top" id="toTop" type="button" aria-label="Наверх">↑</button>
 
-<script src="js/data.js"></script>
-<script src="js/steam-covers.js"></script>
-<script src="js/components.js"></script>
-<script src="js/app.js"></script>
+<script defer src="js/data.js"></script>
+<script defer src="js/steam-covers.js"></script>
+<script defer src="js/components.js"></script>
+<script defer src="js/app.js"></script>
 </body>
 </html>

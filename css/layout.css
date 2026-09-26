@@ -424,23 +424,6 @@ main > section + section {
   gap: var(--sp-2);
 }
 
-.view-toggle {
-  display: flex;
-  border: 2px solid var(--ink);
-}
-
-.view-toggle button {
-  background: var(--paper);
-  border: none;
-  border-right: 1px solid var(--ink);
-  padding: 4px 10px;
-  cursor: pointer;
-  font-size: .9rem;
-}
-
-.view-toggle button:last-child { border-right: none; }
-.view-toggle button.active { background: var(--ink); color: var(--paper); }
-
 .filters-bar {
   display: flex;
   flex-wrap: wrap;
@@ -451,78 +434,15 @@ main > section + section {
 
 .filters-sticky {
   position: sticky;
-  top: 64px;
+  top: var(--header-h);
   z-index: 50;
   background: var(--paper);
   padding: var(--sp-3) 0;
 }
 
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-2);
-}
-
-.chip {
-  font-family: var(--font-mono);
-  font-size: .72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  border: 2px solid var(--ink);
-  background: var(--paper);
-  padding: 6px 12px;
-  cursor: pointer;
-}
-
-.chip.active {
-  background: var(--ink);
-  color: var(--paper);
-}
-
-.selects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-2);
-  margin-left: auto;
-}
-
-.selects select,
-.btn-reset {
-  font-family: var(--font-mono);
-  font-size: .72rem;
-  border: 2px solid var(--ink);
-  background: var(--paper);
-  padding: 6px 10px;
-  cursor: pointer;
-}
+/* Chips, selects, view-toggle and reset button are styled in components.css */
 
 .catalog-wrap { overflow: hidden; }
-
-.catalog-wrap[data-view="grid"] .carousel {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: var(--sp-4);
-}
-
-.catalog-wrap[data-view="list"] .carousel {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-2);
-}
-
-.catalog-wrap[data-view="carousel"] .carousel {
-  display: flex;
-  gap: var(--sp-4);
-  overflow-x: auto;
-  padding-bottom: var(--sp-4);
-  scroll-snap-type: x mandatory;
-}
-
-.catalog-wrap[data-view="carousel"] .game-card {
-  flex: 0 0 220px;
-  scroll-snap-align: start;
-}
 
 .top10-list {
   list-style: none;
@@ -725,5 +645,4 @@ main > section + section {
   .hero-meta span { padding-right: var(--sp-3); }
   .filters-bar { flex-direction: column; align-items: stretch; }
   .selects { margin-left: 0; }
-  .filters-sticky { top: 56px; }
 }

@@ -31,23 +31,6 @@
     return null;
   }
 
-  function escapeHTML(s) {
-    return String(s).replace(/[&<>"']/g, function (c) {
-      return { '&': '&', '<': '<', '>': '>', '"': '"', "'": '&#39;' }[c];
-    });
-  }
-
-  function escapeRegExp(s) {
-    return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  }
-
-  function highlight(text, q) {
-    const safe = escapeHTML(text);
-    if (!q || !q.trim()) return safe;
-    const re = new RegExp('(' + escapeRegExp(escapeHTML(q.trim())) + ')', 'gi');
-    return safe.replace(re, '<mark>$1</mark>');
-  }
-
   function matchesQuery(g, q) {
     if (!q) return true;
     const needle = q.toLowerCase().trim();
@@ -110,19 +93,8 @@
 
   function setHeroVideo(g) {
     if (!isDesktopVideo || reduceMotion || !g || !g.trailerId) { clearHeroVideo(); return; }
-    let wrap = $('#heroVideo');
-    if (!wrap) {
-      wrap = document.createElement('div');
-      wrap.id = 'heroVideo';
-      wrap.className = 'hero-video';
-      wrap.setAttribute('aria-hidden', 'true');
-      const bg = $('#heroBg');
-      if (bg && bg.parentNode) bg.parentNode.insertBefore(wrap, bg.nextSibling);
-      else {
-        const hero = $('#hero');
-        if (hero) hero.insertBefore(wrap, hero.firstChild);
-      }
-    }
+    const wrap = $('#heroVideo');
+    if (!wrap) return;
     if (wrap.dataset.id === g.trailerId) { wrap.classList.add('is-on'); return; }
     wrap.dataset.id = g.trailerId;
     wrap.classList.add('is-on');
@@ -145,7 +117,7 @@
     if (count) count.textContent = 'найдено: ' + list.length + ' из ' + games.length;
     if (wrap) {
       if (list.length === 0) {
-        wrap.innerHTML = '<div class="empty-state"><p>Ничего не найдено по запросу «' + escapeHTML(state.query || '') + '»</p><p>Попробуйте другое название или сбросьте фильтры</p></div>';
+        wrap.innerHTML = '<div class="empty-state"><p>Ничего не найдено по запросу «' + GV.escapeHTML(state.query || '') + '»</p><p>Попробуйте другое название или сбросьте фильтры</p></div>';
       } else {
         wrap.innerHTML = list.map(function (g, i) { return GV.cardHTML(g, state.favorites.has(g.id), i, state.query); }).join('');
       }
@@ -232,12 +204,10 @@
     }
     if (tags) tags.innerHTML = (g.tags || []).map(function (t) { return '<span>#' + t + '</span>'; }).join('');
     if (bg) {
-      var img = g.heroImage || g.cover;
-      if (img) {
-        bg.style.cssText = 'background-image:url(' + img + ');background-size:cover;background-position:center;';
-      } else {
-        bg.style.cssText = GV.coverStyle(g);
-      }
+      const img = g.heroImage || g.cover;
+      bg.style.cssText = img
+        ? 'background-image:url(' + img + ');background-size:cover;background-position:center;'
+        : GV.coverStyle(g);
     }
     if (favBtn) {
       const isFav = state.favorites.has(g.id);
@@ -246,7 +216,7 @@
     }
     if (dots) {
       dots.innerHTML = games.map(function (gg) {
-        return '<button type="button" role="tab" aria-selected="' + (gg.id === g.id) + '" aria-label="' + escapeHTML(gg.title) + '"></button>';
+        return '<button type="button" role="tab" aria-selected="' + (gg.id === g.id) + '" aria-label="' + GV.escapeHTML(gg.title) + '"></button>';
       }).join('');
       $$('#heroDots button').forEach(function (btn, i) {
         btn.addEventListener('click', function () { renderHero(games[i]); startHeroCarousel(); });
@@ -334,10 +304,10 @@
     if (t) t.textContent = 'Трейлер — ' + g.title;
     const all = [{ id: g.trailerId, label: 'Основной' }].concat(g.extraTrailers || []);
     tabs.innerHTML = all.map(function (x, i) {
-      return '<button type="button" data-id="' + x.id + '" class="' + (i === 0 ? 'active' : '') + '">' + x.label + '</button>';
+      return '<button type="button" data-id="' + x.id + '" class="' + (i === 0 ? 'active' : '') + '">' + GV.escapeHTML(x.label) + '</button>';
     }).join('');
     const setF = function (id) {
-      f.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0" title="Трейлер ' + escapeHTML(g.title) + '" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+      f.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0" title="Трейлер ' + GV.escapeHTML(g.title) + '" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
     };
     setF(all[0].id);
     $$('#videoTabs button').forEach(function (b) {
@@ -368,7 +338,7 @@
     });
     const fg = $('#filterGenre');
     if (fg) {
-      fg.innerHTML = '<option value="">Все жанры</option>' + genres.map(function (g) { return '<option value="' + escapeHTML(g) + '">' + escapeHTML(g) + '</option>'; }).join('');
+      fg.innerHTML = '<option value="">Все жанры</option>' + genres.map(function (g) { return '<option value="' + GV.escapeHTML(g) + '">' + GV.escapeHTML(g) + '</option>'; }).join('');
       fg.value = state.filters.genre || '';
     }
     const fs = $('#filterStatus');
@@ -378,7 +348,7 @@
     }
     const fp = $('#filterPlatform');
     if (fp) {
-      fp.innerHTML = '<option value="">Все платформы</option>' + platforms.map(function (p) { return '<option value="' + escapeHTML(p) + '">' + escapeHTML(p.toUpperCase()) + '</option>'; }).join('');
+      fp.innerHTML = '<option value="">Все платформы</option>' + platforms.map(function (p) { return '<option value="' + GV.escapeHTML(p) + '">' + GV.escapeHTML(p.toUpperCase()) + '</option>'; }).join('');
       fp.value = state.filters.platform || '';
     }
     const so = $('#sortBy');
@@ -525,6 +495,7 @@
     if (!b) return;
     b.addEventListener('click', function () {
       const g = games[Math.floor(Math.random() * games.length)];
+      if (!g) return;
       renderHero(g);
       const h = $('#hero');
       if (h) h.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });

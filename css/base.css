@@ -30,7 +30,7 @@ body::before {
 }
 
 :root[data-theme="dark"] body::before,
-:root:not([data-theme="light"]) body::before {
+:root:not([data-theme]):not([data-theme="light"]) body::before {
   background-image:
     repeating-linear-gradient(0deg, rgba(239, 230, 211, .025) 0px, rgba(239, 230, 211, .025) 1px, transparent 1px, transparent 3px),
     radial-gradient(circle at 15% 20%, rgba(230, 57, 70, .04) 0%, transparent 30%);
