@@ -100,7 +100,7 @@
         </div>
       </div>
     </div>
-    <div class="filters-bar filters-sticky">
+    <div class="filters-bar">
       <div class="chips" id="chips">
         <button class="chip" data-chip="text" type="button">Текст</button>
         <button class="chip" data-chip="voice" type="button">Озвучка</button>
@@ -110,7 +110,6 @@
       <div class="selects">
         <select id="filterGenre" aria-label="Жанр"></select>
         <select id="filterStatus" aria-label="Статус"></select>
-        <select id="filterPlatform" aria-label="Платформа"></select>
         <select id="sortBy" aria-label="Сортировка"></select>
         <button class="btn-reset" id="resetFilters" type="button">Сброс</button>
       </div>
@@ -144,8 +143,9 @@
     <div class="about-inner">
       <h2>О проекте</h2>
       <div class="stats-row" id="statsRow"></div>
-      <p>GameVoice — навигатор по русским локализациям и озвучкам. Мы не хостим файлы: только структурируем то, что уже лежит на Playground, Nexus, GitHub и сайтах студий.</p>
-      <p>Рейтинг в «Топе» — из данных каталога, не голосование пользователей. Ваши личные оценки и избранное хранятся у вас в браузере и никуда не отправляются.</p>
+      <p>Привет. Меня зовут <strong>Stintik-123</strong> — я соло-разработчик и делаю GameVoice в одиночку. Надоело, что русские озвучки и русификаторы разбросаны по всему интернету: Playground, Nexus, GitHub, чужие сайты… Здесь всё собрано в одном месте.</p>
+      <p>Мы не хостим файлы — только навигация: кто делал, статус, ссылки, краткая установка. Рейтинг в «Топе» — из данных каталога, не голосование. Избранное и твои оценки живут только в твоём браузере.</p>
+      <p>Обновлять каталог одному тяжело. Если знаешь озвучку или перевод, которых здесь нет — нажми <strong>+</strong> и открой issue на GitHub. Это реально помогает сайту расти.</p>
     </div>
   </section>
 
@@ -211,7 +211,7 @@
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<button class="to-top" id="toTop" type="button" aria-label="Наверх">↑</button>
+<button class="fab-add" id="fabAdd" type="button" aria-label="Предложить игру">+</button>
 
 <script defer src="js/data.js"></script>
 <script defer src="js/steam-covers.js"></script>
