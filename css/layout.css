@@ -636,7 +636,12 @@ main > section + section {
 @media (max-width: 900px) {
   .nav { display: none; }
   .burger { display: flex; }
-  .search { min-width: 120px; }
+  .header-inner { gap: var(--sp-2); padding: var(--sp-2) var(--sp-3); }
+  .header-right { gap: 6px; flex-shrink: 1; min-width: 0; }
+  .search { min-width: 0; flex: 1 1 80px; max-width: 160px; padding: 4px 8px; }
+  .search input { min-width: 0; font-size: .75rem; }
+  .add-btn { display: none; }
+  .logo-tagline { display: none; }
   .hero { min-height: 55vh; }
   .hero-content { padding: var(--sp-10) var(--sp-4) var(--sp-6); }
   .hero-title { font-size: clamp(1.8rem, 7vw, 2.6rem); }
