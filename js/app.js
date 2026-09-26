@@ -88,7 +88,6 @@
 
   let heroCarouselTimer = null;
   let heroHovering = false;
-  /* Desktop (>=900px): muted YouTube trailer as hero background. Mobile: static poster only. */
   const isDesktopVideo = window.matchMedia('(min-width: 900px)').matches;
 
   function heroIndex() {
@@ -106,7 +105,7 @@
     heroCarouselTimer = setInterval(function () {
       if (heroHovering) return;
       renderHero(games[(heroIndex() + 1) % games.length], true);
-    }, 15000);
+    }, 40000);
   }
 
   function setHeroVideo(g) {
