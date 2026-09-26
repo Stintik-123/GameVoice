@@ -21,17 +21,60 @@
   background-size: cover !important; background-position: center !important;
   color: transparent !important; font-size: 0 !important; overflow: hidden;
 }
+
+/* Hero is always dark artwork/video — lock light text regardless of theme */
+.hero,
+.hero .hero-title,
+.hero .hero-desc,
+.hero .hero-meta,
+.hero .hero-meta span,
+.hero .hero-tags span {
+  color: #efe6d3 !important;
+}
+.hero .hero-meta b {
+  color: #e63946 !important;
+}
+.hero .hero-badge {
+  color: #efe6d3 !important;
+  border-color: #efe6d3 !important;
+}
+.hero .hero-dots button {
+  border-color: rgba(239, 230, 211, .55) !important;
+  background: transparent !important;
+}
+.hero .hero-dots button[aria-selected="true"] {
+  background: #e63946 !important;
+  border-color: #e63946 !important;
+}
+
+/* Hero action buttons: always high-contrast on dark hero */
 .hero-actions .btn {
-  border-color: rgba(239,230,211,.55);
-  background: rgba(239,230,211,.94);
-  color: #0a0a0a;
-  box-shadow: 3px 3px 0 rgba(0,0,0,.45);
+  border-color: rgba(239, 230, 211, .55) !important;
+  background: rgba(239, 230, 211, .96) !important;
+  color: #0a0a0a !important;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, .45) !important;
 }
-.hero-actions .btn:hover { background: #fff; box-shadow: 5px 5px 0 rgba(193,39,45,.7); }
+.hero-actions .btn:hover {
+  background: #fff !important;
+  color: #0a0a0a !important;
+  box-shadow: 5px 5px 0 rgba(193, 39, 45, .75) !important;
+}
 .hero-actions .btn-primary {
-  background: var(--red); color: #efe6d3; border-color: rgba(239,230,211,.35);
+  background: #c1272d !important;
+  color: #efe6d3 !important;
+  border-color: rgba(239, 230, 211, .35) !important;
 }
-.hero-actions .btn-primary:hover { background: var(--red-deep); color: #fff; }
+.hero-actions .btn-primary:hover {
+  background: #8a1a1f !important;
+  color: #fff !important;
+}
 .hero-actions .btn[aria-pressed="true"] {
-  background: var(--red); color: #efe6d3; border-color: var(--red);
+  background: #c1272d !important;
+  color: #efe6d3 !important;
+  border-color: #c1272d !important;
+}
+
+/* Hide video layer on small screens (poster only) */
+@media (max-width: 899px) {
+  .hero-video { display: none !important; }
 }
