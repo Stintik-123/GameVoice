@@ -808,3 +808,107 @@ mark {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+
+/* —— About modal —— */
+.modal-card-about {
+  max-width: 720px;
+  padding: 0;
+  overflow: hidden;
+}
+.modal-card-about > .modal-x {
+  top: 12px;
+  right: 12px;
+  background: rgba(10, 10, 10, .65);
+  color: #efe6d3;
+  border-color: rgba(239, 230, 211, .4);
+  box-shadow: none;
+}
+.about-hero {
+  position: relative;
+  border-bottom: 3px solid var(--ink);
+}
+.about-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  object-position: center 30%;
+  background: #0a0a0a;
+}
+.about-hero-text {
+  padding: var(--sp-5) var(--sp-6) var(--sp-4);
+  background: var(--paper-2);
+}
+.about-kicker {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 0 0 var(--sp-2);
+}
+.about-hero-text h3 {
+  margin: 0 0 var(--sp-2);
+  font-size: 1.6rem;
+  line-height: 1.1;
+}
+.about-lead {
+  margin: 0;
+  font-size: .95rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+.about-body {
+  padding: var(--sp-5) var(--sp-6) var(--sp-6);
+}
+.about-body h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin: var(--sp-5) 0 var(--sp-2);
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--ink);
+}
+.about-body h4:first-child { margin-top: 0; }
+.about-body p {
+  margin: 0 0 var(--sp-3);
+  font-size: .92rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.about-body p strong { color: var(--ink); }
+.about-list {
+  margin: 0 0 var(--sp-4);
+  padding-left: 1.2em;
+  font-size: .92rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.about-list li { margin-bottom: var(--sp-2); }
+.about-list strong { color: var(--ink); }
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-top: var(--sp-5) !important;
+  padding-top: var(--sp-4);
+  border-top: 1px dashed var(--line-2);
+}
+.footer-about-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 0;
+}
+.footer-about-btn:hover { color: var(--red); }
+
+@media (max-width: 720px) {
+  .about-photo { max-height: 200px; }
+  .about-hero-text, .about-body { padding-left: var(--sp-4); padding-right: var(--sp-4); }
+  .about-hero-text h3 { font-size: 1.35rem; }
+}
