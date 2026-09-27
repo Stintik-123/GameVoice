@@ -24,11 +24,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230a0a0a'/%3E%3Ctext x='50' y='68' font-size='44' text-anchor='middle' fill='%23efe6d3' font-family='Courier New,monospace' font-weight='700'%3EGV%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="css/tokens.css?v=4">
-<link rel="stylesheet" href="css/base.css?v=4">
-<link rel="stylesheet" href="css/layout.css?v=4">
-<link rel="stylesheet" href="css/components.css?v=4">
-<link rel="stylesheet" href="css/covers.css?v=4">
+<link rel="stylesheet" href="css/tokens.css?v=5">
+<link rel="stylesheet" href="css/base.css?v=5">
+<link rel="stylesheet" href="css/layout.css?v=5">
+<link rel="stylesheet" href="css/components.css?v=5">
+<link rel="stylesheet" href="css/covers.css?v=5">
 </head>
 <body>
 
@@ -44,7 +44,7 @@
     <nav class="nav" aria-label="Основная навигация">
       <a href="#catalog" class="nav-link active">Каталог</a>
       <a href="#favoritesSection" class="nav-link">Избранное <span class="nav-count" id="favCount">0</span></a>
-      <a href="#about" class="nav-link">О проекте</a>
+      <button type="button" class="nav-link" id="aboutBtn">О проекте</button>
       <button class="nav-link" id="faqBtn" type="button">FAQ</button>
     </nav>
     <div class="header-right">
@@ -61,7 +61,7 @@
   <div class="mobile-menu" id="mobileMenu" hidden>
     <a href="#catalog" class="mm-link">Каталог</a>
     <a href="#favoritesSection" class="mm-link">Избранное <span class="nav-count" data-favcount-mirror>0</span></a>
-    <a href="#about" class="mm-link">О проекте</a>
+    <button type="button" class="mm-link" id="aboutBtnMobile">О проекте</button>
     <button class="mm-link" id="faqBtnMobile" type="button">FAQ</button>
     <button class="mm-link" id="addBtnMobile" type="button">+ Предложить игру</button>
   </div>
@@ -142,9 +142,10 @@
     <div class="about-inner">
       <h2>О проекте</h2>
       <div class="stats-row" id="statsRow"></div>
-      <p>Привет. Меня зовут <strong>Stintik-123</strong> — я соло-разработчик и делаю GameVoice в одиночку. Надоело, что русские озвучки и русификаторы разбросаны по всему интернету: Playground, Nexus, GitHub, чужие сайты… Здесь всё собрано в одном месте.</p>
-      <p>Я не хостю файлы — только ссылки и статус: кто делал, что переведено, куда качать. Избранное хранится только в твоём браузере.</p>
-      <p>Обновлять каталог одному тяжело. Если знаешь озвучку или перевод, которых здесь нет — нажми <strong>+</strong> и открой issue на GitHub. Это реально помогает сайту расти.</p>
+      <p>Привет. Меня зовут <strong>Stintik-123</strong> — соло-разработчик. GameVoice я делаю один: русские озвучки разбросаны по интернету, здесь они собраны в одном месте.</p>
+      <p>
+        <button type="button" class="btn btn-primary" id="aboutOpenBtn">Подробнее о проекте</button>
+      </p>
     </div>
   </section>
 
@@ -156,7 +157,7 @@
       <a href="./" class="logo"><span class="logo-mark">GV</span><span class="logo-text"><span class="logo-name">GameVoice</span></span></a>
       <nav class="footer-nav">
         <a href="#catalog">Каталог</a>
-        <a href="#about">О проекте</a>
+        <button type="button" class="footer-about-btn" id="aboutBtnFooter">О проекте</button>
         <a href="https://github.com/Stintik-123/GameVoice" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
@@ -209,12 +210,62 @@
   </div>
 </div>
 
+
+<div class="modal" id="aboutModal" role="dialog" aria-modal="true" aria-labelledby="aboutModalTitle">
+  <div class="modal-card modal-card-about">
+    <button class="modal-x" data-close type="button" aria-label="Закрыть">✕</button>
+
+    <div class="about-hero">
+      <img class="about-photo" src="images/1000009865.jpg" alt="Stintik-123" width="640" height="360" loading="lazy">
+      <div class="about-hero-text">
+        <p class="about-kicker">соло-проект · 2026</p>
+        <h3 id="aboutModalTitle">GameVoice</h3>
+        <p class="about-lead">Каталог русских локализаций и озвучек — без хостинга файлов, только навигация.</p>
+      </div>
+    </div>
+
+    <div class="about-body">
+      <!-- ШАБЛОН: правь текст ниже как угодно -->
+
+      <h4>Зачем это</h4>
+      <p>Русские озвучки и русификаторы валяются по Playground, Nexus, GitHub, Telegram и чужим сайтам. Искать каждый раз заново — боль. GameVoice собирает в одном месте: кто делал, статус, что именно переведено/озвучено и куда качать.</p>
+
+      <h4>Кто я</h4>
+      <p>Меня зовут <strong>Stintik-123</strong>. Сайт делаю один, без команды и без бюджета. Это хобби-проект: хочется, чтобы у русскоязычных игроков был понятный каталог, а не бесконечный гуглёж.</p>
+
+      <h4>Как устроен сайт</h4>
+      <ul class="about-list">
+        <li><strong>Hero</strong> — карусель игр: на компе фон с трейлером YouTube, на телефоне постер.</li>
+        <li><strong>Каталог</strong> — карточки с обложками Steam, фильтры (текст / озвучка / жанр / статус), поиск.</li>
+        <li><strong>Карточка перевода</strong> — автор, статус, описание, прямые ссылки на скачивание.</li>
+        <li><strong>Избранное</strong> — только в твоём браузере (localStorage), никуда не уходит.</li>
+        <li><strong>+</strong> — предложение новой игры/озвучки через issue на GitHub.</li>
+      </ul>
+
+      <h4>Чего здесь нет</h4>
+      <ul class="about-list">
+        <li>Файлы не хостятся — только ссылки на публичные источники.</li>
+        <li>Нет игр с уже официальной русской озвучкой (зачем дублировать).</li>
+        <li>Нет «рандома» и лишних фильтров по магазинам.</li>
+      </ul>
+
+      <h4>Как помочь</h4>
+      <p>Обновлять каталог одному тяжело. Если знаешь озвучку или перевод, которых здесь нет — нажми <strong>+</strong> (или «Предложить игру») и открой issue на GitHub. Даже одна ссылка сильно помогает.</p>
+
+      <p class="about-actions">
+        <a class="btn btn-primary" href="https://github.com/Stintik-123/GameVoice" target="_blank" rel="noopener">GitHub</a>
+        <button type="button" class="btn" data-close>Закрыть</button>
+      </p>
+    </div>
+  </div>
+</div>
+
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <button class="fab-add" id="fabAdd" type="button" aria-label="Предложить игру">+</button>
 
-<script defer src="js/data.js?v=4"></script>
-<script defer src="js/steam-covers.js?v=4"></script>
-<script defer src="js/components.js?v=4"></script>
-<script defer src="js/app.js?v=4"></script>
+<script defer src="js/data.js?v=5"></script>
+<script defer src="js/steam-covers.js?v=5"></script>
+<script defer src="js/components.js?v=5"></script>
+<script defer src="js/app.js?v=5"></script>
 </body>
 </html>
