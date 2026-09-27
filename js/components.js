@@ -145,7 +145,6 @@
       '</div>' +
       '<div class="t-body">' + (t.body || '') + '</div>' +
       '<div class="t-links">' + (t.links || '') + '</div>' +
-      (t.install || '') +
       '</article>';
   }
 
