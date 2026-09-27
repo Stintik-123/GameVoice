@@ -2,9 +2,12 @@
   'use strict';
 
   function escapeHTML(s) {
-    return String(s).replace(/[&<>"']/g, function (c) {
-      return { '&': '&', '<': '<', '>': '>', '"': '"', "'": '&#39;' }[c];
-    });
+    return String(s)
+      .replace(/&/g, '&' + 'amp;')
+      .replace(/</g, '&' + 'lt;')
+      .replace(/>/g, '&' + 'gt;')
+      .replace(/"/g, '&' + 'quot;')
+      .replace(/'/g, '&#39;');
   }
 
   function escapeRegExp(s) {
