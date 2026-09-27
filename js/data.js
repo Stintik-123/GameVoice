@@ -20,8 +20,7 @@ const games = [
       { type: 'voice', status: 'done', author: 'DreamVoice', version: 'v5.3', updated: '2025-08',
         name: 'DreamVoice — Гибридный дубляж Phantom Liberty',
         body: '<p><strong>Статус:</strong> актуально на патч 2.3+</p><p><strong>Что озвучено:</strong> Полный дубляж DLC Phantom Liberty (гибрид: нейросеть и ручная доработка)</p>',
-        links: '<a href="https://www.playground.ru/cyberpunk_2077/file/cyberpunk_2077_gibridnyj_dublyazh_dlya_dlc_phantom_liberty_v1_0_5_3_dreamvoice-1691775" class="btn" target="_blank" rel="noopener">Playground</a><a href="https://t.me/DreamVoiceRu" class="btn" target="_blank" rel="noopener">Telegram</a>',
-        install: '<details class="install"><summary>Краткая установка</summary><ol><li>Удалите предыдущие моды озвучки</li><li>Скачайте архив с Playground</li><li>Распакуйте в папку с игрой по инструкции из архива</li></ol></details>' },
+        links: '<a href="https://www.playground.ru/cyberpunk_2077/file/cyberpunk_2077_gibridnyj_dublyazh_dlya_dlc_phantom_liberty_v1_0_5_3_dreamvoice-1691775" class="btn" target="_blank" rel="noopener">Playground</a><a href="https://t.me/DreamVoiceRu" class="btn" target="_blank" rel="noopener">Telegram</a>' },
       { type: 'voice', status: 'done', author: 'SynthVoiceRu', version: 'r12', updated: '2024-03',
         name: 'Нейро-дубляж SynthVoiceRu',
         body: '<p><strong>Что озвучено:</strong> Основная игра и DLC в разном качестве</p>',
@@ -47,8 +46,7 @@ const games = [
       { type: 'voice', status: 'done', author: 'SynthVoiceRu', version: '1.0 (SV2)', updated: '2024-12',
         name: 'SynthVoiceRu — Нейросетевой дубляж и закадр',
         body: '<p><strong>Что озвучено:</strong> Полный дубляж и отдельная закадровая версия (модель SV2)</p>',
-        links: '<a href="https://www.playground.ru/baldurs_gate_3/file/baldurs_gate_3_russkaya_ozvuchka_nejrosetevoj_dublyazh_v1_0_synthvoiceru-1698229" class="btn" target="_blank" rel="noopener">Playground — дубляж</a><a href="https://www.playground.ru/baldurs_gate_3/file/baldurs_gate_3_rusifikator_zvuka_nejrosetevoj_zakadr_v1_0_synthvoiceru-1698264" class="btn" target="_blank" rel="noopener">Закадр</a>',
-        install: '<details class="install"><summary>Краткая установка</summary><ol><li>Скачать файлы (3–4 архива)</li><li>Положить в папку Mods Larian (LocalAppData)</li><li>В настройках отключить озвучку реплик по клику</li></ol></details>' }
+        links: '<a href="https://www.playground.ru/baldurs_gate_3/file/baldurs_gate_3_russkaya_ozvuchka_nejrosetevoj_dublyazh_v1_0_synthvoiceru-1698229" class="btn" target="_blank" rel="noopener">Playground — дубляж</a><a href="https://www.playground.ru/baldurs_gate_3/file/baldurs_gate_3_rusifikator_zvuka_nejrosetevoj_zakadr_v1_0_synthvoiceru-1698264" class="btn" target="_blank" rel="noopener">Закадр</a>' }
     ]
   },
   {
@@ -66,8 +64,7 @@ const games = [
       { type: 'both', status: 'done', author: 'GamesVoice', version: '1.5', updated: '2026-09',
         name: 'GamesVoice — Полная локализация',
         body: '<p><strong>Что переведено:</strong> Текст, текстуры, полная профессиональная озвучка</p>',
-        links: '<a href="https://www.playground.ru/hogwarts_legacy/file/hogwarts_legacy_rusifikator_teksta_tekstur_i_zvuka_gamesvoice-1681716" class="btn" target="_blank" rel="noopener">Playground</a><a href="https://gamesvoice.ru/library" class="btn" target="_blank" rel="noopener">GamesVoice</a>',
-        install: '<details class="install"><summary>Краткая установка</summary><ol><li>Скачать последнюю версию с Playground</li><li>Запустить установщик и указать папку с игрой</li></ol></details>' }
+        links: '<a href="https://www.playground.ru/hogwarts_legacy/file/hogwarts_legacy_rusifikator_teksta_tekstur_i_zvuka_gamesvoice-1681716" class="btn" target="_blank" rel="noopener">Playground</a><a href="https://gamesvoice.ru/library" class="btn" target="_blank" rel="noopener">GamesVoice</a>' }
     ]
   },
   {
@@ -90,8 +87,7 @@ const games = [
       { type: 'voice', status: 'done', author: 'Eloquence / Реплика / SynthVoice', version: '2.0', updated: '2026-01',
         name: 'Тройной гибридный дубляж',
         body: '<p><strong>Что озвучено:</strong> ~26 000 файлов: Реплика + Eloquence Studio + SynthVoice</p>',
-        links: '<a href="https://www.playground.ru/stalker_2/file/s_t_a_l_k_e_r_2_rusifikator_zvuka_trojnoj_gibridnyj_dublyazh_eloquence_studio_replika_synthvoice-1817504" class="btn" target="_blank" rel="noopener">Playground — тройной дубляж</a>',
-        install: '<details class="install"><summary>Краткая установка</summary><ol><li>Скачать архив нужного варианта</li><li>Распаковать в Stalker2\\Content\\Paks\\~mods</li></ol></details>' }
+        links: '<a href="https://www.playground.ru/stalker_2/file/s_t_a_l_k_e_r_2_rusifikator_zvuka_trojnoj_gibridnyj_dublyazh_eloquence_studio_replika_synthvoice-1817504" class="btn" target="_blank" rel="noopener">Playground — тройной дубляж</a>' }
     ]
   },
   {
@@ -109,8 +105,7 @@ const games = [
       { type: 'both', status: 'done', author: 'GamesVoice', version: '1.5', updated: '2026-04',
         name: 'GamesVoice — Текст и озвучка',
         body: '<p><strong>Что переведено:</strong> Текст и полная профессиональная озвучка</p><p><strong>Актёры:</strong> Александр Гаврилин (Гюстав), Евгения Лучникова (Маэль), Сергей Чихачёв (Моноко) и др.</p>',
-        links: '<a href="https://www.playground.ru/clair_obscur_expedition_33/file/clair_obscur_expedition_33_rusifikator_teksta_i_zvuka_v1_5_gamesvoice-1827268" class="btn" target="_blank" rel="noopener">Playground</a><a href="https://www.gamesvoice.ru/expedition33" class="btn" target="_blank" rel="noopener">GamesVoice</a>',
-        install: '<details class="install"><summary>Краткая установка</summary><ol><li>Скачать с Playground или с сайта GamesVoice</li><li>Запустить установщик и указать папку с игрой</li></ol></details>' }
+        links: '<a href="https://www.playground.ru/clair_obscur_expedition_33/file/clair_obscur_expedition_33_rusifikator_teksta_i_zvuka_v1_5_gamesvoice-1827268" class="btn" target="_blank" rel="noopener">Playground</a><a href="https://www.gamesvoice.ru/expedition33" class="btn" target="_blank" rel="noopener">GamesVoice</a>' }
     ]
   },
   {
@@ -123,22 +118,24 @@ const games = [
     cover: null,
     tags: ['супергерои', 'интерактив', 'эпизоды'],
     trailerId: 'FdULQSRuIdc',
-    desc: 'Официальной русской озвучки нет. Есть эпизодные дубляжи NikiStudio и Studii Net.',
+    desc: 'Официальной русской озвучки нет. Есть профессиональные эпизодные дубляжи NikiStudio и Studii Net, а также полный нейро-дубляж всех 8 эпизодов.',
     translations: [
       { type: 'text', status: 'done', author: 'AdHoc / сообщество',
         name: 'Официальный текст / субтитры',
         body: '<p><strong>Что переведено:</strong> Русские субтитры в игре</p>',
         links: '<span class="link-muted">Уже в игре</span>' },
-      { type: 'voice', status: 'done', author: 'NikiStudio', version: 'Эп. 1–2', updated: '2026-04',
-        name: 'NikiStudio — Эпизоды 1 и 2',
-        body: '<p><strong>Что озвучено:</strong> Полный дубляж 1-го и 2-го эпизодов</p>',
-        links: '<a href="https://www.playground.ru/dispatch/file/dispatch_rusifikator_zvuka_epizod_1_nikistudio-1813525" class="btn" target="_blank" rel="noopener">Playground — эп. 1</a><a href="https://www.playground.ru/dispatch/file/dispatch_rusifikator_zvuka_epizod_2_nikistudio-1840434" class="btn" target="_blank" rel="noopener">Эп. 2</a>',
-        install: '<details class="install"><summary>Краткая установка</summary><ol><li>Распаковать архив в корневую папку игры (где Dispatch.exe)</li><li>Согласиться на замену файлов</li></ol></details>' },
+      { type: 'voice', status: 'done', author: 'NikiStudio', version: 'Эп. 1–3', updated: '2026-07',
+        name: 'NikiStudio — Эпизоды 1–3',
+        body: '<p><strong>Что озвучено:</strong> Полный профессиональный дубляж эпизодов 1, 2 и 3</p><p>Работа над следующими эпизодами продолжается.</p>',
+        links: '<a href="https://www.zoneofgames.ru/files/11155.html" class="btn" target="_blank" rel="noopener">Zone of Games (1–3)</a><a href="https://www.playground.ru/dispatch/file/dispatch_rusifikator_zvuka_epizod_1_nikistudio-1813525" class="btn" target="_blank" rel="noopener">Playground — эп. 1</a><a href="https://www.playground.ru/dispatch/file/dispatch_rusifikator_zvuka_epizod_2_nikistudio-1840434" class="btn" target="_blank" rel="noopener">Эп. 2</a>' },
       { type: 'voice', status: 'done', author: 'Studii Net', version: 'Эп. 1', updated: '2026-04',
         name: 'Studii Net — Эпизод 1',
         body: '<p><strong>Что озвучено:</strong> Первый эпизод, профессиональный состав</p>',
-        links: '<a href="https://www.playground.ru/dispatch/file/dispatch_russkaya_ozvuchka_epizod_1_by_studii_net-1839172" class="btn" target="_blank" rel="noopener">Playground</a>',
-        install: '<details class="install"><summary>Краткая установка</summary><ol><li>Скачать архив</li><li>Файлы Ep101Cinematics.bank и Shift01VO.bank положить в Dispatch\\Content\\FMOD\\Desktop</li></ol></details>' }
+        links: '<a href="https://www.playground.ru/dispatch/file/dispatch_russkaya_ozvuchka_epizod_1_by_studii_net-1839172" class="btn" target="_blank" rel="noopener">Playground</a>' },
+      { type: 'voice', status: 'done', author: 'SuddenFeliciano', version: 'v1.0.16250', updated: '2025-11',
+        name: 'Нейро-озвучка — все 8 эпизодов',
+        body: '<p><strong>Что озвучено:</strong> Почти все диалоги всех 8 эпизодов через нейросеть (короткие/тихие реплики могли быть пропущены фильтром)</p><p><strong>Важно:</strong> AI-перевод, возможны неточности. Качество ниже студийного дубляжа.</p>',
+        links: '<a href="https://www.playground.ru/dispatch/file/dispatch_rusifikator_zvuka_v1_0_16250-1804209" class="btn" target="_blank" rel="noopener">Playground</a>' }
     ]
   },
   {
@@ -160,8 +157,7 @@ const games = [
       { type: 'both', status: 'done', author: 'GamesVoice', version: '1.3+', updated: '2026-09',
         name: 'GamesVoice — Полный дубляж и песни',
         body: '<p><strong>Что озвучено:</strong> Полная профессиональная озвучка; все 20 песен перепеты на русском</p>',
-        links: '<a href="https://www.gamesvoice.ru/alanwake2" class="btn" target="_blank" rel="noopener">GamesVoice</a><a href="https://www.playground.ru/alan_wake_2/file/rus" class="btn" target="_blank" rel="noopener">Playground</a>',
-        install: '<details class="install"><summary>Краткая установка</summary><ol><li>Скачать с сайта GamesVoice</li><li>Запустить установщик и указать папку с игрой</li></ol></details>' }
+        links: '<a href="https://www.gamesvoice.ru/alanwake2" class="btn" target="_blank" rel="noopener">GamesVoice</a><a href="https://www.playground.ru/alan_wake_2/file/rus" class="btn" target="_blank" rel="noopener">Playground</a>' }
     ]
   },
   {
@@ -184,8 +180,7 @@ const games = [
       { type: 'voice', status: 'done', author: 'Сообщество', version: '2.x', updated: '2025-05',
         name: 'Нейро-дубляж (сообщество)',
         body: '<p><strong>Что озвучено:</strong> Реплики NPC и боссов — качество разное, смотрите актуальные файлы на Playground</p>',
-        links: '<a href="https://www.playground.ru/elden_ring/file/rus" class="btn" target="_blank" rel="noopener">Playground — русики</a><a href="https://www.nexusmods.com/eldenring" class="btn" target="_blank" rel="noopener">Nexus</a>',
-        install: '<details class="install"><summary>Краткая установка</summary><ol><li>Установить Mod Engine 2</li><li>Следовать инструкции конкретного мода</li></ol></details>' }
+        links: '<a href="https://www.playground.ru/elden_ring/file/rus" class="btn" target="_blank" rel="noopener">Playground — русики</a><a href="https://www.nexusmods.com/eldenring" class="btn" target="_blank" rel="noopener">Nexus</a>' }
     ]
   }
 ];
