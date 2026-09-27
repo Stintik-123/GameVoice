@@ -26,7 +26,6 @@
   color: transparent !important; font-size: 0 !important; overflow: hidden;
 }
 
-/* Hero is always dark artwork/video — lock light text regardless of theme */
 .hero,
 .hero .hero-title,
 .hero .hero-desc,
@@ -51,7 +50,6 @@
   border-color: var(--hero-red) !important;
 }
 
-/* Hero action buttons: always high-contrast on dark hero */
 .hero-actions .btn {
   border-color: rgba(239, 230, 211, .55) !important;
   background: rgba(239, 230, 211, .96) !important;
@@ -80,4 +78,14 @@
 
 @media (max-width: 899px) {
   .hero-video { display: none !important; }
+}
+
+/* Select chevron visible in dark theme */
+[data-theme="dark"] .selects select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23efe6d3' stroke-width='2.5' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .selects select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23efe6d3' stroke-width='2.5' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  }
 }
