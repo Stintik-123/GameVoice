@@ -433,8 +433,6 @@ main > section + section {
   position: static;
 }
 
-/* Chips, selects, view-toggle and reset button are styled in components.css */
-
 .catalog-wrap { overflow: hidden; }
 
 .top10-list {
@@ -606,6 +604,7 @@ main > section + section {
 }
 
 .fab-add {
+  display: none;
   position: fixed;
   bottom: 24px;
   right: 24px;
@@ -621,10 +620,15 @@ main > section + section {
   z-index: 90;
   box-shadow: 3px 3px 0 var(--ink);
   transition: transform .15s, box-shadow .15s;
-  display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
+}
+
+@media (max-width: 900px) {
+  .fab-add {
+    display: flex;
+  }
 }
 
 .fab-add:hover {
