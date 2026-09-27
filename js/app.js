@@ -123,7 +123,9 @@
     if (count) count.textContent = 'найдено: ' + list.length + ' из ' + games.length;
     if (wrap) {
       if (list.length === 0) {
-        wrap.innerHTML = '<div class="empty-state"><p>Ничего не найдено по запросу «' + GV.escapeHTML(state.query || '') + '»</p><p>Попробуйте другое название или сбросьте фильтры</p></div>';
+        wrap.innerHTML = state.query
+          ? '<div class="empty-state"><p>Ничего не найдено по запросу «' + GV.escapeHTML(state.query) + '»</p><p>Попробуйте другое название или сбросьте фильтры</p></div>'
+          : '<div class="empty-state"><p>Ничего не найдено</p><p>Сбросьте фильтры или измените параметры поиска</p></div>';
       } else {
         wrap.innerHTML = list.map(function (g, i) { return GV.cardHTML(g, state.favorites.has(g.id), i, state.query); }).join('');
       }
