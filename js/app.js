@@ -424,6 +424,10 @@
     });
   }
 
+  function openAbout() {
+    openModal($('#aboutModal'));
+  }
+
   function wireModals() {
     document.addEventListener('click', function (e) {
       if (e.target.closest('[data-close]')) { closeAllModals(); return; }
@@ -433,6 +437,10 @@
     const faqM = $('#faqBtnMobile'); if (faqM) faqM.addEventListener('click', function () { openModal($('#faqModal')); });
     const add = $('#addBtn'); if (add) add.addEventListener('click', function () { openModal($('#addModal')); });
     const addM = $('#addBtnMobile'); if (addM) addM.addEventListener('click', function () { openModal($('#addModal')); });
+    ['aboutBtn', 'aboutBtnMobile', 'aboutBtnFooter', 'aboutOpenBtn'].forEach(function (id) {
+      const el = $('#' + id);
+      if (el) el.addEventListener('click', function (e) { e.preventDefault(); openAbout(); });
+    });
   }
 
   function wireAddForm() {
