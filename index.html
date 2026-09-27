@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>GameVoice — каталог русификаторов и озвучек</title>
-<meta name="description" content="GameVoice — структурированный каталог русских локализаций игр: кто делал, статус, что переведено и озвучено, инструкции по установке.">
+<meta name="description" content="GameVoice — структурированный каталог русских локализаций игр: кто делал, статус, что переведено и озвучено, статус и ссылки.">
 <meta name="theme-color" content="#0f0c0a" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#efe6d3" media="(prefers-color-scheme: light)">
 <meta property="og:title" content="GameVoice — русские локализации игр">
-<meta property="og:description" content="Каталог русификаторов и озвучек: статус, авторы, инструкции по установке.">
+<meta property="og:description" content="Каталог русификаторов и озвучек: статус, авторы, статус и ссылки.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:url" content="https://stintik-123.github.io/GameVoice/">
@@ -17,18 +17,18 @@
 <meta property="og:image:height" content="620">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GameVoice — русские локализации игр">
-<meta name="twitter:description" content="Каталог русификаторов и озвучек: статус, авторы, инструкции по установке.">
+<meta name="twitter:description" content="Каталог русификаторов и озвучек: статус, авторы, статус и ссылки.">
 <meta name="twitter:image" content="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_hero.jpg">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><text x='50' y='68' font-size='46' text-anchor='middle' fill='%23efe6d3' font-family='Courier%20New' font-weight='bold'>GV</text></svg>">
-<link rel="stylesheet" href="css/tokens.css?v=3">
-<link rel="stylesheet" href="css/base.css?v=3">
-<link rel="stylesheet" href="css/layout.css?v=3">
-<link rel="stylesheet" href="css/components.css?v=3">
-<link rel="stylesheet" href="css/covers.css?v=3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230a0a0a'/%3E%3Ctext x='50' y='68' font-size='44' text-anchor='middle' fill='%23efe6d3' font-family='Courier New,monospace' font-weight='700'%3EGV%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/tokens.css?v=4">
+<link rel="stylesheet" href="css/base.css?v=4">
+<link rel="stylesheet" href="css/layout.css?v=4">
+<link rel="stylesheet" href="css/components.css?v=4">
+<link rel="stylesheet" href="css/covers.css?v=4">
 </head>
 <body>
 
@@ -143,7 +143,7 @@
       <h2>О проекте</h2>
       <div class="stats-row" id="statsRow"></div>
       <p>Привет. Меня зовут <strong>Stintik-123</strong> — я соло-разработчик и делаю GameVoice в одиночку. Надоело, что русские озвучки и русификаторы разбросаны по всему интернету: Playground, Nexus, GitHub, чужие сайты… Здесь всё собрано в одном месте.</p>
-      <p>Я не хостю файлы — только навигация: кто делал, статус, ссылки, краткая установка. Избранное живёт только в твоём браузере.</p>
+      <p>Я не хостю файлы — только ссылки и статус: кто делал, что переведено, куда качать. Избранное хранится только в твоём браузере.</p>
       <p>Обновлять каталог одному тяжело. Если знаешь озвучку или перевод, которых здесь нет — нажми <strong>+</strong> и открой issue на GitHub. Это реально помогает сайту расти.</p>
     </div>
   </section>
@@ -203,7 +203,7 @@
   <div class="modal-card">
     <button class="modal-x" data-close type="button" aria-label="Закрыть">✕</button>
     <h3 id="faqTitle">Частые вопросы</h3>
-    <details><summary>Как установить русификатор?</summary><p>У каждого перевода своя инструкция — в карточке варианта, блок «Краткая установка».</p></details>
+    <details><summary>Как установить русификатор?</summary><p>Инструкция обычно есть на странице скачивания (Playground, GamesVoice и т.д.). Мы даём только ссылки.</p></details>
     <details><summary>Вы хостите файлы?</summary><p>Нет. Только навигация по публичным источникам.</p></details>
     <details><summary>Можно предложить игру?</summary><p>Да — кнопка «+» или «Предложить игру». Откроется issue на GitHub.</p></details>
   </div>
@@ -212,9 +212,9 @@
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <button class="fab-add" id="fabAdd" type="button" aria-label="Предложить игру">+</button>
 
-<script defer src="js/data.js?v=3"></script>
-<script defer src="js/steam-covers.js?v=3"></script>
-<script defer src="js/components.js?v=3"></script>
-<script defer src="js/app.js?v=3"></script>
+<script defer src="js/data.js?v=4"></script>
+<script defer src="js/steam-covers.js?v=4"></script>
+<script defer src="js/components.js?v=4"></script>
+<script defer src="js/app.js?v=4"></script>
 </body>
 </html>
