@@ -1,3 +1,7 @@
+/* hero accent locked to one red */
+:root, [data-theme], html {
+  --hero-red: #c1272d;
+}
 /* Steam covers + hero buttons + badges */
 .game-card-cover.has-cover { background-color: #111; }
 .game-card-cover.has-cover::before { opacity: 0; content: none; }
@@ -16,7 +20,7 @@
   padding: 3px 7px; border: 1px solid rgba(239,230,211,.45);
   background: rgba(10,10,10,.72); color: #efe6d3;
 }
-.card-badge.voice { border-color: var(--red); background: rgba(193,39,45,.88); color: #fff; }
+.card-badge.voice { border-color: var(--hero-red); background: rgba(193,39,45,.88); color: #fff; }
 .top-cover.has-cover, .mini-cover.has-cover {
   background-size: cover !important; background-position: center !important;
   color: transparent !important; font-size: 0 !important; overflow: hidden;
@@ -32,7 +36,7 @@
   color: #efe6d3 !important;
 }
 .hero .hero-meta b {
-  color: #e63946 !important;
+  color: var(--hero-red) !important;
 }
 .hero .hero-badge {
   color: #efe6d3 !important;
@@ -43,8 +47,8 @@
   background: transparent !important;
 }
 .hero .hero-dots button[aria-selected="true"] {
-  background: #e63946 !important;
-  border-color: #e63946 !important;
+  background: var(--hero-red) !important;
+  border-color: var(--hero-red) !important;
 }
 
 /* Hero action buttons: always high-contrast on dark hero */
@@ -60,7 +64,7 @@
   box-shadow: 5px 5px 0 rgba(193, 39, 45, .75) !important;
 }
 .hero-actions .btn-primary {
-  background: #c1272d !important;
+  background: var(--hero-red) !important;
   color: #efe6d3 !important;
   border-color: rgba(239, 230, 211, .35) !important;
 }
@@ -69,12 +73,11 @@
   color: #fff !important;
 }
 .hero-actions .btn[aria-pressed="true"] {
-  background: #c1272d !important;
+  background: var(--hero-red) !important;
   color: #efe6d3 !important;
-  border-color: #c1272d !important;
+  border-color: var(--hero-red) !important;
 }
 
-/* Hide video layer on small screens (poster only) */
 @media (max-width: 899px) {
   .hero-video { display: none !important; }
 }
