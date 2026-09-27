@@ -1,7 +1,14 @@
 (function () {
   'use strict';
   var STEAM = {
-    cyberpunk: 1091500, bg3: 1086940, hogwarts: 990080, stalker2: 1643320
+    cyberpunk: 1091500,
+    bg3: 1086940,
+    hogwarts: 990080,
+    stalker2: 1643320,
+    expedition33: 1903340,
+    dispatch: 2592160,
+    alanswake2: 1902960,
+    eldenring: 1245620
   };
   function apply() {
     if (typeof games === 'undefined') return;
