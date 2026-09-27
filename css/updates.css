@@ -1,0 +1,100 @@
+/* updates + about scroll overrides */
+.modal {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+.modal.open {
+  align-items: flex-start !important;
+  padding-top: max(var(--sp-5, 16px), 4vh) !important;
+  padding-bottom: max(var(--sp-5, 16px), 4vh) !important;
+}
+.modal-card-about {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  max-height: 88vh;
+}
+.modal-card-about > .modal-x {
+  position: sticky !important;
+  top: 12px !important;
+  float: right;
+  margin: 12px 12px 0 0;
+  z-index: 5;
+  background: rgba(10, 10, 10, .75) !important;
+  color: #efe6d3 !important;
+  border-color: rgba(239, 230, 211, .4) !important;
+  box-shadow: none !important;
+}
+
+.updates-section {
+  padding: var(--sp-10, 40px) var(--sp-5, 16px);
+}
+.updates-card {
+  max-width: 720px;
+  margin: 0 auto;
+  border: 3px solid var(--ink);
+  background: var(--paper-2);
+  box-shadow: 6px 6px 0 var(--ink);
+  overflow: hidden;
+}
+.updates-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 3px solid var(--ink);
+  background: #0a0a0a;
+}
+.updates-body {
+  padding: var(--sp-5, 16px) var(--sp-6, 24px);
+}
+.updates-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2, 8px);
+  align-items: center;
+  margin-bottom: var(--sp-3, 12px);
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.updates-ver {
+  background: var(--red);
+  color: var(--paper);
+  border: 2px solid var(--ink);
+  padding: 4px 10px;
+}
+.updates-date { color: var(--ink-muted); }
+.updates-body h3 {
+  margin: 0 0 var(--sp-3, 12px);
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+.updates-body p {
+  margin: 0 0 var(--sp-3, 12px);
+  font-size: .95rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.updates-body p strong { color: var(--ink); }
+.updates-list {
+  margin: 0 0 var(--sp-4, 16px);
+  padding-left: 1.2em;
+  font-size: .92rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.updates-list li { margin-bottom: var(--sp-2, 8px); }
+.updates-list strong { color: var(--ink); }
+
+@media (max-width: 720px) {
+  .updates-photo { max-height: 220px; }
+  .updates-body { padding: var(--sp-4, 16px); }
+  .modal-card-about { max-height: 92vh; }
+}
