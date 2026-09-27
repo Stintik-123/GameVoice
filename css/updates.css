@@ -1,13 +1,15 @@
 /* updates + about scroll overrides */
-.modal {
-  overflow-y: auto !important;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
+.modal:not(.open) {
+  display: none !important;
 }
 .modal.open {
+  display: flex !important;
   align-items: flex-start !important;
   padding-top: max(var(--sp-5, 16px), 4vh) !important;
   padding-bottom: max(var(--sp-5, 16px), 4vh) !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 .modal-card-about {
   overflow-x: hidden !important;
