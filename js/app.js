@@ -478,7 +478,7 @@
   }
 
   function wireBurger() {
-    const btn = $('#menuBtn'), menu = $('#mobileMenu'), overlay = $('#menuOverlay');
+    const btn = $('#burgerBtn') || $('#menuBtn'), menu = $('#mobileMenu'), overlay = $('#menuOverlay');
     if (!btn || !menu) return;
     function close() {
       menu.classList.remove('open');
