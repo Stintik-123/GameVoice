@@ -81,7 +81,7 @@ const games = [
     platforms: ['steam', 'xbox'],
     cover: null,
     tags: ['сталкер', 'зона', 'выживание'],
-    trailerId: 'nAz9qlbl_8g',
+    trailerId: 'PKO4PL8Xzik',
     desc: 'Гибридные фанатские дубляжи — один из самых активных проектов локализации.',
     translations: [
       { type: 'text', status: 'done', author: 'GSC / сообщество',
@@ -107,7 +107,7 @@ const games = [
     platforms: ['steam', 'ps', 'xbox'],
     cover: null,
     tags: ['пошаговая', 'франция', 'сюжет'],
-    trailerId: 'HYyWMxLW7nM',
+    trailerId: 'ejgW-upPMgk',
     desc: 'Профессиональный дубляж GamesVoice — один из громких фанатских проектов 2026 года.',
     translations: [
       { type: 'both', status: 'done', author: 'GamesVoice', version: '1.5', updated: '2026-04',
@@ -129,7 +129,7 @@ const games = [
     platforms: ['steam', 'ps', 'xbox'],
     cover: null,
     tags: ['супергерои', 'интерактив', 'эпизоды'],
-    trailerId: 'FdULQSRuIdc',
+    trailerId: 'fTVgX7b1N8E',
     desc: 'Официальной русской озвучки нет. Есть профессиональные эпизодные дубляжи NikiStudio и Studii Net, а также полный нейро-дубляж всех 8 эпизодов.',
     translations: [
       { type: 'text', status: 'done', author: 'AdHoc / сообщество',
@@ -181,6 +181,7 @@ const games = [
     platforms: ['steam', 'ps'],
     cover: null,
     tags: ['хоррор', 'психологический', 'ремейк'],
+    trailerId: '1WEw7jec_mc',
     desc: 'Официальный текст. Полный профессиональный дубляж от GamesVoice.',
     translations: [
       { type: 'text', status: 'done', author: 'Bloober Team / Konami',
@@ -202,6 +203,7 @@ const games = [
     platforms: ['steam', 'ps', 'xbox'],
     cover: null,
     tags: ['средневековье', 'история', 'реализм'],
+    trailerId: '7ynJN-HejlY',
     desc: 'Официальный текст. Нейросетевой дубляж и закадр от SynthVoiceRu — 261 тысяча реплик.',
     translations: [
       { type: 'text', status: 'done', author: 'Warhorse Studios',
@@ -223,6 +225,7 @@ const games = [
     platforms: ['steam', 'epic', 'ps', 'xbox'],
     cover: null,
     tags: ['вестерн', 'открытый мир', 'сюжет'],
+    trailerId: 'eaW0tYpxyp0',
     desc: 'Официальный текст. Актёрский фанатский дубляж в разработке — уже доступно демо.',
     translations: [
       { type: 'text', status: 'done', author: 'Rockstar Games',
@@ -248,6 +251,7 @@ const games = [
     platforms: ['steam', 'epic', 'ps', 'xbox'],
     cover: null,
     tags: ['открытый мир', 'кооператив', 'криминал'],
+    trailerId: 'QkkoHAzjnUs',
     desc: 'Официальный текст. Фанатские озвучки сюжета существуют — качество и покрытие разные.',
     translations: [
       { type: 'text', status: 'done', author: 'Rockstar Games',
@@ -269,6 +273,7 @@ const games = [
     platforms: ['steam'],
     cover: null,
     tags: ['классика', 'научная фантастика', 'сюжет'],
+    trailerId: 'kWnzRGD9NDE',
     desc: 'Официальный текст. Легендарная озвучка издателя «Бука» возвращается в игру силами сообщества.',
     translations: [
       { type: 'text', status: 'done', author: 'Valve / Бука',
