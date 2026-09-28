@@ -452,22 +452,12 @@
     }
   }
 
-  function wireFab() {
-    const fab = $('#fabAdd');
-    if (!fab) return;
-    fab.addEventListener('click', function () { openModal($('#addModal')); });
-  }
-
-  function wireMenu() {
-    const btn = $('#menuBtn'), menu = $('#mobileMenu');
-    if (!btn || !menu) return;
-    btn.addEventListener('click', function () {
-      const open = menu.classList.toggle('open');
-      btn.setAttribute('aria-expanded', String(open));
-    });
-    menu.addEventListener('click', function (e) {
-      if (e.target.closest('a, button')) { menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
-    });
+  function updateThemeBtn() {
+    const btn = $('#themeBtn');
+    if (!btn) return;
+    const t = document.documentElement.getAttribute('data-theme') || 'dark';
+    btn.textContent = t === 'light' ? '☀' : '☾';
+    btn.setAttribute('aria-label', t === 'light' ? 'Тёмная тема' : 'Светлая тема');
   }
 
   function wireTheme() {
@@ -475,11 +465,56 @@
     const root = document.documentElement;
     const saved = store.get('gv_theme', null);
     if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+    else if (!root.getAttribute('data-theme')) {
+      root.setAttribute('data-theme', window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    }
+    updateThemeBtn();
     if (btn) btn.addEventListener('click', function () {
-      const cur = root.getAttribute('data-theme');
-      const next = cur === 'light' ? 'dark' : 'light';
-      root.setAttribute('data-theme', next);
-      store.set('gv_theme', next);
+      const cur = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', cur);
+      store.set('gv_theme', cur);
+      updateThemeBtn();
+    });
+  }
+
+  function wireBurger() {
+    const btn = $('#menuBtn'), menu = $('#mobileMenu'), overlay = $('#menuOverlay');
+    if (!btn || !menu) return;
+    function close() {
+      menu.classList.remove('open');
+      if (overlay) overlay.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    function open() {
+      menu.classList.add('open');
+      if (overlay) overlay.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    btn.addEventListener('click', function () {
+      if (menu.classList.contains('open')) close(); else open();
+    });
+    if (overlay) overlay.addEventListener('click', close);
+    menu.addEventListener('click', function (e) {
+      if (e.target.closest('a, button')) close();
+    });
+  }
+
+  function wireFabAdd() {
+    const fab = $('#fabAdd');
+    if (!fab) return;
+    fab.addEventListener('click', function () { openModal($('#addModal')); });
+  }
+
+  function wireHotkeys() {
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { closeAllModals(); return; }
+      if (e.key === '/' && !e.target.matches('input, textarea, select')) {
+        e.preventDefault();
+        const si = $('#searchInput');
+        if (si) si.focus();
+      }
     });
   }
 
@@ -488,13 +523,17 @@
     if (!id) return false;
     const g = gameById(id);
     if (!g) return false;
-    openDetails(id, true);
+    openDetails(g.id, false);
     return true;
   }
 
   function init() {
-    if (typeof games === 'undefined') return;
     populateFilters();
+    renderStats();
+    renderNews();
+    renderFavorites();
+    renderHistory();
+    renderCatalog();
     wireView();
     wireChips();
     wireSelects();
@@ -504,16 +543,11 @@
     wireModals();
     wireAddForm();
     wireHero();
-    wireFab();
-    wireMenu();
     wireTheme();
-    renderCatalog();
-    renderFavorites();
-    renderHistory();
-    renderStats();
-    renderNews();
+    wireBurger();
+    wireFabAdd();
+    wireHotkeys();
     if (!handleDeepLink()) renderHero(games[0]);
-    window.addEventListener('hashchange', handleDeepLink);
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
