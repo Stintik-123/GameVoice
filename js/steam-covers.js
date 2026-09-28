@@ -8,7 +8,12 @@
     expedition33: 1903340,
     dispatch: 2592160,
     alanswake2: 1902960,
-    eldenring: 1245620
+    eldenring: 1245620,
+    sh2: 2124490,
+    kcd2: 1771300,
+    rdr2: 1174180,
+    gtav: 271590,
+    hl2: 220
   };
   function apply() {
     if (typeof games === 'undefined') return;
