@@ -1,0 +1,16 @@
+name: link-check
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract URLs from data.js
+        run: grep -oE 'https?://[^"'\'' ]+' js/data.js | sort -u > urls.txt
+      - name: Run lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --max-concurrency 4 urls.txt
