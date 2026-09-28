@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://stintik-123.github.io/GameVoice/sitemap.xml
