@@ -117,7 +117,7 @@
       '</button>';
   }
 
-  function translationHTML(g, t, idx, userRating) {
+  function translationHTML(t) {
     return '<article class="translation-card">' +
       '<div class="t-head">' +
         '<div class="t-name">' + escapeHTML(t.name || '') + '</div>' +
