@@ -1,514 +1,266 @@
-<html>
-
+<!DOCTYPE html>
 <html lang="ru">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
 <title>GameVoice — каталог русификаторов и озвучек</title>
-
-<meta name="description" content="GameVoice — структурированный каталог русских локализаций игр: кто делал, статус, что переведено и озвучено, статус и ссылки.">
-
+<meta name="description" content="GameVoice — структурированный каталог русских локализаций игр: кто делал, что переведено и озвучено, статус и ссылки.">
 <meta name="theme-color" content="#0f0c0a" media="(prefers-color-scheme: dark)">
-
 <meta name="theme-color" content="#efe6d3" media="(prefers-color-scheme: light)">
-
 <meta property="og:title" content="GameVoice — русские локализации игр">
-
-<meta property="og:description" content="Каталог русификаторов и озвучек: статус, авторы, статус и ссылки.">
-
+<meta property="og:description" content="Каталог русификаторов и озвучек: кто делал, что переведено, статус и ссылки.">
 <meta property="og:type" content="website">
-
 <meta property="og:locale" content="ru_RU">
-
 <meta property="og:url" content="https://stintik-123.github.io/GameVoice/">
-
 <meta property="og:image" content="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_hero.jpg">
-
 <meta property="og:image:width" content="1920">
-
 <meta property="og:image:height" content="620">
-
 <meta name="twitter:card" content="summary_large_image">
-
 <meta name="twitter:title" content="GameVoice — русские локализации игр">
-
-<meta name="twitter:description" content="Каталог русификаторов и озвучек: статус, авторы, статус и ссылки.">
-
+<meta name="twitter:description" content="Каталог русификаторов и озвучек: кто делал, что переведено, статус и ссылки.">
 <meta name="twitter:image" content="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_hero.jpg">
-
 <link rel="manifest" href="manifest.webmanifest">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230a0a0a'/%3E%3Ctext x='50' y='68' font-size='44' text-anchor='middle' fill='%23efe6d3' font-family='Courier New,monospace' font-weight='700'%3EGV%3C/text%3E%3C/svg%3E">
-
-<link rel="stylesheet" href="css/tokens.css?v=6">
-
-<link rel="stylesheet" href="css/base.css?v=6">
-
-<link rel="stylesheet" href="css/layout.css?v=6">
-
-<link rel="stylesheet" href="css/components.css?v=6">
-
-<link rel="stylesheet" href="css/covers.css?v=6">
-
-<link rel="stylesheet" href="css/updates.css?v=6">
-
+<link rel="stylesheet" href="css/tokens.css?v=7">
+<link rel="stylesheet" href="css/base.css?v=7">
+<link rel="stylesheet" href="css/layout.css?v=7">
+<link rel="stylesheet" href="css/components.css?v=7">
+<link rel="stylesheet" href="css/covers.css?v=7">
+<link rel="stylesheet" href="css/updates.css?v=7">
 </head>
-
 <body>
 
-
 <header class="header">
-
   <div class="header-inner">
-
     <a href="./" class="logo" aria-label="GameVoice — на главную">
-
       <span class="logo-mark" aria-hidden="true">GV</span>
-
       <span class="logo-text">
-
         <span class="logo-name">GameVoice</span>
-
         <span class="logo-tagline">каталог русификаторов</span>
-
       </span>
-
     </a>
-
     <nav class="nav" aria-label="Основная навигация">
-
       <a href="#catalog" class="nav-link active">Каталог</a>
-
       <a href="#favoritesSection" class="nav-link">Избранное <span class="nav-count" id="favCount">0</span></a>
-
       <button type="button" class="nav-link" id="aboutBtn">О проекте</button>
-
       <button class="nav-link" id="faqBtn" type="button">FAQ</button>
-
     </nav>
-
     <div class="header-right">
-
       <div class="search">
-
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-
         <input type="search" id="searchInput" placeholder="Поиск игры, студии, тегов…" autocomplete="off" aria-label="Поиск">
-
         <button type="button" class="search-clear" id="searchClear" hidden aria-label="Очистить">×</button>
-
       </div>
-
       <button class="add-btn" id="addBtn" type="button">+ Добавить</button>
-
       <button class="icon-btn" id="themeBtn" type="button" aria-label="Сменить тему">🌙</button>
-
       <button class="burger" id="burgerBtn" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
-
     </div>
-
   </div>
-
   <div class="mobile-menu" id="mobileMenu" hidden>
-
     <a href="#catalog" class="mm-link">Каталог</a>
-
     <a href="#favoritesSection" class="mm-link">Избранное <span class="nav-count" data-favcount-mirror>0</span></a>
-
     <button type="button" class="mm-link" id="aboutBtnMobile">О проекте</button>
-
     <button class="mm-link" id="faqBtnMobile" type="button">FAQ</button>
-
     <button class="mm-link" id="addBtnMobile" type="button">+ Предложить игру</button>
-
   </div>
-
 </header>
-
 
 <main>
 
-
   <section class="hero" id="hero">
-
     <div class="hero-bg" id="heroBg"></div>
-
     <div class="hero-video" id="heroVideo" aria-hidden="true"></div>
-
     <div class="hero-overlay"></div>
-
     <div class="hero-content">
-
       <div class="hero-badge" id="heroBadge"></div>
-
       <h1 class="hero-title" id="heroTitle"></h1>
-
       <p class="hero-desc" id="heroDesc"></p>
-
       <div class="hero-meta" id="heroMeta"></div>
-
       <div class="hero-tags" id="heroTags"></div>
-
       <div class="hero-actions">
-
         <button class="btn btn-primary" id="heroTrailerBtn" type="button">▶ Трейлер</button>
-
         <button class="btn" id="gotoDetailsBtn" type="button">Варианты перевода ↓</button>
-
         <button class="btn" id="favBtn" type="button" aria-pressed="false">☆ В избранное</button>
-
       </div>
-
       <div class="hero-dots" id="heroDots" role="tablist" aria-label="Выбор игры"></div>
-
     </div>
-
   </section>
-
 
   <section id="catalog">
-
     <div class="section-header">
-
       <h2>Игры</h2>
-
       <span class="results-count" id="resultsCount" aria-live="polite"></span>
-
       <div class="header-controls">
-
         <div class="view-toggle" role="group" aria-label="Вид каталога">
-
           <button data-view="grid" class="active" type="button" title="Сетка" aria-label="Сетка">▦</button>
-
           <button data-view="list" type="button" title="Список" aria-label="Список">☰</button>
-
           <button data-view="carousel" type="button" title="Лента" aria-label="Лента">▭</button>
-
         </div>
-
       </div>
-
     </div>
-
     <div class="filters-bar">
-
       <div class="chips" id="chips">
-
         <button class="chip" data-chip="text" type="button">Текст</button>
-
         <button class="chip" data-chip="voice" type="button">Озвучка</button>
-
         <button class="chip" data-chip="both" type="button">Текст + озвучка</button>
-
       </div>
-
       <div class="selects">
-
         <select id="filterGenre" aria-label="Жанр"></select>
-
         <select id="filterStatus" aria-label="Статус"></select>
-
         <select id="sortBy" aria-label="Сортировка"></select>
-
         <button class="btn-reset" id="resetFilters" type="button">Сброс</button>
-
       </div>
-
     </div>
-
     <div class="catalog-wrap" id="catalogWrap" data-view="grid">
-
       <div class="carousel" id="carousel"></div>
-
     </div>
-
   </section>
-
 
   <section class="details-section" id="details">
-
     <h2 class="details-title" id="detailsTitle">Варианты локализации</h2>
-
     <div class="translations" id="translationsList"></div>
-
   </section>
-
 
   <section class="mini-section" id="favoritesSection">
-
     <div class="section-header"><h2>Избранное</h2></div>
-
     <div class="mini-grid" id="favoritesGrid"></div>
-
   </section>
-
 
   <section class="mini-section" id="historySection">
-
     <div class="section-header"><h2>Недавно смотрели</h2></div>
-
     <div class="mini-grid" id="historyGrid"></div>
-
   </section>
-
 
   <section class="updates-section" id="updates">
-
-    <div class="section-header"><h2>Дневник Разработки</h2></div>
-
+    <div class="section-header"><h2>Дневник разработки</h2></div>
     <article class="updates-card">
-
       <img class="updates-photo" src="images/IMG_20260927_113513_752.jpg" alt="GameVoice 1.0" width="720" height="400" loading="lazy">
-
       <div class="updates-body">
-
         <div class="updates-meta">
-
           <span class="updates-ver">v1.0</span>
-
-          <span class="updates-date">Сентябрь 2026</span>
-
+          <span class="updates-date">сентябрь 2026</span>
         </div>
-
         <h3>Первый публичный выпуск</h3>
-
-        <p>Спасибо, что заглянул на GameVoice. Это первый релиз, и я очень надеюсь что это хоть кто нибудь прочитает и сайт будет хоть кому нибудь нужен. </p>
-
-        <p>Перейдём к делу, этот раздел будет использоваться как дневник разработки, тут будут появляться новости что изменилось на сайте а также возможно иногда и мои мысли.</p>
-
-         <p>Если сайт пригодился, расскажи друзьям или кинь ссылку на озвучку, которой здесь ещё нет. Даже одна issue на GitHub сильно помогает.</p>
-        <ul class="updates-list">
-
-        </ul>
-
-        <p><em><!-- правь текст выше как угодно --></em></p>
-
+        <p>Спасибо, что заглянул на GameVoice. Это первый релиз — надеюсь, сайт будет хоть кому-нибудь полезен.</p>
+        <p>Перейдём к делу: этот раздел — дневник разработки. Здесь будут появляться заметки об изменениях на сайте, а иногда, возможно, и мои мысли.</p>
+        <p>Если сайт пригодился — расскажи друзьям или кинь ссылку на озвучку, которой здесь ещё нет. Даже одна issue на GitHub сильно помогает.</p>
       </div>
-
     </article>
-
   </section>
-
 
   <section class="about-section" id="about">
-
     <div class="about-inner">
-
       <h2>О проекте</h2>
-
       <div class="stats-row" id="statsRow"></div>
-
-      <p>Привет. Меня зовут <strong>Stintik-123</strong> — буду рад знакомству, если хочешь узнать больше о GameVoice нажми кнопку "Подробнее о проекте"</p>
-
+      <p>Привет. Меня зовут <strong>Stintik-123</strong> — соло-разработчик. Если хочешь узнать больше о GameVoice, жми «Подробнее о проекте».</p>
       <p>
-
         <button type="button" class="btn btn-primary" id="aboutOpenBtn">Подробнее о проекте</button>
-
       </p>
-
     </div>
-
   </section>
-
 
 </main>
 
-
 <footer class="footer">
-
   <div class="footer-inner">
-
     <div class="footer-top">
-
       <a href="./" class="logo"><span class="logo-mark">GV</span><span class="logo-text"><span class="logo-name">GameVoice</span></span></a>
-
       <nav class="footer-nav">
-
         <a href="#catalog">Каталог</a>
-
         <button type="button" class="footer-about-btn" id="aboutBtnFooter">О проекте</button>
-
         <a href="https://github.com/Stintik-123/GameVoice" target="_blank" rel="noopener">GitHub</a>
-
       </nav>
-
     </div>
-
     <p>Каталог русификаторов · самиздат · 2026</p>
-
-    <p class="footer-note">Не связаны с правообладателями. Все торговые марки принадлежат их владельцам. Ссылки ведут на сторонние ресурсы — используйте на свой страх и риск.</p>
-
+    <p class="footer-note">Сайт не связан с правообладателями. Все торговые марки принадлежат их владельцам. Ссылки ведут на сторонние ресурсы — используй на свой страх и риск.</p>
   </div>
-
 </footer>
 
-
 <div class="modal modal-video" id="trailerModal" role="dialog" aria-modal="true" aria-label="Трейлер">
-
   <div class="video-card">
-
     <div class="video-head">
-
       <h3 id="trailerTitle">Трейлер</h3>
-
       <button class="modal-x" data-close type="button" aria-label="Закрыть">✕</button>
-
     </div>
-
     <div id="videoTabs"></div>
-
     <div id="videoFrame"></div>
-
   </div>
-
 </div>
-
 
 <div class="modal" id="addModal" role="dialog" aria-modal="true" aria-labelledby="addModalTitle">
-
   <div class="modal-card">
-
     <button class="modal-x" data-close type="button" aria-label="Закрыть">✕</button>
-
     <h3 id="addModalTitle">Предложить игру</h3>
-
     <p class="modal-sub">Откроется issue на GitHub.</p>
-
     <form id="addForm">
-
       <label>Название *<input name="title" required placeholder="Diablo IV"></label>
-
       <label>Тип
-
         <select name="type">
-
           <option value="text">Текст</option>
-
           <option value="voice">Озвучка</option>
-
           <option value="both">Текст + озвучка</option>
-
           <option value="subtitles">Субтитры</option>
-
         </select>
-
       </label>
-
       <label>Автор / студия<input name="author" placeholder="GamesVoice…"></label>
-
       <label>Ссылка<input name="url" type="url" placeholder="https://…"></label>
-
       <label>Комментарий<textarea name="comment" rows="3"></textarea></label>
-
       <button type="submit" class="btn btn-primary full">Создать issue</button>
-
     </form>
-
   </div>
-
 </div>
-
 
 <div class="modal" id="faqModal" role="dialog" aria-modal="true" aria-labelledby="faqTitle">
-
   <div class="modal-card">
-
     <button class="modal-x" data-close type="button" aria-label="Закрыть">✕</button>
-
     <h3 id="faqTitle">Частые вопросы</h3>
-
-    <details><summary>Как установить русификатор?</summary><p>Инструкция обычно есть на странице скачивания (Playground, GamesVoice и т.д.). Мы даём только ссылки.</p></details>
-
-    <details><summary>Вы хостите файлы?</summary><p>Нет. Только навигация по публичным источникам.</p></details>
-
+    <details><summary>Как установить русификатор?</summary><p>Инструкция обычно есть на странице скачивания (Playground, GamesVoice и т.д.). Я даю только ссылки.</p></details>
+    <details><summary>На сайте лежат файлы русификаторов?</summary><p>Нет. Только навигация по публичным источникам.</p></details>
     <details><summary>Можно предложить игру?</summary><p>Да — кнопка «+» или «Предложить игру». Откроется issue на GitHub.</p></details>
-
   </div>
-
 </div>
 
-
 <div class="modal" id="aboutModal" role="dialog" aria-modal="true" aria-labelledby="aboutModalTitle">
-
   <div class="modal-card modal-card-about">
-
     <button class="modal-x" data-close type="button" aria-label="Закрыть">✕</button>
 
-
     <div class="about-hero">
-
       <img class="about-photo" src="images/1000009865.jpg" alt="Stintik-123" width="640" height="360" loading="lazy">
-
       <div class="about-hero-text">
-
         <p class="about-kicker">GameVoice · 2026</p>
-
         <h3 id="aboutModalTitle">GameVoice</h3>
-
-        <p class="about-lead">Привет чумба, добро пожаловать на мой сайт GameVoice, тут ты можешь найти ссылку на русификатор любой из игр.</p>
-
+        <p class="about-lead">Привет! Это GameVoice — каталог русских озвучек и русификаторов: кто делал, что переведено и куда качать.</p>
       </div>
-
     </div>
-
 
     <div class="about-body">
 
-
       <h4>Кто я такой?</h4>
+      <p>Меня зовут <strong>Stintik-123</strong> (либо Stintik_Official) — я соло-разработчик, и сайты для меня это хобби, которым я занимаюсь в свободное время. Нашёл ошибку или хочешь предложить игру? Пиши в Telegram: <strong>@Keb04w</strong>.</p>
 
-      <p>Меня зовут <strong>Stintik-123 (Ну либо Stintik_Official), вы также можете знать меня по моему проекту StintikVPN, я соло-разработчик, для меня создание сайтов это такое небольшое хобби которым я занимаюсь в свободное время, если вдруг захочешь мне написать чтобы сообщить о проблеме или что-то добавить на сайт то пиши в тг @Keb04w </strong>..</p>
-
-      <h4>Почему ты решился сделать этот сайт и зачем он был нужен?</h4>
-
-      <p>КРусские озвучки и русификаторы валяются по Playground, Nexus, GitHub, Telegram и другим. Искать каждый раз заново — боль. GameVoice собирает в одном месте: кто делал, статус, что именно переведено/озвучено и куда качать.</p>
-
-      </ul>
-
+      <h4>Зачем всё это</h4>
+      <p>Русские озвучки и русификаторы валяются по Playground, Nexus, GitHub, Telegram и чужим сайтам. Искать каждый раз заново — боль. GameVoice собирает их в одном месте: кто делал, статус, что именно переведено/озвучено и куда качать.</p>
 
       <h4>Как помочь</h4>
-
       <p>Обновлять каталог одному тяжело. Если знаешь озвучку или перевод, которых здесь нет — нажми <strong>+</strong> (или «Предложить игру») и открой issue на GitHub. Даже одна ссылка сильно помогает.</p>
 
-
       <p class="about-actions">
-
         <a class="btn btn-primary" href="https://github.com/Stintik-123/GameVoice" target="_blank" rel="noopener">GitHub</a>
-
         <button type="button" class="btn" data-close>Закрыть</button>
-
       </p>
-
     </div>
-
   </div>
-
 </div>
 
-
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
 <button class="fab-add" id="fabAdd" type="button" aria-label="Предложить игру">+</button>
 
-
-<script defer src="js/data.js?v=6"></script>
-
-<script defer src="js/steam-covers.js?v=6"></script>
-
-<script defer src="js/components.js?v=6"></script>
-
-<script defer src="js/app.js?v=6"></script>
-
+<script defer src="js/data.js?v=7"></script>
+<script defer src="js/steam-covers.js?v=7"></script>
+<script defer src="js/components.js?v=7"></script>
+<script defer src="js/app.js?v=7"></script>
 </body>
-
-</html> 
+</html>
