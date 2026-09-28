@@ -408,23 +408,6 @@
   color: var(--paper);
 }
 
-.rating-stars {
-  display: inline-flex;
-  gap: 2px;
-}
-
-.rating-stars button {
-  border: none;
-  background: none;
-  font-size: 1.2rem;
-  color: var(--line-strong);
-  padding: 0 2px;
-  transition: color .15s, transform .15s;
-}
-
-.rating-stars button:hover { transform: scale(1.15); }
-.rating-stars button.filled { color: var(--red); }
-
 .t-body {
   padding: var(--sp-4) var(--sp-5);
   color: var(--ink-soft);
@@ -768,7 +751,6 @@ details p {
 
   .modal-card { padding: var(--sp-5); box-shadow: 5px 5px 0 var(--red); }
   .mini-grid { grid-template-columns: 1fr; }
-  .news-grid { grid-template-columns: 1fr; }
   .stats-row { gap: var(--sp-6); }
 }
 mark {
@@ -846,13 +828,12 @@ mark {
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--ink-muted);
   margin: 0 0 var(--sp-2);
 }
 .about-hero-text h3 {
-  margin: 0 0 var(--sp-2);
+  margin: 0 0 var(--sp-3);
   font-size: 1.6rem;
-  line-height: 1.1;
 }
 .about-lead {
   margin: 0;
@@ -867,48 +848,29 @@ mark {
   font-family: var(--font-display);
   font-size: 1.1rem;
   margin: var(--sp-5) 0 var(--sp-2);
-  padding-bottom: 4px;
-  border-bottom: 2px solid var(--ink);
 }
 .about-body h4:first-child { margin-top: 0; }
 .about-body p {
   margin: 0 0 var(--sp-3);
   font-size: .92rem;
-  line-height: 1.65;
   color: var(--ink-soft);
-}
-.about-body p strong { color: var(--ink); }
-.about-list {
-  margin: 0 0 var(--sp-4);
-  padding-left: 1.2em;
-  font-size: .92rem;
   line-height: 1.6;
-  color: var(--ink-soft);
 }
-.about-list li { margin-bottom: var(--sp-2); }
-.about-list strong { color: var(--ink); }
 .about-actions {
   display: flex;
-  flex-wrap: wrap;
   gap: var(--sp-3);
-  margin-top: var(--sp-5) !important;
-  padding-top: var(--sp-4);
-  border-top: 1px dashed var(--line-2);
+  flex-wrap: wrap;
+  margin-top: var(--sp-5);
 }
 .footer-about-btn {
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--ink);
   background: none;
   border: none;
-  color: inherit;
-  font: inherit;
   cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 3px;
   padding: 0;
 }
 .footer-about-btn:hover { color: var(--red); }
-
-@media (max-width: 720px) {
-  .about-photo { max-height: 200px; }
-  .about-hero-text, .about-body { padding-left: var(--sp-4); padding-right: var(--sp-4); }
-  .about-hero-text h3 { font-size: 1.35rem; }
-}
