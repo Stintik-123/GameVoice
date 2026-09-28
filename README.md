@@ -12,33 +12,39 @@
 /
 ├── index.html              # Разметка, модалки, подключение шрифтов/скриптов (defer)
 ├── manifest.webmanifest    # PWA
+├── robots.txt
+├── sitemap.xml
+├── favicon.svg
+├── apple-touch-icon.png
 ├── css/
 │   ├── tokens.css          # Дизайн-токены: цвета, светлая/тёмная темы
 │   ├── base.css            # Reset, типографика, базовые состояния
 │   ├── layout.css          # Header, hero, секции, футер, адаптив
 │   ├── components.css      # Карточки, фильтры, модалки, тосты
 │   └── covers.css          # Steam-обложки, бейджи, герой-оверлеи
+├── images/
+│   └── og.png              # Open Graph 1200×630
 └── js/
     ├── data.js             # База: игры, варианты локализации, реальные ссылки
     ├── steam-covers.js     # Подстановка обложек/герой-картинок по Steam appid
-    ├── components.js       # GV.* — рендер HTML-компонентов (карточки, топ, новости)
-    └── app.js              # Логика: поиск, фильтры, избранное, рейтинг, hero
+    ├── components.js       # GV.* — рендер HTML-компонентов
+    └── app.js              # Логика: поиск, фильтры, избранное, hero
 ```
 
 ## Возможности
 
 - Поиск (`/`) по названию, студии, жанру, году и тегам с подсветкой совпадений
-- Фильтры: тип (чипы со счётчиками) / статус / платформа + сортировка
-  (рейтинг · дата обновления · год · число вариантов · алфавит), сброс в один клик
+- Фильтры: тип (чипы со счётчиками) / жанр / статус + сортировка
+  (дата обновления · год · число вариантов · алфавит), сброс в один клик
 - Виды каталога: сетка · список · лента (carousel), выбор запоминается
 - Избранное и история просмотров (localStorage)
-- Пользовательский рейтинг ★ для каждого варианта перевода
-- «Топ недели» и «Новости переводов» — строятся из данных каталога
 - Deep-link `#cyberpunk` / `#bg3` открывает карточку игры
-- Ротация hero-баннера + фоновый muted-трейлер YouTube (десктоп, не при reduced-motion)
+- Hero-баннер с ротацией и фоновым muted-трейлером YouTube (десктоп, не при reduced-motion)
 - Клавиши: `/` — поиск, `Esc` — закрыть модалку/меню
-- Модалки с автофокусом и возвратом фокуса; FAQ; предложение игры → issue на GitHub
+- Модалки с автофокусом, возвратом фокуса и focus trap
+- FAQ; предложение игры → issue на GitHub
 - Светлая/тёмная тема с учётом системной настройки; PWA-манифест
+- Fallback обложек (буква названия), если Steam-картинка недоступна
 
 ## Запуск
 
@@ -53,13 +59,13 @@ python3 -m http.server 8099
 ## Данные
 
 Все ссылки в `js/data.js` ведут на публичные страницы Playground, Nexus Mods,
-GamesVoice и Telegram. GameVoice **не хостит** файлы — только навигация.
+GamesVoice, Steam Workshop и Telegram. GameVoice **не хостит** файлы — только навигация.
 
 Поля игры: `id`, `title`, `subtitle`, `year`, `genre`, `developer`, `platforms`,
 `tags`, `trailerId`, `extraTrailers`, `desc`, `translations`.
 
 Поля перевода: `type` (text/voice/both/subtitles), `status` (done/progress/abandoned),
-`author`, `rating`, `version`, `updated` (YYYY-MM), `name`, `body`, `links`, `install`.
+`author`, `version`, `updated` (YYYY-MM или YYYY-MM-DD), `name`, `body`, `links`, `install`.
 
 Обложки и герой-фоны подгружаются автоматически из Steam CDN по appid
 (`js/steam-covers.js`); там же можно задать `g.cover` / `g.heroImage` вручную.
@@ -69,9 +75,4 @@ GamesVoice и Telegram. GameVoice **не хостит** файлы — толь�
 Логика — `js/app.js`, компоненты — `js/components.js`, стили — `css/*`.
 Сборки нет: правьте исходники и обновляйте страницу.
 
-## Планы
-
-- Реальный бэкенд для предложений и оценок
-- Страницы авторов
-- RSS
-- Автопроверка живости ссылок
+Еженедельная проверка ссылок из `js/data.js`: `.github/workflows/link-check.yml` (lychee).
