@@ -207,6 +207,7 @@
         btn.addEventListener('click', function () { renderHero(games[i]); startHeroCarousel(); });
       });
     }
+    const tb = $('#heroTrailerBtn'); if (tb) tb.hidden = !g.trailerId;
     if (isDesktopVideo) setHeroVideo(g); else clearHeroVideo();
     if (!fromCarousel) startHeroCarousel();
   }
@@ -451,86 +452,49 @@
     }
   }
 
-  function updateThemeBtn() {
-    const b = $('#themeBtn');
-    if (!b) return;
-    const cur = document.documentElement.dataset.theme;
-    const dark = cur === 'dark' || (!cur && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    b.textContent = dark ? '☀' : '🌙';
+  function wireFab() {
+    const fab = $('#fabAdd');
+    if (!fab) return;
+    fab.addEventListener('click', function () { openModal($('#addModal')); });
+  }
+
+  function wireMenu() {
+    const btn = $('#menuBtn'), menu = $('#mobileMenu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', function () {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+    menu.addEventListener('click', function (e) {
+      if (e.target.closest('a, button')) { menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+    });
   }
 
   function wireTheme() {
+    const btn = $('#themeBtn');
+    const root = document.documentElement;
     const saved = store.get('gv_theme', null);
-    if (saved) document.documentElement.dataset.theme = saved;
-    updateThemeBtn();
-    const b = $('#themeBtn');
-    if (!b) return;
-    b.addEventListener('click', function () {
-      const cur = document.documentElement.dataset.theme;
-      const sys = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const next = (cur === 'dark' || (!cur && sys)) ? 'light' : 'dark';
-      document.documentElement.dataset.theme = next;
+    if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+    if (btn) btn.addEventListener('click', function () {
+      const cur = root.getAttribute('data-theme');
+      const next = cur === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', next);
       store.set('gv_theme', next);
-      updateThemeBtn();
-    });
-  }
-
-  function wireBurger() {
-    const b = $('#burgerBtn'), m = $('#mobileMenu');
-    if (!b || !m) return;
-    b.addEventListener('click', function () {
-      const open = !m.classList.contains('open');
-      m.classList.toggle('open', open);
-      m.hidden = !open;
-      b.setAttribute('aria-expanded', String(open));
-    });
-    $$('.mobile-menu a, .mobile-menu button').forEach(function (el) {
-      el.addEventListener('click', function () {
-        m.classList.remove('open'); m.hidden = true; b.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-
-  function wireFabAdd() {
-    const b = $('#fabAdd');
-    if (!b) return;
-    b.addEventListener('click', function () {
-      const m = $('#addModal');
-      if (m) openModal(m);
-    });
-  }
-
-  function wireHotkeys() {
-    document.addEventListener('keydown', function (e) {
-      const tag = document.activeElement && document.activeElement.tagName;
-      if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') {
-        e.preventDefault();
-        const i = $('#searchInput'); if (i) i.focus();
-      } else if (e.key === 'Escape') {
-        closeAllModals();
-        const m = $('#mobileMenu');
-        if (m && m.classList.contains('open')) { m.classList.remove('open'); m.hidden = true; const b = $('#burgerBtn'); if (b) b.setAttribute('aria-expanded', 'false'); }
-        const i = $('#searchInput'); if (i && document.activeElement === i) i.blur();
-      }
     });
   }
 
   function handleDeepLink() {
-    const h = location.hash.replace('#', '');
-    if (!h) return false;
-    const g = gameById(h);
+    const id = (location.hash || '').replace(/^#/, '');
+    if (!id) return false;
+    const g = gameById(id);
     if (!g) return false;
-    openDetails(g.id, false);
+    openDetails(id, true);
     return true;
   }
 
   function init() {
+    if (typeof games === 'undefined') return;
     populateFilters();
-    renderStats();
-    renderNews();
-    renderFavorites();
-    renderHistory();
-    renderCatalog();
     wireView();
     wireChips();
     wireSelects();
@@ -540,11 +504,16 @@
     wireModals();
     wireAddForm();
     wireHero();
+    wireFab();
+    wireMenu();
     wireTheme();
-    wireBurger();
-    wireFabAdd();
-    wireHotkeys();
+    renderCatalog();
+    renderFavorites();
+    renderHistory();
+    renderStats();
+    renderNews();
     if (!handleDeepLink()) renderHero(games[0]);
+    window.addEventListener('hashchange', handleDeepLink);
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
