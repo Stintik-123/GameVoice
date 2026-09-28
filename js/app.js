@@ -218,7 +218,7 @@
     const list = $('#translationsList');
     const title = $('#detailsTitle');
     if (title) title.textContent = 'Варианты локализации — ' + g.title;
-    if (list) list.innerHTML = g.translations.map(function (t, idx) { return GV.translationHTML(g, t, idx, 0); }).join('');
+    if (list) list.innerHTML = g.translations.map(function (t) { return GV.translationHTML(t); }).join('');
     pushHistory(g.id);
     if (location.hash !== '#' + g.id) history.replaceState(null, '', '#' + g.id);
     renderHero(g);
