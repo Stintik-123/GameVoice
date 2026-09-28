@@ -181,7 +181,7 @@ const games = [
     platforms: ['steam', 'ps'],
     cover: null,
     tags: ['хоррор', 'психологический', 'ремейк'],
-    trailerId: '1WEw7jec_mc',
+    trailerId: 'FUNVlzGwW3A',
     desc: 'Официальный текст. Полный профессиональный дубляж от GamesVoice.',
     translations: [
       { type: 'text', status: 'done', author: 'Bloober Team / Konami',
