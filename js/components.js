@@ -39,10 +39,6 @@
     return (clean.charAt(0) || '?').toUpperCase();
   }
 
-  function ratingOf(g) {
-    return 0;
-  }
-
   function pluralVariants(n) {
     n = Math.abs(Number(n) || 0);
     var m = n % 100;
@@ -121,16 +117,6 @@
       '</button>';
   }
 
-  function topItemHTML(g, index) {
-    const coverCls = 'top-cover' + (g.cover ? ' has-cover' : '');
-    return '<li class="top-item" data-id="' + g.id + '" tabindex="0" role="button">' +
-      '<span class="top-num">' + (index + 1) + '</span>' +
-      '<span class="' + coverCls + '" style="' + coverStyle(g) + '">' + (g.cover ? '' : initialOf(g)) + '</span>' +
-      '<span class="top-info"><span class="top-title">' + escapeHTML(g.title) + '</span>' +
-      '<span class="top-sub">' + escapeHTML(g.developer) + ' · ' + pluralVariants(translationCount(g)) + '</span></span>' +
-      '</li>';
-  }
-
   function translationHTML(g, t, idx, userRating) {
     return '<article class="translation-card">' +
       '<div class="t-head">' +
@@ -159,39 +145,12 @@
       '<div class="stat"><span class="stat-num">' + done + '</span><span class="stat-label">готовых вариантов</span></div>';
   }
 
-  function newsHTML() {
-    const items = [];
-    games.forEach(function (g) {
-      (g.translations || []).forEach(function (t) {
-        if (!t.updated) return;
-        items.push({ game: g, tr: t, date: t.updated });
-      });
-    });
-    items.sort(function (a, b) { return b.date.localeCompare(a.date); });
-    const top = items.slice(0, 8);
-    if (!top.length) return '';
-    return top.map(function (it) {
-      return '<article class="news-card" data-id="' + it.game.id + '">' +
-        '<div class="news-top">' +
-          '<span class="news-kind ' + escapeHTML(it.tr.status) + '">' + escapeHTML(statusLabel(it.tr.status)) + '</span>' +
-          '<span class="news-date">' + escapeHTML(it.date) + '</span>' +
-        '</div>' +
-        '<div class="news-game">' + escapeHTML(it.game.title) + '</div>' +
-        '<div class="news-tr">' + escapeHTML(it.tr.name || '') + '</div>' +
-        '<div class="news-author">' + escapeHTML(it.tr.author || '') + '</div>' +
-        '</article>';
-    }).join('');
-  }
-
   window.GV = {
     coverStyle: coverStyle,
     cardHTML: cardHTML,
     miniCardHTML: miniCardHTML,
-    topItemHTML: topItemHTML,
     translationHTML: translationHTML,
     statsHTML: statsHTML,
-    newsHTML: newsHTML,
-    ratingOf: ratingOf,
     translationCount: translationCount,
     pluralVariants: pluralVariants,
     lastUpdated: lastUpdated,
