@@ -21,7 +21,7 @@
   background: rgba(10,10,10,.72); color: #efe6d3;
 }
 .card-badge.voice { border-color: var(--hero-red); background: rgba(193,39,45,.88); color: #fff; }
-.top-cover.has-cover, .mini-cover.has-cover {
+.mini-cover.has-cover {
   background-size: cover !important; background-position: center !important;
   color: transparent !important; font-size: 0 !important; overflow: hidden;
 }
