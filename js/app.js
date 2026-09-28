@@ -143,12 +143,6 @@
     });
   }
 
-  function renderNews() {
-    const grid = $('#newsGrid');
-    if (!grid || typeof GV.newsHTML !== 'function') return;
-    grid.innerHTML = GV.newsHTML();
-  }
-
   function renderFavorites() {
     const grid = $('#favoritesGrid');
     const section = $('#favoritesSection');
@@ -186,10 +180,10 @@
     if (title) title.textContent = g.title + (g.subtitle ? ' ' + g.subtitle : '');
     if (desc) desc.textContent = g.desc || '';
     if (meta) {
-      const p = (g.platforms || []).join(' · ').toUpperCase();
-      meta.innerHTML = '<span>' + g.genre + '</span><span>' + g.year + '</span><span>' + GV.pluralVariants(GV.translationCount(g)) + '</span>' + (p ? '<span>' + p + '</span>' : '');
+      const p = (g.platforms || []).map(function (x) { return GV.escapeHTML(String(x).toUpperCase()); }).join(' · ');
+      meta.innerHTML = '<span>' + GV.escapeHTML(g.genre) + '</span><span>' + GV.escapeHTML(g.year) + '</span><span>' + GV.pluralVariants(GV.translationCount(g)) + '</span>' + (p ? '<span>' + p + '</span>' : '');
     }
-    if (tags) tags.innerHTML = (g.tags || []).map(function (t) { return '<span>#' + t + '</span>'; }).join('');
+    if (tags) tags.innerHTML = (g.tags || []).map(function (t) { return '<span>#' + GV.escapeHTML(t) + '</span>'; }).join('');
     if (bg) {
       const img = g.heroImage || g.cover;
       bg.style.cssText = img ? 'background-image:url(' + img + ');background-size:cover;background-position:center;' : GV.coverStyle(g);
@@ -246,6 +240,12 @@
   }
 
   let lastFocused = null;
+  let modalKeydown = null;
+  function modalFocusables(m) {
+    return $$('a[href], button, input, [tabindex]:not([tabindex="-1"])', m).filter(function (el) {
+      return !el.disabled && el.getAttribute('aria-hidden') !== 'true';
+    });
+  }
   function openModal(m) {
     if (!m) return;
     lastFocused = document.activeElement;
@@ -253,9 +253,35 @@
     document.body.style.overflow = 'hidden';
     const f = m.querySelector('button, input, select, textarea, a[href]');
     if (f && f.focus) f.focus();
+    if (modalKeydown) document.removeEventListener('keydown', modalKeydown);
+    modalKeydown = function (e) {
+      if (e.key === 'Escape') {
+        document.removeEventListener('keydown', modalKeydown);
+        modalKeydown = null;
+        closeModal(m);
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const els = modalFocusables(m);
+      if (!els.length) return;
+      const first = els[0];
+      const last = els[els.length - 1];
+      if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      } else if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      }
+    };
+    document.addEventListener('keydown', modalKeydown);
   }
   function closeModal(m) {
     if (!m) return;
+    if (modalKeydown) {
+      document.removeEventListener('keydown', modalKeydown);
+      modalKeydown = null;
+    }
     m.classList.remove('open');
     if (m.id === 'trailerModal') { const f = $('#videoFrame'); if (f) f.innerHTML = ''; }
     if (!$$('.modal.open').length) document.body.style.overflow = '';
@@ -391,13 +417,13 @@
     document.addEventListener('click', function (e) {
       const fav = e.target.closest('[data-fav]');
       if (fav) { e.preventDefault(); e.stopPropagation(); toggleFavorite(fav.dataset.fav); return; }
-      const card = e.target.closest('.game-card[data-id], .top-item[data-id], .mini-card[data-id], .news-card[data-id]');
+      const card = e.target.closest('.game-card[data-id], .mini-card[data-id]');
       if (card) openDetails(card.dataset.id, true);
     });
     document.addEventListener('keydown', function (e) {
       if (e.key !== 'Enter' && e.key !== ' ') return;
       if (e.target.closest('[data-fav]')) return;
-      const card = e.target.closest('.game-card[data-id], .top-item[data-id]');
+      const card = e.target.closest('.game-card[data-id]');
       if (!card) return;
       e.preventDefault();
       openDetails(card.dataset.id, true);
@@ -452,28 +478,21 @@
     }
   }
 
-  function updateThemeBtn() {
-    const btn = $('#themeBtn');
-    if (!btn) return;
-    const t = document.documentElement.getAttribute('data-theme') || 'dark';
-    btn.textContent = t === 'light' ? '☀' : '☾';
-    btn.setAttribute('aria-label', t === 'light' ? 'Тёмная тема' : 'Светлая тема');
-  }
-
   function wireTheme() {
     const btn = $('#themeBtn');
-    const root = document.documentElement;
+    if (!btn) return;
+    const apply = function (t) {
+      document.documentElement.setAttribute('data-theme', t);
+      btn.textContent = t === 'dark' ? '🌙' : '☀️';
+      store.set('gv_theme', t);
+    };
     const saved = store.get('gv_theme', null);
-    if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
-    else if (!root.getAttribute('data-theme')) {
-      root.setAttribute('data-theme', window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-    }
-    updateThemeBtn();
-    if (btn) btn.addEventListener('click', function () {
-      const cur = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-      root.setAttribute('data-theme', cur);
-      store.set('gv_theme', cur);
-      updateThemeBtn();
+    if (saved) apply(saved);
+    else if (window.matchMedia('(prefers-color-scheme: dark)').matches) apply('dark');
+    else apply('light');
+    btn.addEventListener('click', function () {
+      const cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      apply(cur);
     });
   }
 
@@ -509,8 +528,8 @@
 
   function wireHotkeys() {
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') { closeAllModals(); return; }
-      if (e.key === '/' && !e.target.matches('input, textarea, select')) {
+      if (e.key === 'Escape') closeAllModals();
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
         const si = $('#searchInput');
         if (si) si.focus();
@@ -523,14 +542,13 @@
     if (!id) return false;
     const g = gameById(id);
     if (!g) return false;
-    openDetails(g.id, false);
+    openDetails(id, false);
     return true;
   }
 
   function init() {
     populateFilters();
     renderStats();
-    renderNews();
     renderFavorites();
     renderHistory();
     renderCatalog();
