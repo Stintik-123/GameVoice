@@ -1,0 +1,2779 @@
+{
+ "checked": "2026-11-10T11:42:15.794Z",
+ "total": 462,
+ "alive": 461,
+ "links": {
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/": {
+   "ok": false,
+   "status": 404,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:46.987Z"
+  },
+  "https://www.nintendo.com/us/store/products/kuznetsk-1997-detective-visual-novel-switch/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:47.026Z"
+  },
+  "https://vkplay.ru/play/game/kuznetsk1997/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:47.028Z"
+  },
+  "https://vkplay.ru/play/game/2007zelik/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:47.079Z"
+  },
+  "https://store.steampowered.com/app/2013120/1997/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:47.151Z"
+  },
+  "https://store.steampowered.com/app/2761160/2007": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:47.195Z"
+  },
+  "https://gamesvoice.ru/product/1997": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:47.289Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/APTaleI_GV_Rus-v1.0.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:47.299Z"
+  },
+  "https://gamesvoice.ru/product/2007": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:47.488Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/APTaleR_GV_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:47.528Z"
+  },
+  "https://disk.yandex.ru/d/Wgd3-4sQ_wTEcA": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:47.580Z"
+  },
+  "https://store.steampowered.com/app/752590/A_Plague_Tale_Innocence/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:47.590Z"
+  },
+  "https://cloud.mail.ru/public/179L/4P8wh8V2v": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:47.597Z"
+  },
+  "https://gamesvoice.ru/product/innocence": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:47.744Z"
+  },
+  "https://drive.google.com/file/d/1DNtC1cML4Af3nKbW79oijJEkecHRML54/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:47.912Z"
+  },
+  "https://store.steampowered.com/app/1182900/A_Plague_Tale_Requiem/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:48.012Z"
+  },
+  "https://gamesvoice.ru/product/requiem": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:48.063Z"
+  },
+  "https://cloud.mail.ru/public/WdcB/LbmZW1zWU": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:48.080Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/Agony_GV_VO_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:48.098Z"
+  },
+  "https://disk.yandex.ru/d/ERvW6_P7Mzdl-Q": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:48.246Z"
+  },
+  "https://www.xbox.com/ru-ru/games/store/kuznetsk-1997-detective-visual-novel/9pjtgtk447l0": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:48.331Z"
+  },
+  "https://gamesvoice.ru/product/agony": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:48.488Z"
+  },
+  "https://store.steampowered.com/app/487720/Agony/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:48.519Z"
+  },
+  "https://drive.google.com/file/d/1sQy9SGnGgjbsRWskEKA0NhR1ZM4U03Ep/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:48.562Z"
+  },
+  "https://cloud.mail.ru/public/HgJf/Z2KcCmp2c": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:48.571Z"
+  },
+  "https://www.epicgames.com/store/ru/p/alan-wake-remastered": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:41:48.693Z"
+  },
+  "https://disk.yandex.ru/d/c1RjLe4fIZcAiQ": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:48.698Z"
+  },
+  "https://drive.google.com/drive/folders/1wlbV7iPFkbG22Hl7-t6h4lRUyBLziDQq": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:48.831Z"
+  },
+  "https://cloud.mail.ru/public/ZubT/XP6wJZih6": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:48.902Z"
+  },
+  "https://disk.yandex.ru/d/IbM4DhT4T2tnIQ": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:48.912Z"
+  },
+  "https://store.steampowered.com/app/108710/Alan_Wake/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:49.028Z"
+  },
+  "https://www.playground.ru/alan_wake_2/file/alan_wake_2_rusifikator_teksta_i_zvuka_v1_2_gamesvoice-1765021": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:49.116Z"
+  },
+  "https://gamesvoice.ru/product/alanwake": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:49.249Z"
+  },
+  "https://drive.google.com/drive/folders/1iZgzZFVC5jiv9uU5N5_RWswDLa0WuzGp?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:49.296Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/AW2_GV_Rus-v1.4.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:49.304Z"
+  },
+  "https://www.gamesvoice.ru/alanwake2": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:49.450Z"
+  },
+  "http://store.epicgames.com/p/alan-wake-2": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:41:49.474Z"
+  },
+  "https://disk.yandex.ru/d/7DpSsPJwB4DD7w": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:49.476Z"
+  },
+  "https://cloud.mail.ru/public/3FS7/NsxWBfhHt": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:49.567Z"
+  },
+  "https://drive.google.com/file/d/1UNEWJik88zFQofwYWTNX1VYdTxDphmGk/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:49.624Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/AWAN_GV_VO_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:49.650Z"
+  },
+  "https://gamesvoice.ru/product/alanwake2": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:49.721Z"
+  },
+  "https://www.epicgames.com/store/ru/product/alan-wake-american-nightmare/home": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:41:49.766Z"
+  },
+  "https://www.gog.com/ru/game/alan_wake": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:49.926Z"
+  },
+  "https://drive.google.com/file/d/100keVPZOl3zb5Wqhq81Bvwxqmt19sFb1/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:49.930Z"
+  },
+  "https://cloud.mail.ru/public/sVqK/HjW89iiGJ": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:49.952Z"
+  },
+  "https://store.steampowered.com/app/202750/Alan_Wakes_American_Nightmare/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:49.960Z"
+  },
+  "https://store.steampowered.com/app/406720/Alekhines_Gun/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:50.114Z"
+  },
+  "https://gamesvoice.ru/product/americannightmare": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:50.137Z"
+  },
+  "https://disk.yandex.ru/d/D2IYPzOBUtEppQ": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:50.139Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/AS1_GV_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:50.290Z"
+  },
+  "https://gamesvoice.ru/product/alekhines-gun": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:50.346Z"
+  },
+  "https://cloud.mail.ru/public/4Xc4/WXJyCqSWh": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:50.463Z"
+  },
+  "https://store.steampowered.com/app/2897700/Arizona_Sunshine_Remake/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:50.476Z"
+  },
+  "https://www.gog.com/game/alan_wakes_american_nightmare": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:50.546Z"
+  },
+  "https://gamesvoice.ru/product/arizonasunshine": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:50.572Z"
+  },
+  "https://drive.google.com/file/d/1Nwn5NXJNnWHOTh1Q6QDb4npOiZvTy6Aj/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:50.576Z"
+  },
+  "https://www.playground.ru/baldurs_gate_3/file/baldurs_gate_3_russkaya_ozvuchka_nejrosetevoj_dublyazh_v1_0_synthvoiceru-1698229": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:50.701Z"
+  },
+  "https://www.playground.ru/baldurs_gate_3/file/baldurs_gate_3_rusifikator_zvuka_nejrosetevoj_zakadr_v1_0_synthvoiceru-1698264": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:50.714Z"
+  },
+  "https://disk.yandex.ru/d/UnqBxqUKIZ4Yhg": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:50.799Z"
+  },
+  "https://cloud.mail.ru/public/4yb9/ZQB4yUTKm": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:51.025Z"
+  },
+  "https://store.steampowered.com/app/107100/Bastion/?l=russian": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:51.054Z"
+  },
+  "https://gamesvoice.ru/product/bastion": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:51.063Z"
+  },
+  "https://store.steampowered.com/app/1728610/Beyond_The_Darkness/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:51.175Z"
+  },
+  "https://www.epicgames.com/store/ru/p/black-book": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:41:51.182Z"
+  },
+  "https://disk.yandex.ru/d/W6cl9Mb43PqHiX?w=1": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:51.232Z"
+  },
+  "https://gamesvoice.ru/product/beyondthedarkness": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:51.238Z"
+  },
+  "https://drive.google.com/file/d/1H6oy2w9UPzE-QwT55YaCDMD72Joo7vHT/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:51.246Z"
+  },
+  "https://www.gog.com/game/bastion": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:51.374Z"
+  },
+  "https://store.steampowered.com/app/1138660/Black_Book/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:51.433Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/BM_GV_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:51.552Z"
+  },
+  "https://gamesvoice.ru/product/blackbook": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:51.601Z"
+  },
+  "https://www.nintendo.ru/-/-Nintendo-Switch/Black-Book-2013883.html": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:51.709Z"
+  },
+  "https://disk.yandex.ru/d/Rbs-hUi9bopLrA": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:51.854Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/BL2_GV_VO_Rus-v1.1.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:51.979Z"
+  },
+  "https://cloud.mail.ru/public/aaV6/dHiNKm2LU": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:52.006Z"
+  },
+  "https://gamesvoice.ru/product/blackmesa": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:52.033Z"
+  },
+  "https://store.steampowered.com/app/362890/Black_Mesa/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:52.035Z"
+  },
+  "https://www.gog.com/game/black_book": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:52.098Z"
+  },
+  "https://www.epicgames.com/store/ru/product/borderlands-2/homevv": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:41:52.169Z"
+  },
+  "https://cloud.mail.ru/public/vGwj/qUE6ASenN": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:52.428Z"
+  },
+  "https://disk.yandex.ru/d/QsC7gAfJxQILVw": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:52.446Z"
+  },
+  "https://gamesvoice.ru/product/borderlands2": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:52.498Z"
+  },
+  "https://store.steampowered.com/app/1630920/Bright_Lights_of_Svetlov/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:52.546Z"
+  },
+  "https://store.steampowered.com/sub/32849/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:52.675Z"
+  },
+  "https://store.playstation.com/ru-ru/product/EP4638-CUSA28263_00-7836518641928021/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:52.681Z"
+  },
+  "https://drive.google.com/file/d/1p5V0AY5SsSmbhOEerVw4T4cYG6yqGZ1J/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:52.775Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/Bulletstorm_VO_Rus_v1.2.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:52.816Z"
+  },
+  "https://store.steampowered.com/app/1998030/Bug_Dolls_Soviet_Project/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:52.859Z"
+  },
+  "https://gamesvoice.ru/product/svetlov": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:52.860Z"
+  },
+  "https://gamesvoice.ru/product/bugdolls": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:52.901Z"
+  },
+  "https://store.steampowered.com/app/501590/Bulletstorm_Full_Clip_Edition/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.093Z"
+  },
+  "https://store.steampowered.com/app/2852700/BUS_Bro_u_Survived/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.239Z"
+  },
+  "https://gamesvoice.ru/product/bulletstorm": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.254Z"
+  },
+  "https://gamesvoice.ru/product/bus": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.300Z"
+  },
+  "https://www.playground.ru/clair_obscur_expedition_33/file/clair_obscur_expedition_33_rusifikator_teksta_i_zvuka_v1_5_gamesvoice-1827268": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.306Z"
+  },
+  "https://drive.google.com/file/d/1vPV0JzCZpq6R93ffotxnEMditKsi3w3S/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.395Z"
+  },
+  "https://disk.yandex.ru/d/1SNIVz5WJ28GFA": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.441Z"
+  },
+  "https://www.microsoft.com/ru-ru/p/black-book/9n6tqn780v77?activetab=pivot:overviewtab": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.545Z"
+  },
+  "https://www.playground.ru/clair_obscur_expedition_33/file/clair_obscur_expedition_33_rusifikator_zvuka_nejrosetevoj_dublyazh_i_zakadrovaya_ozvuchka_synthvoiceru-1769524": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.557Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/CttS_GV_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.571Z"
+  },
+  "https://www.gamesvoice.ru/expedition33": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.659Z"
+  },
+  "https://store.epicgames.com/ru/p/close-to-the-sun": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:41:53.764Z"
+  },
+  "https://cloud.mail.ru/public/vDYx/2bZp3Tq5M": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.834Z"
+  },
+  "https://store.steampowered.com/app/968870/Close_to_the_Sun/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.836Z"
+  },
+  "https://drive.google.com/file/d/1kLPsa2YPsq_w9aHdvciHrn81-JTfCkqt/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.884Z"
+  },
+  "https://disk.yandex.ru/d/WVVtoUjFj1yvbQ": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.896Z"
+  },
+  "https://store.steampowered.com/app/464100/Codex_of_Victory/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:53.967Z"
+  },
+  "https://gamesvoice.ru/product/closetothesun": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.056Z"
+  },
+  "https://gamesvoice.ru/product/codexofvictory": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.084Z"
+  },
+  "https://www.epicgames.com/store/ru/p/control": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:41:54.112Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/Control_GV_Rus.exe": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.120Z"
+  },
+  "https://cloud.mail.ru/public/9pF5/YGrTK38gq": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.249Z"
+  },
+  "https://store.steampowered.com/app/870780/Control_Ultimate_Edition/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.260Z"
+  },
+  "https://t.me/DreamVoiceRu": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.348Z"
+  },
+  "https://drive.google.com/file/d/1s1luo7LfnubtXFz-tC8yzKOkYfnAmwL9/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.411Z"
+  },
+  "https://gamesvoice.ru/product/control": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.445Z"
+  },
+  "https://www.playground.ru/cyberpunk_2077/file/cyberpunk_2077_gibridnyj_dublyazh_dlya_dlc_phantom_liberty_v1_0_5_3_dreamvoice-1691775": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.487Z"
+  },
+  "https://www.playground.ru/cyberpunk_2077/file/cyberpunk_2077_nejro_dublyazh_dlya_dlc_phantom_liberty_v2_0_0_synthvoiceru-1683699": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.536Z"
+  },
+  "https://store.steampowered.com/app/2138330/Cyberpunk_2077_Prizrachnaya_svoboda/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.693Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/Dark_Souls_III_Rus_Snd_1.5.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.694Z"
+  },
+  "https://www.gog.com/game/control_ultimate_edition": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.816Z"
+  },
+  "https://www.gamesvoice.ru/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.860Z"
+  },
+  "https://disk.yandex.ru/d/jw9nGT0WvQdvEQ": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.879Z"
+  },
+  "https://gamesvoice.ru/product/cyberpunk-2077-phantom-liberty": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.886Z"
+  },
+  "https://cloud.mail.ru/public/TeXj/DYjkJSiLa": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:54.976Z"
+  },
+  "https://disk.yandex.ru/d/nPe0lmhz3KQwey": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.048Z"
+  },
+  "https://store.steampowered.com/app/374320/DARK_SOULS_III/?l=russian": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.091Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/DD_GV_Rus.exe": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.145Z"
+  },
+  "https://gamesvoice.ru/product/darksouls3": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.237Z"
+  },
+  "https://drive.google.com/file/d/1LOTcDagoCP8rig5ydlNiOvdX9st60OoW/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.299Z"
+  },
+  "https://cloud.mail.ru/public/pTP9/vTbzH5y3t": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.397Z"
+  },
+  "https://store.steampowered.com/app/262060/Darkest_Dungeon/?l=russian": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.418Z"
+  },
+  "https://disk.yandex.uz/d/kJoSmr8RQ-qpWg": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.431Z"
+  },
+  "https://drive.google.com/file/d/1ksYSUMPciAHH43zlru6Am2_XaY7R0N4G/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.491Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/Daylight_VO_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.529Z"
+  },
+  "https://gamesvoice.ru/product/darkestdungeon": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.539Z"
+  },
+  "https://store.steampowered.com/app/230840/Daylight/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.799Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/DSR_GV_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.808Z"
+  },
+  "https://gamesvoice.ru/product/daylight": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.870Z"
+  },
+  "https://drive.google.com/file/d/1C_hoJ-PiXYClrZx4ILIZLFyiuSUNMRbl/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.939Z"
+  },
+  "https://cloud.mail.ru/public/8P5K/AjympHjM5": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.958Z"
+  },
+  "https://disk.yandex.ru/d/lVC-z-G04rP4bg": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:55.987Z"
+  },
+  "https://disk.yandex.uz/d/NFnbk40A_onWGw": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.007Z"
+  },
+  "https://www.gog.com/game/darkest_dungeon": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.153Z"
+  },
+  "https://store.steampowered.com/app/1693980/Dead_Space/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.190Z"
+  },
+  "https://cloud.mail.ru/public/nEx7/4BWpVPcXB": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.217Z"
+  },
+  "https://gamesvoice.ru/product/deadspace": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.299Z"
+  },
+  "https://cloud.mail.ru/public/BYn4/jvkjcdpCw": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.422Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/DefendersOfArdania_s.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.467Z"
+  },
+  "https://drive.google.com/file/d/1-isGELwQgyd81Eo_zy6dED4ttt2SUFVP/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.498Z"
+  },
+  "https://disk.yandex.ru/d/qztCmFYHi2fw-w": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.515Z"
+  },
+  "https://gamesvoice.ru/product/dearesther": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.578Z"
+  },
+  "https://drive.google.com/drive/folders/1_b--lhlNTppJq4LL7ZabBqTsi3AIRAGJ?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.630Z"
+  },
+  "https://store.steampowered.com/app/520720/Dear_Esther_Landmark_Edition/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.712Z"
+  },
+  "https://gamesvoice.ru/product/doa": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.892Z"
+  },
+  "https://www.zoneofgames.ru/files/11155.html": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.909Z"
+  },
+  "https://store.steampowered.com/app/73060/Defenders_of_Ardania/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.952Z"
+  },
+  "https://www.playground.ru/dispatch/file/dispatch_rusifikator_zvuka_epizod_1_nikistudio-1813525": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.974Z"
+  },
+  "https://drive.google.com/file/d/1ns8fbuPO7_wlDQd7keHqpyDnVx9J5ruK/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.981Z"
+  },
+  "https://www.playground.ru/dispatch/file/dispatch_rusifikator_zvuka_epizod_2_nikistudio-1840434": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:56.994Z"
+  },
+  "https://cloud.mail.ru/public/h3j6/ErjpW8vvs": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.021Z"
+  },
+  "https://www.playground.ru/dispatch/file/dispatch_russkaya_ozvuchka_epizod_1_by_studii_net-1839172": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.172Z"
+  },
+  "https://www.playground.ru/dispatch/file/dispatch_rusifikator_zvuka_v1_0_16250-1804209": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.270Z"
+  },
+  "https://disk.yandex.ru/d/fq7qADsGrGKa9": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.324Z"
+  },
+  "https://store.steampowered.com/app/1367710/Dixotomia": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.331Z"
+  },
+  "https://gamesvoice.ru/product/dixotomia": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.357Z"
+  },
+  "https://disk.yandex.ru/d/FL12pZwoE6IEFw": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.526Z"
+  },
+  "https://drive.google.com/file/d/1_320tbgh2fhPggNH3gl3BON17J1S70Na/view?usp=drive_link": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.534Z"
+  },
+  "https://cloud.mail.ru/public/TSKV/YSZDK9hdV": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.609Z"
+  },
+  "https://vkplay.ru/play/game/gedonia_2/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.616Z"
+  },
+  "https://store.steampowered.com/app/253980/Enclave": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.617Z"
+  },
+  "https://gamesvoice.ru/product/enclave": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.682Z"
+  },
+  "https://store.steampowered.com/app/2566340/Gedonia_2": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.802Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/GR_VO_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.866Z"
+  },
+  "https://www.epicgames.com/store/ru/p/ghostrunner": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:41:57.915Z"
+  },
+  "https://gamesvoice.ru/product/gedonia2": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.947Z"
+  },
+  "https://www.gog.com/ru/game/enclave": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:57.954Z"
+  },
+  "https://store.steampowered.com/app/1139900/Ghostrunner/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:58.108Z"
+  },
+  "https://cloud.mail.ru/public/BEqQ/FiMLhngzt": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:58.109Z"
+  },
+  "https://store.playstation.com/en-us/concept/10010693": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:58.184Z"
+  },
+  "https://gamesvoice.ru/product/ghostrunner": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:58.295Z"
+  },
+  "https://store.playstation.com/en-au/concept/10010662": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:58.297Z"
+  },
+  "https://drive.google.com/file/d/1_jvwtCfyS_02pwgVHI7dwttt3XxdJ1_I/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:58.306Z"
+  },
+  "https://gamesvoice.ru/product/gothic2-classic": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:58.527Z"
+  },
+  "https://www.gog.com/ru/game/ghostrunner": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:58.553Z"
+  },
+  "https://www.playground.ru/gta_5/file/grand_theft_auto_5_rusifikator_zvuka_nejrosetevoj_dublyazh_enhanced_v1_0_synthvoiceru_toreno-1706326": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:58.651Z"
+  },
+  "https://gamesvoice.ru/product/gothic-classic": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:58.715Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/GTAVC_GV_Rus_v1.2.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:58.812Z"
+  },
+  "https://www.playground.ru/gta_5/file/grand_theft_auto_5_rusifikator_zvuka_nejrosetevoj_zakadr_v1_0_synthvoiceru_toreno-1711928": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:58.861Z"
+  },
+  "https://gamesvoice.ru/product/gtasa": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:58.936Z"
+  },
+  "https://store.steampowered.com/app/1546990/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:59.178Z"
+  },
+  "https://cloud.mail.ru/public/GVes/Bxktct3Yv": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:59.221Z"
+  },
+  "https://www.xbox.com/games/store/gothic-ii-complete-classic/9ndw7nw3k662": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:59.323Z"
+  },
+  "https://drive.google.com/file/d/1CsH8-aiDldCaRT08CHPLinGeph1UX18p/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:59.330Z"
+  },
+  "https://gamesvoice.ru/product/gtavice": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:59.331Z"
+  },
+  "https://store.epicgames.com/ru/p/hades": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:41:59.367Z"
+  },
+  "https://disk.yandex.ru/d/GUM7vsNCvddt0A": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:59.428Z"
+  },
+  "https://disk.yandex.uz/d/UsbpIIvC_90nWA": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:59.436Z"
+  },
+  "https://store.steampowered.com/app/1145360/Hades/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:59.533Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/HLAlyx_GV_VO_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:59.568Z"
+  },
+  "https://gamesvoice.ru/product/hades": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:59.713Z"
+  },
+  "https://disk.yandex.ru/d/DX0UfHnKnWwZlw": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:59.848Z"
+  },
+  "https://steamcommunity.com/workshop/filedetails/?id=2995029006": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:59.852Z"
+  },
+  "https://drive.google.com/file/d/1jxWXhHJTT1XXoyL_Bs27mptPrMuUhY-I/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:59.933Z"
+  },
+  "https://gamesvoice.ru/product/alyx": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:59.952Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/HeavyFireShatteredSpear_GameSVoiCE_s.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:41:59.956Z"
+  },
+  "https://store.steampowered.com/app/546560/HalfLife_Alyx/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:00.018Z"
+  },
+  "https://cloud.mail.ru/public/aaBp/NVUqM2MqS": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:00.095Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/HB_GV_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:00.317Z"
+  },
+  "https://drive.google.com/file/d/1F5wEozZFAopoRu11D4Q5SIMTLMK0RI8b/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:00.321Z"
+  },
+  "https://store.steampowered.com/app/385600/Heavy_Fire_Shattered_Spear/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:00.343Z"
+  },
+  "https://gamesvoice.ru/product/heavyfire": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:00.350Z"
+  },
+  "https://cloud.mail.ru/public/mJBR/8uFp5h4xN": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:00.449Z"
+  },
+  "https://www.xbox.com/ru-RU/games/store/gothic-classic/9P9ZLGT70BQ5": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:00.479Z"
+  },
+  "https://disk.yandex.ru/d/0U6tM8CArGJ4b": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:00.577Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/HerStory_GV_VO_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:00.751Z"
+  },
+  "https://store.steampowered.com/app/414340/Hellblade_Senuas_Sacrifice/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:00.775Z"
+  },
+  "https://cloud.mail.ru/public/9hLT/4gExZ4f4t": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:00.879Z"
+  },
+  "https://gamesvoice.ru/product/hellblade": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:00.903Z"
+  },
+  "https://disk.yandex.ru/d/p_6tZdxxx9bjsg": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:00.945Z"
+  },
+  "https://disk.yandex.ru/d/elcwDlZhoAbpig": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:01.107Z"
+  },
+  "https://www.gog.com/game/hellblade_senuas_sacrifice_pack": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:01.110Z"
+  },
+  "https://cloud.mail.ru/public/U4bN/4T3B9ivqP": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:01.218Z"
+  },
+  "https://drive.google.com/file/d/120V7Sa-MtJfK1yu5Z--Zwq3gWUc1lwXr/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:01.236Z"
+  },
+  "https://gamesvoice.ru/product/herstoryvhs": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:01.319Z"
+  },
+  "https://drive.google.com/file/d/1KIPxqzOFKyeR7TcMU6E1IMrM_TM4oAYR/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:01.321Z"
+  },
+  "https://store.steampowered.com/app/368370/Her_Story/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:01.345Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/HL_GV_Rus-v1.5.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:01.348Z"
+  },
+  "https://store.epicgames.com/ru/p/hogwarts-legacy": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:42:01.442Z"
+  },
+  "https://store.steampowered.com/app/990080/_/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:01.637Z"
+  },
+  "https://www.playground.ru/hogwarts_legacy/file/hogwarts_legacy_rusifikator_teksta_tekstur_i_zvuka_gamesvoice-1681716": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:01.672Z"
+  },
+  "https://cloud.mail.ru/public/y8NT/VuyHYtuPb": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:01.827Z"
+  },
+  "https://gamesvoice.ru/product/hogwartslegacy": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:01.852Z"
+  },
+  "https://www.gamesvoice.ru/product/hogwartslegacy": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:01.888Z"
+  },
+  "https://www.gog.com/game/her_story": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:01.911Z"
+  },
+  "https://disk.yandex.ru/d/VT6B1yiCJrpq1Q": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:01.926Z"
+  },
+  "https://drive.google.com/drive/folders/1YiD6D6fZmvrg2DhQ63I7iR1XfWv6rdy-?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:02.037Z"
+  },
+  "https://disk.yandex.ru/d/V-l-piEOTCWcew": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:02.091Z"
+  },
+  "https://cloud.mail.ru/public/fzDJ/SXHRFyBH2": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:02.241Z"
+  },
+  "https://gamesvoice.ru/product/immortalhunters": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:02.338Z"
+  },
+  "https://store.steampowered.com/app/2336760/Immortal_Hunters/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:02.345Z"
+  },
+  "https://gamesvoice.ru/product/iamalive": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:02.372Z"
+  },
+  "https://drive.google.com/file/d/1rjW9IMEnn8IT8gAu51fB3GTFMdBQP72Y/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:02.397Z"
+  },
+  "https://store.steampowered.com/app/214250/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:02.406Z"
+  },
+  "https://cloud.mail.ru/public/KBge/kAExTaUUW": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:02.535Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/ITT_GV_Rus.exe": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:02.702Z"
+  },
+  "https://store.steampowered.com/app/562860/Ion_Fury/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:02.721Z"
+  },
+  "https://gamesvoice.ru/product/ionfury": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:02.735Z"
+  },
+  "https://drive.google.com/drive/folders/1QOagPWqni_LtFYRcrC3tAoOd3GbdO4XQ": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:02.819Z"
+  },
+  "https://www.nexusmods.com/kingdomcomedeliverance2/mods/217": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:42:02.962Z"
+  },
+  "https://cloud.mail.ru/public/puER/ZruK1xP1S": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.018Z"
+  },
+  "https://disk.yandex.ru/d/f7WByGRl3HPwew": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.029Z"
+  },
+  "https://disk.yandex.ru/d/4MUgfNVFk8YrYQ": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.037Z"
+  },
+  "https://www.playground.ru/kingdom_come_deliverance_2/file/kingdom_come_deliverance_2_rusifikator_zvuka_nejrosetevoj_perevod_v09_06_2025_synthvoiceru-1751616": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.076Z"
+  },
+  "https://store.steampowered.com/app/1426210/It_Takes_Two/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.104Z"
+  },
+  "https://gamesvoice.ru/product/ittakestwo": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.135Z"
+  },
+  "https://store.epicgames.com/tr/p/legacy-of-kain-soul-reaver-12-remastered-f5c5ec": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:42:03.224Z"
+  },
+  "https://drive.google.com/file/d/17VVJ3cdIFuGX1Z8VjAt2EEnybvopWd5n/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.269Z"
+  },
+  "https://store.steampowered.com/app/3747730/Legacy_of_Kain_Defiance_Remastered/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.298Z"
+  },
+  "https://gamesvoice.ru/product/defiance": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.443Z"
+  },
+  "https://www.gog.com/ru/game/legacy_of_kain_defiance_remastered_deluxe_edition": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.637Z"
+  },
+  "https://store.steampowered.com/app/2872240/Lost_in_the_Roots/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.639Z"
+  },
+  "https://gamesvoice.ru/product/soulreaver": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.691Z"
+  },
+  "https://gamesvoice.ru/product/lost-in-the-roots": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.733Z"
+  },
+  "https://store.steampowered.com/app/2521380/Legacy_of_Kain_Soul_Reaver_12_Remastered/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.788Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/MadRiders_s.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.794Z"
+  },
+  "https://www.gog.com/en/game/legacy_of_kain_soul_reaver_12_remastered": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.818Z"
+  },
+  "https://store.playstation.com/product/JP8394-PPSA31878_00-LOKDRBASEPS50000": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:03.899Z"
+  },
+  "https://gamesvoice.ru/product/madriders": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.144Z"
+  },
+  "https://cloud.mail.ru/public/VkKr/zbeZBnydT": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.145Z"
+  },
+  "https://disk.yandex.ru/d/eG15lGTdrGJAa": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.166Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/Observer+Redux_GV_VO_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.177Z"
+  },
+  "https://drive.google.com/file/d/1LMwXh53nRJnZZPQIxw6t_Cs7XbfyIbID/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.248Z"
+  },
+  "https://cloud.mail.ru/public/La9J/F2Goy1xWc": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.267Z"
+  },
+  "https://disk.yandex.ru/d/ryRgIHvgt2He1A": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.381Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/Oceanhorn_Monster_of_Uncharted_Seas_VO_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.394Z"
+  },
+  "https://drive.google.com/file/d/12-SBO3UipzxKip9rUu0iMelrNEE3_uyR/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.420Z"
+  },
+  "https://store.steampowered.com/app/1386900/Observer_System_Redux/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.458Z"
+  },
+  "https://gamesvoice.ru/product/observer": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.625Z"
+  },
+  "https://store.steampowered.com/app/339200/Oceanhorn_Monster_of_Uncharted_Seas/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.762Z"
+  },
+  "https://disk.yandex.ru/d/qccC5VShrFtFr": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.821Z"
+  },
+  "https://store.steampowered.com/app/2346840/LIXO_ODNOGLAZOE/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.822Z"
+  },
+  "https://drive.google.com/file/d/1eq39uCXUfwY5n2AWjBvtNxmnXDUQSIu-/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.853Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/PanzerCorps_GameSVoiCE_s.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.977Z"
+  },
+  "https://gamesvoice.ru/product/oceanhorn": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:04.995Z"
+  },
+  "https://gamesvoice.ru/product/likho": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:05.042Z"
+  },
+  "https://cloud.mail.ru/public/SJLu/mRAkFrpDC": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:05.072Z"
+  },
+  "https://drive.google.com/file/d/1uBBZg2nkOyI9AJqZ2JvX1FOZCa6js72G/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:05.328Z"
+  },
+  "https://cloud.mail.ru/public/yG4P/Y71reDR8y": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:05.364Z"
+  },
+  "https://store.steampowered.com/app/268400/Panzer_Corps_Gold/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:05.408Z"
+  },
+  "https://store.steampowered.com/app/346290/Penumbra_Necrologue": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:05.426Z"
+  },
+  "https://gamesvoice.ru/product/panzercorps": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:05.449Z"
+  },
+  "https://disk.yandex.ru/d/ORyxvMtXrGJEe": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:05.461Z"
+  },
+  "https://gamesvoice.ru/product/necrologue": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:05.484Z"
+  },
+  "https://pioner.games": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:05.538Z"
+  },
+  "https://store.steampowered.com/app/3105890/PIONER/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:05.630Z"
+  },
+  "https://www.gog.com/game/observer_system_redux": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:05.713Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/Pyre.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:05.728Z"
+  },
+  "https://gamesvoice.ru/product/pioner": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:05.774Z"
+  },
+  "https://store.steampowered.com/app/462770/Pyre/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.002Z"
+  },
+  "https://cloud.mail.ru/public/j5vj/7kXt2nSag": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.047Z"
+  },
+  "https://drive.google.com/drive/folders/1-zqwYjwM50PtlZtIKpQ838ikO9Pj-vQ9?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.085Z"
+  },
+  "https://store.steampowered.com/app/3817560/Race_of_the_Nine_Worlds/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.094Z"
+  },
+  "https://disk.yandex.ru/d/899hHtDhCohzkw": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.212Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/Raft_GV_Rus.exe": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.266Z"
+  },
+  "https://gamesvoice.ru/product/pyre": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.295Z"
+  },
+  "https://gamesvoice.ru/product/race-of-the-nine-worlds": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.309Z"
+  },
+  "https://drive.google.com/file/d/1BE9U1haJRzbBzCMzf1LBzeDKpX5hDu2A/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.527Z"
+  },
+  "https://store.steampowered.com/app/648800/Raft/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.594Z"
+  },
+  "https://cloud.mail.ru/public/kGxp/gjfsEWZ9o": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.603Z"
+  },
+  "https://disk.yandex.ru/d/6N9j_ClbqAio2Q": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.662Z"
+  },
+  "https://gamesvoice.ru/product/raft": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.664Z"
+  },
+  "https://www.gog.com/game/pyre": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.700Z"
+  },
+  "https://www.playground.ru/red_dead_redemption_2/file/red_dead_redemption_2_russkaya_ozvuchka_dublyazh_demo-1866520": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.701Z"
+  },
+  "https://boosty.to/synthvoiceru": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.839Z"
+  },
+  "https://store.steampowered.com/app/447290/Redeemer_Enhanced_Edition/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:06.967Z"
+  },
+  "https://www.nintendo.co.uk/Games/Nintendo-Switch-games/Redeemer-Enhanced-Edition-1592476.html": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:07.091Z"
+  },
+  "https://gamesvoice.ru/product/redeemer": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:07.104Z"
+  },
+  "https://disk.yandex.ru/d/JY8asZDdGxZ4_A": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:07.115Z"
+  },
+  "https://store.steampowered.com/app/952060/RESIDENT_EVIL_3/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:07.280Z"
+  },
+  "https://drive.google.com/file/d/13GANMq_8KWFEh9M8Oo4kKhupIyqmzCDo/view": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:42:07.308Z"
+  },
+  "https://cloud.mail.ru/public/4pKV/XpEJT1oxx": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:07.316Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/Resident_Evil_Biohazard_HD_REMASTER_VO_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:07.416Z"
+  },
+  "https://gamesvoice.ru/product/re3": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:07.476Z"
+  },
+  "https://disk.yandex.ru/d/Bj3Di7aQBMzCqg": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:07.640Z"
+  },
+  "https://store.steampowered.com/app/304240/Resident_Evil__biohazard_HD_REMASTER/?l=russian&cc=": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:07.678Z"
+  },
+  "https://www.xbox.com/en-us/games/store/redeemer-enhanced-edition/9mzv25jsh9lc": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:07.758Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/REREV_GV_VO_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:07.804Z"
+  },
+  "https://gamesvoice.ru/product/residentevilhd": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:07.840Z"
+  },
+  "https://drive.google.com/file/d/1Pe07D-s6bn2yL1ylqP06Y3fpVgxqXSCl/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:07.884Z"
+  },
+  "https://cloud.mail.ru/public/bzJF/AsQ73vi5R": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:07.938Z"
+  },
+  "https://cloud.mail.ru/public/kKzk/v56QM1k7Z": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:08.086Z"
+  },
+  "https://store.steampowered.com/app/222480/Resident_Evil_Revelations/?l=russian": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:08.180Z"
+  },
+  "https://gamesvoice.ru/product/rev": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:08.256Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/REREV2_GV_VO_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:08.287Z"
+  },
+  "https://store.playstation.com/ru-ru/product/EP3617-CUSA15822_00-REDEEMERENHANCED": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:08.382Z"
+  },
+  "https://drive.google.com/file/d/1YHAfoS2GQ8GHSJC34v0YEt1jXhtAY_BF/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:08.407Z"
+  },
+  "https://cloud.mail.ru/public/NZxK/VgYTjzNZH": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:08.513Z"
+  },
+  "https://store.steampowered.com/app/287290/Resident_Evil_Revelations_2__Biohazard_Revelations_2/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:08.601Z"
+  },
+  "https://disk.yandex.ru/d/qXSwwomInMpb9Q": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:08.618Z"
+  },
+  "https://gamesvoice.ru/product/rev2": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:08.731Z"
+  },
+  "https://disk.yandex.ru/d/z3sOhjyjdEWfFg": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:08.735Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/Risen_3_VO_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:08.736Z"
+  },
+  "https://drive.google.com/file/d/1cadVXyd1lv0aVkB8adRj2C2jxJ2OKw-p/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:08.920Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/Risen_new_Earth_VO_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:08.980Z"
+  },
+  "https://cloud.mail.ru/public/DnvZ/eQD31s64N": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:08.994Z"
+  },
+  "https://store.steampowered.com/app/249230/Risen_3__Titan_Lords/?l=russian": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:09.047Z"
+  },
+  "https://disk.yandex.ru/d/wZMbsS3NDB9fmw": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:09.104Z"
+  },
+  "https://drive.google.com/file/d/1zRrOUVmLdrOSFHd2BHtQhNljr5Wq03nH/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:09.188Z"
+  },
+  "https://gamesvoice.ru/product/risen3": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:09.212Z"
+  },
+  "https://gamesvoice.ru/product/neuland": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:09.423Z"
+  },
+  "https://drive.google.com/file/d/1XSYbDc2z3-HQjir8n-ty2MpHcjxNOfam/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:09.450Z"
+  },
+  "https://www.playground.ru/stalker_2/file/s_t_a_l_k_e_r_2_heart_of_chornobyl_rusifikator_zvuka_eloquence_studio-1798333": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:09.557Z"
+  },
+  "https://www.gog.com/game/risen_3_titan_lords_complete_edition": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:09.569Z"
+  },
+  "https://cloud.mail.ru/public/rH35/2sesvZr5H": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:09.593Z"
+  },
+  "https://disk.yandex.ru/d/BX345E9S3Cnn6s": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:09.610Z"
+  },
+  "https://store.steampowered.com/app/2742840/Saturn/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:09.648Z"
+  },
+  "https://www.playground.ru/stalker_2/file/s_t_a_l_k_e_r_2_heart_of_chornobyl_rusifikator_zvuka_dublyazh_eloquence_studio_replika_synthvoice_vof_2_0_h-1817504": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:09.674Z"
+  },
+  "https://vkplay.ru/play/game/saturn/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:09.687Z"
+  },
+  "https://gamesvoice.ru/product/saturn": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:09.829Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/SCP - Containment Breach. Русификатор GamesVoice.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:09.883Z"
+  },
+  "https://cloud.mail.ru/public/7WDj/xQ2cTwSpA": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.031Z"
+  },
+  "https://gamesvoice.ru/product/scp": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.067Z"
+  },
+  "https://disk.yandex.ru/d/-dadhGVZ3Innmw": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.073Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/SH2R_GV_VO_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.131Z"
+  },
+  "https://drive.google.com/file/d/1xxtqbE1K1k1dq8s7X0jPmAay0NSlLRZw/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.178Z"
+  },
+  "https://store.epicgames.com/en-US/p/silent-hill-2-4542c7": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:42:10.211Z"
+  },
+  "https://cloud.mail.ru/public/nxdC/39WtLwHSS": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.262Z"
+  },
+  "https://disk.yandex.ru/d/x5VOkDRQ19zRiQ": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.276Z"
+  },
+  "https://store.steampowered.com/app/2124490/SILENT_HILL_2/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.357Z"
+  },
+  "https://drive.google.com/file/d/1ZGQCzNmNScfMVhL0V1-kgOgU7lk9MCME/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.481Z"
+  },
+  "https://gamesvoice.ru/product/silenthill2": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.507Z"
+  },
+  "https://www.playground.ru/silent_hill_2/file/silent_hill_2_remake_rusifikator_zvuka_gamesvoice_v1_1-1778499": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.513Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/SilentHill3_gv_s.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.524Z"
+  },
+  "https://disk.yandex.ru/d/c_89COMw--mMDQ": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.956Z"
+  },
+  "https://www.gamesvoice.ru/silenthill2": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.962Z"
+  },
+  "https://cloud.mail.ru/public/Kcem/FtbkKn84Z": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.973Z"
+  },
+  "https://drive.google.com/file/d/1c4Acj4OiLLlggDnCGlQ53FTE-YHrnLRI/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.979Z"
+  },
+  "https://gamesvoice.ru/product/silenthill3": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:10.986Z"
+  },
+  "https://www.gog.com/ru/game/silent_hill_2": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.013Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/SilentHillAlchemilla_GameSVoiCE_s.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.096Z"
+  },
+  "https://vkplay.ru/play/game/smersh-wolfhunter-47447/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.105Z"
+  },
+  "https://disk.yandex.ru/d/CyQmc82arGKPy": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.126Z"
+  },
+  "https://gamesvoice.ru/product/alchemilla": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.383Z"
+  },
+  "https://store.steampowered.com/app/4431400/Smersh_Wolfhound/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.389Z"
+  },
+  "https://gamesvoice.ru/product/Smersh-Wolfhound": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.438Z"
+  },
+  "https://drive.google.com/file/d/1buyG1DTkJt7VR_QnhtQhQYx8AmIiZsm9/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.456Z"
+  },
+  "https://cloud.mail.ru/public/RKbT/R3GeFyNw9": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.489Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/SOMA.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.504Z"
+  },
+  "https://cloud.mail.ru/public/KSMT/DfRyY5RPH": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.566Z"
+  },
+  "https://www.epicgames.com/store/ru/product/soma/home": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:42:11.588Z"
+  },
+  "https://disk.yandex.ru/d/nnAsLcf776ABJg": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.789Z"
+  },
+  "https://store.steampowered.com/app/213670/South_Park_The_Stick_of_Truth/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.855Z"
+  },
+  "https://store.steampowered.com/app/282140/SOMA/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.863Z"
+  },
+  "https://gamesvoice.ru/product/soma": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.923Z"
+  },
+  "https://gamesvoice.ru/product/south-park-the-stick-of-truth": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:11.975Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/SWJS_GV_Rus-v1.3.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:12.050Z"
+  },
+  "https://drive.google.com/drive/folders/1o6k10k7_UCr9PZZ7CmjEPaQA9D-4AazP?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:12.080Z"
+  },
+  "https://store.epicgames.com/en-US/p/star-wars-jedi-survivor": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:42:12.090Z"
+  },
+  "https://store.steampowered.com/app/1774580/STAR_WARS_Jedi_Survivor": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:12.283Z"
+  },
+  "https://www.gog.com/game/soma": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:12.312Z"
+  },
+  "https://cloud.mail.ru/public/Evb5/hnMVHmKVg": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:12.328Z"
+  },
+  "https://gamesvoice.ru/product/swsurvivor": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:12.474Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/Sub1_GV_Rus.exe": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:12.491Z"
+  },
+  "https://disk.yandex.ru/d/APfRCvLah6ugjA": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:12.569Z"
+  },
+  "https://www.epicgames.com/store/ru/product/subnautica/home": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:42:12.607Z"
+  },
+  "https://disk.yandex.uz/d/DbrDs-zZFZ8M8A": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:12.736Z"
+  },
+  "https://drive.google.com/file/d/1iEv4TDglQlBBMZGhyjD5-LzhkYNDKd2U/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:12.750Z"
+  },
+  "https://store.steampowered.com/app/264710/Subnautica/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:12.758Z"
+  },
+  "https://drive.google.com/file/d/1MrCCq40e25geVZ6YGxpfjvehecjdJyo-/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:12.761Z"
+  },
+  "https://cloud.mail.ru/public/FKDi/GP8pNQHQp": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:12.790Z"
+  },
+  "https://gamesvoice.ru/product/subnautica": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:12.942Z"
+  },
+  "https://disk.yandex.uz/d/oL7eqUcVyfgrig": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.069Z"
+  },
+  "https://store.steampowered.com/app/848450/Subnautica_Below_Zero/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.127Z"
+  },
+  "https://cloud.mail.ru/public/7tbx/9NFjotr18": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.134Z"
+  },
+  "https://gamesvoice.ru/product/belowzero": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.173Z"
+  },
+  "https://gamesvoice.ru/product/systemshock2": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.212Z"
+  },
+  "https://store.steampowered.com/app/866570/System_Shock_2_25th_Anniversary_Remaster/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.229Z"
+  },
+  "https://drive.google.com/file/d/1sI2blgSF1GUyR0-XhI3UwlEI7RyKZfXO/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.284Z"
+  },
+  "https://store.steampowered.com/app/3254050/The_Black_Ice/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.353Z"
+  },
+  "https://vkplay.ru/play/game/the_black_ice": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.407Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/The_Old_City_Leviathan_VO_Rus_1.1.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.570Z"
+  },
+  "https://cloud.mail.ru/public/LaJk/GazwznrwT": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.621Z"
+  },
+  "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/VanishingOfEthanCarter_Vo-Txt_Rus.zip": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.668Z"
+  },
+  "https://gamesvoice.ru/product/blackice": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.671Z"
+  },
+  "https://drive.google.com/file/d/1XKNcGZLgX4MxuvL9OKJvxY-08OmFo8ws/view?usp=sharing": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.683Z"
+  },
+  "https://gamesvoice.ru/product/leviathan": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.811Z"
+  },
+  "https://disk.yandex.ru/d/LT5NDSWkokDwCg": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.812Z"
+  },
+  "https://store.steampowered.com/app/297350/The_Old_City_Leviathan/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:13.994Z"
+  },
+  "https://cloud.mail.ru/public/VjDB/iWzSdf6nV": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:14.076Z"
+  },
+  "https://store.steampowered.com/app/258520/The_Vanishing_of_Ethan_Carter/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:14.097Z"
+  },
+  "https://store.epicgames.com/en-US/p/tomb-raider-iiii-remastered-538640": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:42:14.106Z"
+  },
+  "https://drive.google.com/file/d/1DY0oyj0hktI38_djezbs25XyV9mEKTRw/view": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:14.180Z"
+  },
+  "https://gamesvoice.ru/product/ethancarter": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:14.199Z"
+  },
+  "https://store.steampowered.com/app/2478970/Tomb_Raider_IIII_Remastered_Starring_Lara_Croft/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:14.241Z"
+  },
+  "https://disk.yandex.ru/d/xlAjl8aNAlfUQw": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:14.283Z"
+  },
+  "https://store.epicgames.com/ru/p/tomb-raider-ivvi-remastered-0be789": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:42:14.295Z"
+  },
+  "https://gamesvoice.ru/product/tomb-raider-remastered": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:14.505Z"
+  },
+  "https://store.steampowered.com/app/2525380/Tomb_Raider_IVVI_Remastered/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:14.513Z"
+  },
+  "https://store.steampowered.com/app/1710670/Tracery_of_Fate/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:14.627Z"
+  },
+  "https://gamesvoice.ru/product/tomb-raider-remastered2": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:14.694Z"
+  },
+  "https://gamesvoice.ru/product/traceryoffate": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:14.735Z"
+  },
+  "https://www.epicgames.com/store/en-US/product/transistor/home": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:42:14.848Z"
+  },
+  "https://www.gog.com/game/the_vanishing_of_ethan_carter": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:14.913Z"
+  },
+  "https://www.gog.com/en/game/tomb_raider_iv_vi_remastered": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:14.957Z"
+  },
+  "https://cloud.mail.ru/public/LSxC/aQiQFUmhM": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:15.007Z"
+  },
+  "https://disk.yandex.ru/d/jLE3t1eY3aMkpf": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:15.084Z"
+  },
+  "https://www.epicgames.com/store/ru/p/voidtrain": {
+   "ok": true,
+   "status": 403,
+   "blocked": true,
+   "checked": "2026-11-10T11:42:15.128Z"
+  },
+  "https://store.steampowered.com/app/237930/Transistor/?l=russian": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:15.319Z"
+  },
+  "https://gamesvoice.ru/product/transistor": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:15.326Z"
+  },
+  "https://www.gog.com/en/game/tomb_raider_i_to_iii_remastered": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:15.353Z"
+  },
+  "https://store.steampowered.com/app/1159690/Voidtrain/": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:15.354Z"
+  },
+  "https://drive.google.com/drive/folders/1Ih6bqtYc9AvV8q3QDjHFpcG3JT1uEA6c": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:15.399Z"
+  },
+  "https://store.steampowered.com/app/2499040/Volkolak_The_Will_of_Gods": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:15.491Z"
+  },
+  "https://gamesvoice.ru/product/voidtrain": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:15.496Z"
+  },
+  "https://www.gog.com/game/transistor": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:15.538Z"
+  },
+  "https://vkplay.ru/play/game/volkolak-the-will-of-gods": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:15.584Z"
+  },
+  "https://vkplay.ru/play/game/drevnie_rusy": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:15.587Z"
+  },
+  "https://store.steampowered.com/app/2669860": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:15.729Z"
+  },
+  "https://gamesvoice.ru/product/volkolak": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:15.762Z"
+  },
+  "https://gamesvoice.ru/product/yar": {
+   "ok": true,
+   "status": 200,
+   "blocked": false,
+   "checked": "2026-11-10T11:42:15.794Z"
+  }
+ }
+}

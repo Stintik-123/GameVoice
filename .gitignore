@@ -1,1 +1,4 @@
-(empty)
+node_modules/
+.shots/
+*.log
+.DS_Store

@@ -1,0 +1,20 @@
+{
+  "name": "gamevoice",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Каталог русских локализаций и озвучек игр",
+  "type": "module",
+  "scripts": {
+    "serve": "node scripts/serve.mjs 8099",
+    "fetch:api": "node scripts/fetch-gamesvoice.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "build:catalog": "node scripts/build-catalog.mjs",
+    "check:site": "node scripts/check-site.mjs",
+    "check:local": "node scripts/check-local-links.mjs",
+    "shots": "node scripts/shots.mjs",
+    "assets": "node scripts/make-assets.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
+  }
+}

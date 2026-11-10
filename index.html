@@ -26,12 +26,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/tokens.css?v=9">
-<link rel="stylesheet" href="css/base.css?v=9">
-<link rel="stylesheet" href="css/layout.css?v=9">
-<link rel="stylesheet" href="css/components.css?v=9">
-<link rel="stylesheet" href="css/covers.css?v=9">
-<link rel="stylesheet" href="css/updates.css?v=9">
+<link rel="stylesheet" href="css/tokens.css?v=10">
+<link rel="stylesheet" href="css/base.css?v=10">
+<link rel="stylesheet" href="css/layout.css?v=10">
+<link rel="stylesheet" href="css/components.css?v=10">
+<link rel="stylesheet" href="css/covers.css?v=10">
+<link rel="stylesheet" href="css/updates.css?v=10">
 </head>
 <body>
 
@@ -87,7 +87,11 @@
         <button class="btn" id="gotoDetailsBtn" type="button">Варианты перевода ↓</button>
         <button class="btn" id="favBtn" type="button" aria-pressed="false">☆ В избранное</button>
       </div>
-      <div class="hero-dots" id="heroDots" role="tablist" aria-label="Выбор игры"></div>
+      <div class="hero-pager">
+        <button class="hero-pager__btn" id="heroPrev" type="button" aria-label="Предыдущая игра">‹</button>
+        <span class="hero-pager__count" id="heroCounter" aria-live="polite">1 / 1</span>
+        <button class="hero-pager__btn" id="heroNext" type="button" aria-label="Следующая игра">›</button>
+      </div>
     </div>
   </section>
 
@@ -260,9 +264,6 @@
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <button class="fab-add" id="fabAdd" type="button" aria-label="Предложить игру">+</button>
 
-<script defer src="js/data.js?v=9"></script>
-<script defer src="js/steam-covers.js?v=9"></script>
-<script defer src="js/components.js?v=9"></script>
-<script defer src="js/app.js?v=9"></script>
+<script type="module" src="js/app.js?v=10"></script>
 </body>
 </html>
