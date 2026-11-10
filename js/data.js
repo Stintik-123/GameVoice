@@ -17,6 +17,9 @@ export const GAMES = [
     desc: "Перед вами - визуальная новелла-детектив с оригинальным авторским сюжетом и приятной графикой в стиле аниме. История рассказывает про простых подростков, живущих в 1997 году, и сталкивающихся с тайнами своего, казалось бы, привычного городка, в котором они прожили всю жизнь.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2013120/587262/a480bd0854a31420022648d47b08c0049595d453/1751067460/hls_264_master.m3u8?t=1689249153",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256958019/movie.293x165.jpg?t=1689249153",
+    steamId: "2013120",
     extraTrailers: [],
     translations: [
     {
@@ -44,7 +47,10 @@ export const GAMES = [
     tags: ["приключенческие игры","официальный перевод"],
     desc: "Перед вами - визуальная новелла в жанре ужасов. Обычный студент Григорий прочесывает городские легенды своего закрытого подмосквоного городка в поисках интересных фактов. Все больше и больше он начинает замечать разные странности, что происходят вокруг...",
     source: "gamesvoice",
-    trailerId: null,
+    trailerId: "UZcxEv648Dg",
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2761160/882759/89b488b2800884beb32d2184c44e61d111d6b275/1750897706/hls_264_master.m3u8?t=1746126606",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257134024/62cee8de2331a609853a1c63d2a286bf151aba69/movie_600x337.jpg?t=1746126606",
+    steamId: "2761160",
     extraTrailers: [],
     translations: [
     {
@@ -73,6 +79,9 @@ export const GAMES = [
     desc: "1348 год. Черная смерть опустошает Францию. Амиция и ее младший брат Юго спасаются от Инквизиции в разоренном чумой краю. Чтобы уйти от погони и огнем и светом разогнать полчища крыс, героям придется объединить силы с другими подростками. И только узы дружбы помогут им преодолеть немыслимые ужасы, которые ждут их на пу",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/752590/257171/68fb555a2dc7f226d69962647a0d0885295edde4/1750579071/hls_264_master.m3u8?t=1576492399",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256769762/movie.293x165.jpg?t=1576492399",
+    steamId: "752590",
     extraTrailers: [],
     translations: [
     {
@@ -101,6 +110,9 @@ export const GAMES = [
     desc: "Брат и сестра отправляются в новое странствие в суровом, полном тьмы мире. Решайте, на что вы готовы пойти, чтобы выжить и спасти своих любимых. Что бы вы ни выбрали, к вашим услугам богатый арсенал оружия, инструментов и магических сил.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/1182900/511732/2f9fb439ffce76b95396f9902ebcfb2c7bd7e1c6/1750635289/hls_264_master.m3u8?t=1667820594",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256915012/movie.293x165.jpg?t=1667820594",
+    steamId: "1182900",
     extraTrailers: [],
     translations: [
     {
@@ -129,6 +141,9 @@ export const GAMES = [
     desc: "Agony хоррор от первого лица, действие которого разворачивается в аду. Вы измученная душа, томящаяся в глубинах ада и не сохранившая воспоминаний о своем прошлом. Особая способность брать под контроль людей и демонов дает вам шанс выжить.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/487720/165415/10504bab795e4f9d70a31c3b24fca09ecf2fda99/1751291691/hls_264_master.m3u8?t=1527617090",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256718277/movie.293x165.jpg?t=1527617090",
+    steamId: "487720",
     extraTrailers: [],
     translations: [
     {
@@ -157,6 +172,9 @@ export const GAMES = [
     desc: "Писатель Алан Уэйк признанный мастер триллеров, переживает творческий кризис. В поисках вдохновения он отправляется вместе с женой в тихий городок Брайт Фоллс. Однако там возлюбленная Алана таинственным образом исчезает, и начинается череда кошмаров. Реальность и фантазии перемешались, и чтобы выжить, Алану придется ис",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/108710/6835/4ed6b629bedc7607badfcde88f72e53f5df3364e/1750492670/hls_264_master.m3u8?t=1447355365",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/81422/movie.293x165.jpg?t=1447355365",
+    steamId: "108710",
     extraTrailers: [],
     translations: [
     {
@@ -185,6 +203,9 @@ export const GAMES = [
     desc: "Официальный текст. Полный профессиональный дубляж GamesVoice, включая перепетые песни.",
     source: "curated",
     trailerId: "dlQ3FeNu5Yw",
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -222,8 +243,11 @@ export const GAMES = [
     tags: ["экшены","песни","фанатская озвучка"],
     desc: "Alan Wake II — это игра в жанре survival-horror от третьего лица. Игрокам предстоит сыграть за Алана Уэйка и Сагу Андерсон в двух параллельных однопользовательских историях, играемых в любом порядке, выбранном игроком.",
     source: "gamesvoice",
-    trailerId: null,
-    extraTrailers: [],
+    trailerId: "0nGyhvz8F4E",
+    trailerHls: "",
+    trailerPreview: "https://api.gamesvoice.ru/storage/uploads/products/media/previews/ebb30473197612fae71af39f4a00d924.jpg",
+    steamId: "",
+    extraTrailers: [{"id":"yO7MzRnliEw","label":"Трейлер"}],
     translations: [
     {
       type: "both",
@@ -251,6 +275,9 @@ export const GAMES = [
     desc: "В этот раз Алан Уэйк сразится с мистером Скрипом, вестником тьмы! Новый захватывающий сюжет, орды ужасающих врагов, серьезное оружие и прекрасные пейзажи Аризоны, а также увлекательный новый режим станут настоящим подарком для фанатов Алана Уэйка, а для всех остальных — отличной возможностью познакомиться с историей пи",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/202750/7589/8955a3ddc03569a56c51e25b093154a5403f3e1c/1751249306/hls_264_master.m3u8?t=1447355848",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/81639/movie.293x165.jpg?t=1447355848",
+    steamId: "202750",
     extraTrailers: [],
     translations: [
     {
@@ -279,6 +306,9 @@ export const GAMES = [
     desc: "It is the height of the Cold War, a time of global uncertainty and civil unrest. You are Agent Alekhine, a highly skilled Russian assassin, driven by a moral compass that leads you headfirst into a covert operation unsanctioned by the country you previously served.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/406720/44344/3e83425678b50af329547520d8dc6bba605569ac/1751279318/hls_264_master.m3u8?t=1756898927",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256657117/02dc301c7a095affca0c48cab8bcda650866b75f/movie_600x337.jpg?t=1756898927",
+    steamId: "406720",
     extraTrailers: [],
     translations: [
     {
@@ -307,6 +337,9 @@ export const GAMES = [
     desc: "Arizona Sunshine Remake поднимает оригинальную, отмеченную наградами игру на новый уровень — с полностью переделанной убойной ВР-графикой, боями и оружием нового поколения. Боритесь с ожившими мертвецами в одиночку или вместе с тремя товарищами в постапокалиптической юго-западной Америке, которую захватили зомби.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2897700/773552/0b8a9823d69bdff42559564f83bc19ccada92d1f/1750821203/hls_264_master.m3u8?t=1729608955",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257066228/b640e459dbeb85841a30ba78c81dcf7a665299a4/movie_600x337.jpg?t=1729608955",
+    steamId: "2897700",
     extraTrailers: [],
     translations: [
     {
@@ -335,6 +368,9 @@ export const GAMES = [
     desc: "Официальный текст. Полной профессиональной озвучки нет — есть нейросетевые варианты SynthVoiceRu.",
     source: "curated",
     trailerId: "1T22wNvoNiU",
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -373,6 +409,9 @@ export const GAMES = [
     desc: "Bastion — ролевая игра с принципиально новым взглядом на истории в играх — спасибо рассказчику, реагирующему на все действия игрока. На пути к разгадке тайны Бедствия — странной катастрофы, разорвавшей мир на части, героя ждет более сорока ярких, нарисованных от руки мест.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/107100/5553/65889a52860043dc6d95ed434f355583c9d77804/1750498453/hls_264_master.m3u8?t=1532635774",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/80996/movie.293x165.jpg?t=1532635774",
+    steamId: "107100",
     extraTrailers: [],
     translations: [
     {
@@ -401,6 +440,9 @@ export const GAMES = [
     desc: "Beyond The Darkness - это мрачная история, которая окунёт вас в детские кошмары, даже если вы успели о них позабыть. Помогите маленькой девочке Милли сразиться с ужасами, таящимися во тьме, и найдите её пропавшую семью.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/1728610/777652/9a1ab4845c8662106aa08eae7cad25ccb409e555/1751024704/hls_264_master.m3u8?t=1729980787",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257068676/861aee7bc5da31e874cdc58a42fca6d18e1f8219/movie_600x337.jpg?t=1729980787",
+    steamId: "1728610",
     extraTrailers: [],
     translations: [
     {
@@ -429,6 +471,9 @@ export const GAMES = [
     desc: "«Чёрная книга» - слияние карточной RPG и классической приключенческой игры. В центре сюжета - рассказ о молодой колдунье, борющейся за спасение своего погибшего возлюбленного. Погрузитесь в загадочный мир русских сказок - и раскройте тайны, скрывающиеся во тьме.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/1138660/283416/d48b16fc56b817666c57ff9a6b713221c4005c68/1750626462/hls_264_master.m3u8?t=1588685958",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256784339/movie.293x165.jpg?t=1588685958",
+    steamId: "1138660",
     extraTrailers: [],
     translations: [
     {
@@ -457,6 +502,9 @@ export const GAMES = [
     desc: "Black Mesa — фанатский ремейк оригинальной Half-Life на движке Source. Конечной целью разработки игры являлось воссоздание с нуля Half-Life, используя расширенные возможности движка Source для создания нового и более увлекательного мира игры с гораздо более разнообразным окружением, а также более сложным и реалистичным",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/362890/270609/74929ca65b6e654d8ce1d5ee361b218d940f8603/1750516090/hls_264_master.m3u8?t=1583517821",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256777178/movie.293x165.jpg?t=1583517821",
+    steamId: "362890",
     extraTrailers: [],
     translations: [
     {
@@ -485,6 +533,9 @@ export const GAMES = [
     desc: "В команде с тремя Охотниками за Хранилищем встретьтесь лицом к лицу с целым миром тварей, психов и злым гением — Красавчиком Джеком. Заводите друзей, снаряжайте их пушками из гигантского арсенала и отправляйтесь с напарниками сражаться плечом к плечу в поисках мести и искупления грехов на неизведанных еще территориях П",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -513,6 +564,9 @@ export const GAMES = [
     desc: "Bright Lights of Svetlov - квест от 1 лица о жизни советской семьи, которой пришлось столкнуться с серьёзными испытаниями. Аккуратно воссозданный быт середины 80х позволит лучше погрузиться в мир вымышленного провинциального города.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/1630920/368315/b98cefed35d57aa416ae22f988b626e5800fbd85/1751011855/hls_264_master.m3u8?t=1620725882",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256834006/movie.293x165.jpg?t=1620725882",
+    steamId: "1630920",
     extraTrailers: [],
     translations: [
     {
@@ -541,6 +595,9 @@ export const GAMES = [
     desc: "Хоррор игра о небольшом городе охваченном опасными куклами. События Bug Dolls: Soviet Project развиваются в небольшом городке Жуковске, где осенью 1991 года состоялась загадочная эвакуация всего населения.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/1998030/464880/7e2a772ea60bf72dc3ab0492dd9e8962a8c6771b/1751065683/hls_264_master.m3u8?t=1653488291",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256887614/movie.293x165.jpg?t=1653488291",
+    steamId: "1998030",
     extraTrailers: [],
     translations: [
     {
@@ -569,6 +626,9 @@ export const GAMES = [
     desc: "Вы — Грейсон Хант, некогда элитный киллер Dead Echo. После крушения корабля вы оказались на заброшенной планете-курорте Стигия и должны сделать выбор: спасаться или отомстить предателю.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/501590/99407/a1af0efe2620b3e56f501c46b4ae7af1bdabcd34/1750538642/hls_264_master.m3u8?t=1492798832",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256683629/movie.293x165.jpg?t=1492798832",
+    steamId: "501590",
     extraTrailers: [],
     translations: [
     {
@@ -597,6 +657,9 @@ export const GAMES = [
     desc: "Прокатись с друзьями сквозь апокалипсис! BUS: Bro U Survived это кооперативное сюжетное приключение с собственным автобусом! Бей зомби, собирай ресурсы, помогай другим выжившим. Сможешь ли ты узнать правду о начале эпидемии и решить судьбу острова?",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2852700/274692523/e6fe5c7ddb0881499617bc31397e25e8552a8c79/1769710807/hls_264_master.m3u8?t=1769711555",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257275496/f9bc98f1199fc7af461f0c852acf2a19219f923a/movie_600x337.jpg?t=1769711555",
+    steamId: "2852700",
     extraTrailers: [],
     translations: [
     {
@@ -625,7 +688,10 @@ export const GAMES = [
     desc: "Профессиональный дубляж GamesVoice, 2026.",
     source: "curated+gamesvoice",
     trailerId: "ejgW-upPMgk",
-    extraTrailers: [],
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/1903340/876247/5c4709c3a98d932003a6b85bd5e4bfcd6a777e7a/1748581603/hls_264_master.m3u8?t=1745478082",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257129803/a409d62da478b6b9fdceeb05a1281805fe7a0dae/movie_600x337.jpg?t=1745478082",
+    steamId: "1903340",
+    extraTrailers: [{"id":"5PkW1L-Lrzo","label":"Трейлер"}],
     translations: [
     {
       type: "both",
@@ -663,6 +729,9 @@ export const GAMES = [
     desc: "1897 год. Корабль «Гелиос» неподвижно стоит посреди открытого моря. Небо затянули мрачные тучи, а бушующие волны бьются о борт. Исполинские золотые статуи с роскошным убранством украшают каждый уголок судна.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/968870/282658/7c972d74f9ad42ce9a343f17aa1a32e758e3629b/1751170108/hls_264_master.m3u8?t=1588597518",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256783960/movie.293x165.jpg?t=1588597518",
+    steamId: "968870",
     extraTrailers: [],
     translations: [
     {
@@ -691,6 +760,9 @@ export const GAMES = [
     desc: "В игре Codex of Victory вам предстоит пройти протяженную сюжетную кампанию, в ходе которой придется строить и вести в бой армии боевых роботизированных машин, танков и вертолетов. Игра представляет собой смесь стратегии, строительства в реальном времени и пошагового тактического боя. Путешествуйте между планетами, сраж",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/464100/92534/f642695e818eb27f1a1802004e29d29130c2214b/1751289299/hls_264_master.m3u8?t=1488473946",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256680621/movie.293x165.jpg?t=1488473946",
+    steamId: "464100",
     extraTrailers: [],
     translations: [
     {
@@ -719,6 +791,9 @@ export const GAMES = [
     desc: "Тайное агентство в Нью-Йорке вдруг оказывается под контролем внеземных сил — именно вам предстоит стать его новым директором и попытаться восстановить контроль.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/870780/302947/a9fd4106f169a2a8828160ffbfa16aadd7fea059/1750591905/hls_264_master.m3u8?t=1599146533",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256795524/movie.293x165.jpg?t=1599146533",
+    steamId: "870780",
     extraTrailers: [],
     translations: [
     {
@@ -747,6 +822,9 @@ export const GAMES = [
     desc: "Официальный текст. Официальной русской озвучки нет — только фанатские дубляжи (в том числе для Phantom Liberty).",
     source: "curated",
     trailerId: "8X2kIfS6fb8",
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [{"id":"sJbexcm4Trk","label":"Phantom Liberty"}],
     translations: [
     {
@@ -805,6 +883,9 @@ export const GAMES = [
     desc: "После событий в районе Пасифика Ви получает сообщение от Сон Со Ми по прозвищу «Сойка» — помощницы президента Новых Соединённых Штатов Америки Розалинд Майерс. Сойка сообщает о крушении самолёта с президентом в районе Пёсий Город, контролируемом военным диктатором Куртом Хансеном, и просит помощи в спасении Майерс в об",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2138330/637365/9e9580ba238e44ced2224d99fb6ae34f499ef26e/1750747651/hls_264_master.m3u8?t=1701866015",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256987085/movie.293x165.jpg?t=1701866015",
+    steamId: "2138330",
     extraTrailers: [],
     translations: [
     {
@@ -833,6 +914,9 @@ export const GAMES = [
     desc: "Огонь гаснет, мир обращается в руины, и вам предстоят сражения с еще более колоссальными врагами. Традиционная мрачная и атмосфера, напряженные битвы и еще более динамичный геймплей. Лишь угли тлеют во мраке... Соберитесь с духом и погрузитесь во тьму!",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/374320/48797/e6075d14ad252fe2660a62e7c8b7eaf0afa64096/1750520094/hls_264_master.m3u8?t=1700587333",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256659154/movie.293x165.jpg?t=1700587333",
+    steamId: "374320",
     extraTrailers: [],
     translations: [
     {
@@ -861,6 +945,9 @@ export const GAMES = [
     desc: "Вам предстоит собрать, обучить и возглавить команду героев, у каждого из которых есть свои недостатки. Команду нужно будет провести по жутким лесам, опустевшим заповедникам, обрушенным склепам и другим опасным местам. Сражаться придётся не только с немыслимыми врагами, но и со стрессом, голодом, болезнями и непроглядно",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/262060/50503/a313852a4becb5f5e662685db8e57a8283b7cd85/1750497858/hls_264_master.m3u8?t=1747999027",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256659907/movie.293x165.jpg?t=1747999027",
+    steamId: "262060",
     extraTrailers: [],
     translations: [
     {
@@ -889,6 +976,9 @@ export const GAMES = [
     desc: "Вы просыпаетесь, в заброшенной больнице. Ваш телефон является единственным источником света. Вы заблудились в лабиринтах и пытаетесь найти путь назад, постоянно слыша странные звуки и чувствуя за спиной чье-то жуткое присутствие...",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/230840/17207/f65454623d19153388020db603526ac87191a26f/1751248942/hls_264_master.m3u8?t=1447360364",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2030908/movie.293x165.jpg?t=1447360364",
+    steamId: "230840",
     extraTrailers: [],
     translations: [
     {
@@ -917,6 +1007,9 @@ export const GAMES = [
     desc: "Классический научно-популярный хоррор с элементами выживания возвращается: игра была воссоздана с нуля и предлагает ещё глубже погрузиться в обволакивающую атмосферу мёртвого космоса.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/1693980/536887/4bc39903cb1de775b3a2a9bc3b536f54da93ba32/1750726170/hls_264_master.m3u8?t=1675772698",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256929315/movie.293x165.jpg?t=1675772698",
+    steamId: "1693980",
     extraTrailers: [],
     translations: [
     {
@@ -945,6 +1038,9 @@ export const GAMES = [
     desc: "Dear Esther - это удивительный мир Внешних Гебридских островов. Это история любви, потерь, вины и воздаяния.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/520720/76189/b7aa7d508959c3aef698d11f6d47cd1fc204d5ae/1750542797/hls_264_master.m3u8?t=1487095337",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256672426/movie.293x165.jpg?t=1487095337",
+    steamId: "520720",
     extraTrailers: [],
     translations: [
     {
@@ -973,6 +1069,9 @@ export const GAMES = [
     desc: "A next-generation tower defense game set in the rich fantasy world of Majesty, but with a twist.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/73060/7035/cb9219ef35100df8fe5efd130e3225c1314cdcbc/1751259946/hls_264_master.m3u8?t=1447355494",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/81483/movie.293x165.jpg?t=1447355494",
+    steamId: "73060",
     extraTrailers: [],
     translations: [
     {
@@ -1001,6 +1100,9 @@ export const GAMES = [
     desc: "Официальной русской озвучки нет. Есть русские эпизодные дубляжи NikiStudio и Studii Net, а также полный нейро-дубляж всех 8 эпизодов.",
     source: "curated",
     trailerId: "fTVgX7b1N8E",
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -1059,6 +1161,9 @@ export const GAMES = [
     desc: "Иммерсивный VR экшен-шутер с футуристичным оружием и вампирскими способностями. Уничтожьте вампирский культ и его лидеров сай-фай антиутопии. Сможете ли вы раскрыть тёмные секреты далёкой планеты и остаться прежним?",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/1367710/1397251675/d47459cf45872f53d6b8507771f8cc292554abf5/1756143356/hls_264_master.m3u8?t=1756532721",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257188609/b25ca4663bbeb1e1a02323359700598c5ea6a41d/movie_600x337.jpg?t=1756532721",
+    steamId: "1367710",
     extraTrailers: [],
     translations: [
     {
@@ -1087,6 +1192,9 @@ export const GAMES = [
     desc: "Официальной русской озвучки нет. Стабильного полного фанатского дубляжа на 2026 не подтверждено.",
     source: "curated",
     trailerId: "E3Huy2cdih0",
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -1125,6 +1233,9 @@ export const GAMES = [
     desc: "Края разлома сближаются с каждым столетием. Столкновения на границе происходят все чаще, и они неизбежно перерастут в полномасштабную войну. Что будет дальше решать вам. Возглавить доведенных до отчаяния жителей Селенхайма и спасти их от гибели или примкнуть к темным ордам Чужбины и разгромить Удел, чтобы забрать то, ч",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/253980/13496/1e321928eaa4605a5c62871814b164c5fc7ad29d/1751248589/hls_264_master.m3u8?t=1447358799",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2029343/movie.293x165.jpg?t=1447358799",
+    steamId: "253980",
     extraTrailers: [],
     translations: [
     {
@@ -1153,6 +1264,9 @@ export const GAMES = [
     desc: "Gedonia 2 - это кооперативная онлайн РПГ, позволяющая в группе до 4 игроков свободно исследовать живой открытый мир и создавать уникальных персонажей.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2566340/732524/6bf4a5e5376292ac4b50efaed759d10fafa4110c/1750817082/hls_264_master.m3u8?t=1725370694",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257041588/movie.293x165.jpg?t=1725370694",
+    steamId: "2566340",
     extraTrailers: [],
     translations: [
     {
@@ -1181,6 +1295,9 @@ export const GAMES = [
     desc: "Ghostrunner — эта жестокая игра-слэшер от первого лица с супердинамичным сюжетом, разворачивающимся в мрачном киберпанковом мире футуристической сверхконструкции. Пройдите путь снизу доверху, встретьтесь с тираном и воздайте ему по заслугам.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/1139900/334841/31d2fefd7d00202173bb40ebb1ff0ad798ad5f71/1750626657/hls_264_master.m3u8?t=1610688020",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256814625/movie.293x165.jpg?t=1610688020",
+    steamId: "1139900",
     extraTrailers: [],
     translations: [
     {
@@ -1209,6 +1326,9 @@ export const GAMES = [
     desc: "Вы уничтожили магический барьер и освободили заключённых Долины Рудников. Вырвавшиеся на свободу бывшие заключённые стали терроризировать окрестности города Хоринис. У городского ополчения слишком мало сил, чтобы бороться с преступниками за пределами города. Но самое страшное то, что начали ходить слухи о возвращении м",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -1237,6 +1357,9 @@ export const GAMES = [
     desc: "Королевство Миртана охвачено ужасной войной. Орды орков вторглись в земли людей, и король нуждается в большом количестве магической руды, из которой производят превосходное оружие. Если человек совершил хотя бы незначительное преступление, его сразу отправляли добывать руду на остров Хоринис.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -1265,6 +1388,9 @@ export const GAMES = [
     desc: "Официальный текст. Фанатские озвучки сюжета существуют — качество и покрытие разные.",
     source: "curated",
     trailerId: "QkkoHAzjnUs",
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -1303,6 +1429,9 @@ export const GAMES = [
     desc: "Grand Theft Auto: San Andreas: It s the early 90s. After a couple of cops frame him for homicide, Carl CJ Johnson is forced on a journey that takes him across the entire state of San Andreas, to save his family and to take control of the streets.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -1330,7 +1459,10 @@ export const GAMES = [
     tags: ["экшены","фанатская озвучка"],
     desc: "Добро пожаловать в 1980-е. Из десятилетия огромных причесок и вычурных костюмов в пастельных тонах пришла история о том, как один человек вознесся на самый верх криминального мира. Grand Theft Auto вернулась.",
     source: "gamesvoice",
-    trailerId: null,
+    trailerId: "txV5BYdBdj0",
+    trailerHls: "",
+    trailerPreview: "https://api.gamesvoice.ru/storage/uploads/products/media/previews/210f602998b2408dae5d81345f5c5f00.jpg",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -1359,6 +1491,9 @@ export const GAMES = [
     desc: "Бросьте вызов богу мёртвых и прорубите себе путь из Подземного мира в игре в жанрах «рогалик» и «данжен-кроулер» от создателей Bastion, Transistor и Pyre.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/1145360/312686/b0312c49135823cc34946e98148abfb8da71f0fb/1750627549/hls_264_master.m3u8?t=1600353465",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256801252/movie.293x165.jpg?t=1600353465",
+    steamId: "1145360",
     extraTrailers: [],
     translations: [
     {
@@ -1387,6 +1522,9 @@ export const GAMES = [
     desc: "Русская озвучка Valve/Буки и community-проекты по её восстановлению и исправлению.",
     source: "curated",
     trailerId: "kWnzRGD9NDE",
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -1425,6 +1563,9 @@ export const GAMES = [
     desc: "Half-Life: Alyx — это возвращение Valve во вселенную Half-Life в виртуальной реальности. Это история невозможной борьбы с жестокой расой пришельцев, известной как Альянс. События происходят между Half-Life и Half-Life 2.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/546560/253732/6dc0a5b4a9f2bb0ea9e74ea2bdd4647eb09e1f4d/1749861541/hls_264_master.m3u8?t=1762986581",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256767815/movie.293x165.jpg?t=1762986581",
+    steamId: "546560",
     extraTrailers: [],
     translations: [
     {
@@ -1453,6 +1594,9 @@ export const GAMES = [
     desc: "Iran has nuclear weapons and one is sitting on a fully fueled ICBM going through its final launch checklist. Fight your way through Afghanistan, make it over the Iranian border, infiltrate the missile base and permanently stop the countdown in this super fast, high intensity on-rails shooter.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/385600/42978/053fbb69a021a9bacf63bba0d65bd6410e4bbe56/1751275989/hls_264_master.m3u8?t=1447378059",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256656418/movie.293x165.jpg?t=1447378059",
+    steamId: "385600",
     extraTrailers: [],
     translations: [
     {
@@ -1481,6 +1625,9 @@ export const GAMES = [
     desc: "В эпоху викингов измученная кельтская воительница отправляется в ужасную страну мертвых, чтобы сразиться за душу погибшего возлюбленного. Вас ждет погружение в меланхолическую ярость и расстроенное сознание воительницы Сенуи.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/414340/416147/373321aa603c3f1794b4f1bbeb4298ae65b71d1d/1750527661/hls_264_master.m3u8?t=1637082351",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256859910/movie.293x165.jpg?t=1637082351",
+    steamId: "414340",
     extraTrailers: [],
     translations: [
     {
@@ -1509,6 +1656,9 @@ export const GAMES = [
     desc: "Игровой процесс Her Story представляет собой поиск видеоклипов по ключевым словам в базе данных, которые нарезаны на небольшие части из семи вымышленных полицейских допросов британки Ханны Смит по делу исчезновения её мужа.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/368370/37248/8e1fb104299299f2752a02035548658ea269f7a4/1751271171/hls_264_master.m3u8?t=1684945729",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2039903/movie.293x165.jpg?t=1684945729",
+    steamId: "368370",
     extraTrailers: [],
     translations: [
     {
@@ -1536,8 +1686,11 @@ export const GAMES = [
     tags: ["экшены","текстуры","фанатская озвучка"],
     desc: "Хогвартс. Наследие — это ролевая игра с открытым миром. Теперь вы можете контролировать свои действия и стать центральным героем собственных приключений в волшебном мире.",
     source: "gamesvoice",
-    trailerId: null,
-    extraTrailers: [],
+    trailerId: "Uqo0k3Qnmsw",
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/990080/312591535/edf964f7fb722d801bbe72a28ae205e8931519f7/1778796107/hls_264_master.m3u8?t=1778797473",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256930503/f057454ecf651b710de9d5e12d87808a8a9b550c/movie_600x337.jpg?t=1778797473",
+    steamId: "990080",
+    extraTrailers: [{"id":"umo33NEOSmI","label":"Трейлер"}],
     translations: [
     {
       type: "both",
@@ -1565,6 +1718,9 @@ export const GAMES = [
     desc: "Полная фанатская локализация GamesVoice: текст, текстуры и озвучка.",
     source: "curated",
     trailerId: "1O6Qstncpnc",
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -1593,6 +1749,9 @@ export const GAMES = [
     desc: "В I Am Alive игроку предстоит выживать в правдоподобном и опасном постапокалиптическом мире.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/214250/8811/5ed1654ffe4cf3c756a8aac75c22b3eb2558e8bd/1751259657/hls_264_master.m3u8?t=1447356510",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/81965/movie.293x165.jpg?t=1447356510",
+    steamId: "214250",
     extraTrailers: [],
     translations: [
     {
@@ -1621,6 +1780,9 @@ export const GAMES = [
     desc: "Бог умер. Его убила могущественная Церковь, покорившая весь мир. Теперь грядёт апокалипсис. Всё это в жанре RPG beat 'em up. Стань одним из бессмертных охотников. Брось вызов судьбе, разоблачи ложь кардиналов и найди перерожденного Бога.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2336760/829516/4a1e0efaa7b9267f3a30337f5c9f489fb62b593d/1750908031/hls_264_master.m3u8?t=1741194076",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257098722/f610b34016e0c7c0cf1d604e3ecb26fb6799ba6b/movie_600x337.jpg?t=1741194076",
+    steamId: "2336760",
     extraTrailers: [],
     translations: [
     {
@@ -1649,6 +1811,9 @@ export const GAMES = [
     desc: "Сапёру Шелли Харрисон по прозвищу «Бомба» поручено важное задание остановить лидера секты доктора Хескела и его роботизированную армию, бесчинствующую на улицах Нового Вашингтона.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/562860/613121/812197cb5eafd885e1e5f1b3750c7ed9a38973bd/1751302221/hls_264_master.m3u8?t=1696113767",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256972695/movie.293x165.jpg?t=1696113767",
+    steamId: "562860",
     extraTrailers: [],
     translations: [
     {
@@ -1677,6 +1842,9 @@ export const GAMES = [
     desc: "Играйте за принявших решение развестись Коди и Мэй, двух людей, волшебством превращённых в кукол. Вместе они попадают в сказочный мир, где за каждым углом поджидают неожиданные препятствия, и поневоле вынуждены спасать свои давшие трещину отношения.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/1426210/356092/0165ad2494097e40af29c015e8948175c3fb97a8/1750688156/hls_264_master.m3u8?t=1616514535",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256827093/movie.293x165.jpg?t=1616514535",
+    steamId: "1426210",
     extraTrailers: [],
     translations: [
     {
@@ -1705,6 +1873,9 @@ export const GAMES = [
     desc: "Официальный текст. Нейросетевой дубляж и закадр от SynthVoiceRu — 261 тысяча реплик.",
     source: "curated",
     trailerId: "7ynJN-HejlY",
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -1743,6 +1914,9 @@ export const GAMES = [
     desc: "Следите за противостоянием вампира Каина и его бывшего соратника Разиэля в Носготе — мире конфликтов, интриг и предначертанных судеб — и используйте против врагов легендарные клинки и потусторонние силы.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/3747730/1947777072/8a19cd5dcfc6aed44b1eb3724036e54f9e890c00/1772471807/hls_264_master.m3u8?t=1772553545",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257296811/be2640ac348466ef399f0a2d8f477ff138731321/movie_600x337.jpg?t=1772553545",
+    steamId: "3747730",
     extraTrailers: [],
     translations: [
     {
@@ -1771,6 +1945,9 @@ export const GAMES = [
     desc: "Бросьте вызов судьбе и отправляйтесь в пришедший в упадок Носгот, чтобы отомстить... Следите за эпическим конфликтом Каина и Разиэля в оригинальном формате или с обновленной графикой.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2521380/754295/bb84e0d3552418ca696ef560bcc8e312bc5b4eef/1750816289/hls_264_master.m3u8?t=1733952367",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257054249/53db4ea5e1a67f63ae6db96c82806cbb60c731bf/movie_600x337.jpg?t=1733952367",
+    steamId: "2521380",
     extraTrailers: [],
     translations: [
     {
@@ -1799,6 +1976,9 @@ export const GAMES = [
     desc: "2D-приключение с элементами психологического триллера о чувстве вины и страхе. Маленькая девочка просыпается на чердаке чужого дома где-то в глуши. Кто её похитил и зачем? Возможно ли сбежать, если выхода нет, а в тенях притаилось нечто?",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2872240/1667112614/017fb7f96970edee51991ce1e44827e8482cba84/1768476211/hls_264_master.m3u8?t=1768476614",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257265234/9d7e1bf05b60c534d1f1762f0811b2ce2bfb1a8d/movie_600x337.jpg?t=1768476614",
+    steamId: "2872240",
     extraTrailers: [],
     translations: [
     {
@@ -1827,6 +2007,9 @@ export const GAMES = [
     desc: "Perform aerial stunts, use your boost wisely, and open shortcuts to dominate your friends on 45 tracks in stunning tropical locations across the globe. The game s breathtaking speed and accessible gameplay allows players of all skills to instantly pick up on the fun, while the competitive multiplayer and customization ",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -1855,6 +2038,9 @@ export const GAMES = [
     desc: "2084 год. Погрузитесь в роль нейродетектива и проникайте в чужие разумы на фоне декораций футуристического мира, охваченного войной и болезнями. Их чувства, мысли и воспоминания помогут вам раскрыть дело и поймать неуловимого убийцу.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/1386900/325586/6a4a8bb71a44a97de90103054fe91ca6c473fea5/1750682988/hls_264_master.m3u8?t=1605024754",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256808906/movie.293x165.jpg?t=1605024754",
+    steamId: "1386900",
     extraTrailers: [],
     translations: [
     {
@@ -1883,6 +2069,9 @@ export const GAMES = [
     desc: "Ты просыпаешься и находишь письмо от отца. Он ушёл Единственные зацепки для разгадки тайны — его старый дневник и загадочное ожерелье. Что же произошло?",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/339200/31567/39d094b33dba1398cfd528eb9861e6ad7269c261/1751272483/hls_264_master.m3u8?t=1447369505",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2037306/movie.293x165.jpg?t=1447369505",
+    steamId: "339200",
     extraTrailers: [],
     translations: [
     {
@@ -1911,6 +2100,9 @@ export const GAMES = [
     desc: "Лихо одноглазое — это мистический хоррор от первого лица по мотивам мрачной народной сказки. Исследуйте таинственный мир игры и разгадывайте загадки, чтобы скрыться от своей лихой доли.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2346840/2064284078/8fc18dcc7bfebdaa0c438641270623f46cc57075/1750688562/hls_264_master.m3u8?t=1750752844",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257160348/75fef20ee09df1f02586056c26198f9d21883588/movie_600x337.jpg?t=1750752844",
+    steamId: "2346840",
     extraTrailers: [],
     translations: [
     {
@@ -1939,6 +2131,9 @@ export const GAMES = [
     desc: "The ultimate edition of Panzer Corps, containing hundreds of scenarios and all its expansions. Panzer Corps Gold is the culmination of the wargame that has enthralled millions of fans all around the globe, and now it s your chance to fully experience a real classic.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/268400/17531/510ed7c111fe34ff6f125d4a91595effac5e437f/1751260858/hls_264_master.m3u8?t=1447360505",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2031026/movie.293x165.jpg?t=1447360505",
+    steamId: "268400",
     extraTrailers: [],
     translations: [
     {
@@ -1967,6 +2162,9 @@ export const GAMES = [
     desc: "Пенумбра: Некролог — тотальная модификация для игры Amnesia: The Dark Descent, созданная независимой командой разработчиков и является продолжением серии. Повествование сюжета начинается сразу после того, как Филиппа Лафреска оглушило неизвестное существо во второй части. Очнувшись, он сразу понимает, что вакцина не ср",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/346290/30481/a8fa4a89d8297f8385e3f86a8627b221c82bfc9f/1751275127/hls_264_master.m3u8?t=1447368144",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2036829/movie.293x165.jpg?t=1447368144",
+    steamId: "346290",
     extraTrailers: [],
     translations: [
     {
@@ -1995,6 +2193,9 @@ export const GAMES = [
     desc: "PIONER это MMO-шутер от первого лица с открытым миром, действие которого разворачивается в призрачном мире альтернативной реальности, где на пустынном постапокалиптическом острове покоятся заброшенные постройки советской эпохи. В этой захватывающей среде игровой процесс определяется динамичными элементами PvE и PvP, гд",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/3105890/1038071346/a75045d0ec0692bbcad45a15aa3eca008afca93d/1765906771/hls_264_master.m3u8?t=1765963524",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257250938/6a67f1246f99a52caaba5b7bac66b972a0664eb9/movie_600x337.jpg?t=1765963524",
+    steamId: "3105890",
     extraTrailers: [],
     translations: [
     {
@@ -2023,6 +2224,9 @@ export const GAMES = [
     desc: "Pyre — это отрядная ролевая игра, в которой вам предстоит возглавить отряд изгнанников и привести их к свободе, одержав победу в древнем состязании на просторах таинственного чистилища. Кого ждет слава, а кто останется изгнанником до конца своих дней?",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/462770/114354/7c8ac31a4ccc9ab1b5e92557a41ad8dc9a9fd526/1751289026/hls_264_master.m3u8?t=1500570185",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256690706/movie.293x165.jpg?t=1500570185",
+    steamId: "462770",
     extraTrailers: [],
     translations: [
     {
@@ -2050,7 +2254,10 @@ export const GAMES = [
     tags: ["экшены","официальный перевод"],
     desc: "Примите участие в Гонке Девяти Миров! Играйте за одного из девяти Гонщиков Путей, покорите трассы фантастических планет, пройдите увлекательную сюжетную кампанию и станьте легендой, что восстановит мир среди враждующих галактик.",
     source: "gamesvoice",
-    trailerId: null,
+    trailerId: "LgvEaKZBBg0",
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/3817560/1179557112/290cd0d091763c7cde2a16fcd058ce9cea556ce9/1764169488/hls_264_master.m3u8?t=1764171190",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257238787/bf2eec8be2dbb3a6894226e348ce365914291bdf/movie_600x337.jpg?t=1764171190",
+    steamId: "3817560",
     extraTrailers: [],
     translations: [
     {
@@ -2079,6 +2286,9 @@ export const GAMES = [
     desc: "Raft бросает вас и ваших друзей в эпическое океанское приключение! В одиночку или вместе игроки сражайтесь, чтобы выжить в опасном путешествии по бескрайнему океану! Собирайте мусор, прочесывайте рифы и стройте свой собственный плавучий дом, но будьте осторожны с акулами-людоедами!",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/648800/472596/2b044f3af0177b0711f90c375be5a4b346c125e0/1750567254/hls_264_master.m3u8?t=1655744106",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256892239/movie.293x165.jpg?t=1655744106",
+    steamId: "648800",
     extraTrailers: [],
     translations: [
     {
@@ -2107,6 +2317,9 @@ export const GAMES = [
     desc: "Официальный текст. Актёрский фанатский дубляж в разработке — уже доступно демо.",
     source: "curated",
     trailerId: "eaW0tYpxyp0",
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -2155,6 +2368,9 @@ export const GAMES = [
     desc: "REDEEMER это жестокая и бескомпромиссная игра в жанре «избей их всех», где вы будете пробивать, прорубать и простреливать себе путь сквозь толпы врагов, используя кулаки, молотки, огнестрельное оружие и окружающие предметы.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/447290/532019/a1ecbc5cdeea6b3f37a2cc3f2692b0a03abb49bc/1751286574/hls_264_master.m3u8?t=1674498247",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256926552/movie.293x165.jpg?t=1674498247",
+    steamId: "447290",
     extraTrailers: [],
     translations: [
     {
@@ -2183,6 +2399,9 @@ export const GAMES = [
     desc: "Только Джилл Валентайн знает о преступлениях корпорации «Амбрелла». Чтобы остановить ее, «Амбрелла» использует секретное оружие: Немезис!",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/952060/256907/5141d813edc8089d554b7e98bda705dce4d99409/1750601413/hls_264_master.m3u8?t=1576626964",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256769597/movie.293x165.jpg?t=1576626964",
+    steamId: "952060",
     extraTrailers: [],
     translations: [
     {
@@ -2211,6 +2430,9 @@ export const GAMES = [
     desc: "В 1998 году для расследования странных убийств в окрестности города Раккун-сити направлен отряд особого назначения. На бойцов нападает стая кровожадных псов-мутантов, и они пытаются спастись в усадьбе неподалеку. Но и там все пропитано запахом смерти. Боеприпасов мало, а борьба за выживание трудна.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/304240/24847/a7a573fb1675f6265b9ea5a13c0421e5800bdc54/1750504044/hls_264_master.m3u8?t=1447363519",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2034311/movie.293x165.jpg?t=1447363519",
+    steamId: "304240",
     extraTrailers: [],
     translations: [
     {
@@ -2239,6 +2461,9 @@ export const GAMES = [
     desc: "Игра погружает игроков в события, происходящие в период между четвёртой и пятой и раскрывающие правду о вирусе T-Бездна. В Resident Evil Revelations присутствуют звезды серии Джилл Валентайн и Крис Редфилд, а также их партнеры по BSAA Паркер Лучиани и Джессика Шерават.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/222480/11635/ad017711ee17f25ea94d68d27d01f59a3468d6fb/1756429580/hls_264_master.m3u8?t=1447357940",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2028719/movie.293x165.jpg?t=1447357940",
+    steamId: "222480",
     extraTrailers: [],
     translations: [
     {
@@ -2267,6 +2492,9 @@ export const GAMES = [
     desc: "Клэр и Мойра были на вечеринке в честь поступления Мойры в антибиотеррористическую организацию TerraSave. Внезапно в здание ворвались неизвестные вооружённые люди и ввели Клэр и Мойре снотворное. Придя в себя в заброшенной тюрьме, Клэр обнаружила, что камера в которой она находилась каким-то образом открылась, а на ее ",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/287290/31755/77106ca61294fdad8987c1987e29d5e65ee3eb82/1750490531/hls_264_master.m3u8?t=1447369729",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2037379/movie.293x165.jpg?t=1447369729",
+    steamId: "287290",
     extraTrailers: [],
     translations: [
     {
@@ -2295,6 +2523,9 @@ export const GAMES = [
     desc: "Главная цель протагониста — вернуть себе потерянную душу, для этого придётся заручиться поддержкой одной из фракций в игре, вновь собрать команду, обзавестись кораблём и попутно спасти мир от новой угрозы.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/249230/24491/9b06e71ef1e7ad919691ad90ffbb752401dca6c2/1750837070/hls_264_master.m3u8?t=1447363394",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2034136/movie.293x165.jpg?t=1447363394",
+    steamId: "249230",
     extraTrailers: [],
     translations: [
     {
@@ -2323,6 +2554,9 @@ export const GAMES = [
     desc: "Наш герой участвует в небольшой экспедиции. Ее участники на трех лодках ищут скрытые бухты межу двумя островами архипелага, но, к сожалению, так и не могут их найти. В тумане они потеряют друг друга, и лишь, когда туман постепенно рассеется, наш герой и братья Карл и Густав снова встретятся в открытом море.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -2351,6 +2585,9 @@ export const GAMES = [
     desc: "Гибридные фанатские дубляжи нескольких студий.",
     source: "curated",
     trailerId: "PKO4PL8Xzik",
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -2399,6 +2636,9 @@ export const GAMES = [
     desc: "Космическое будущее России, 2062 год. Век освоения космоса омрачает неожиданная угроза, что несёт смерть всему человечеству. Понять тайну происходящего предстоит ученому из России. Разберитесь в детективной истории: ищите ответы на Земле и спутниках Сатурна.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2742840/800861/a9a0521464ead456c235afc0ce87858d2ede93fc/1750896065/hls_264_master.m3u8?t=1738846588",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257082595/55211cf828e7322abb5930bab4a06a14c719cec8/movie_600x337.jpg?t=1738846588",
+    steamId: "2742840",
     extraTrailers: [],
     translations: [
     {
@@ -2427,6 +2667,9 @@ export const GAMES = [
     desc: "Целью игры является выживание в условиях нарушения содержания аномальных объектов в одной из зон содержания организации, известной как «Фонд SCP».",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -2454,7 +2697,10 @@ export const GAMES = [
     tags: ["экшены","фанатская озвучка"],
     desc: "Изучая письмо своей покойной жены, Джеймс возвращается в Сайлент Хилл, с которым у них связано столько воспоминаний. Он обнаруживает город-призрак, по которому бродят жуткие монстры и который окутан густым туманом.",
     source: "gamesvoice",
-    trailerId: null,
+    trailerId: "bpBvlKbgRkg",
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2124490/768821/b4cc65bd4a85849c5cc8f4cd65bbb1974cdce0f3/1750837073/hls_264_master.m3u8?t=1744248681",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257063160/b8d8d574fe93e6d924047ec3bcc7414115d6c096/movie_600x337.jpg?t=1744248681",
+    steamId: "2124490",
     extraTrailers: [],
     translations: [
     {
@@ -2483,6 +2729,9 @@ export const GAMES = [
     desc: "Официальный текст. Полный профессиональный дубляж от GamesVoice.",
     source: "curated",
     trailerId: "FUNVlzGwW3A",
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -2521,6 +2770,9 @@ export const GAMES = [
     desc: "Действие игры стартует спустя 17 лет после окончания первой части, в которой Гарри Мэйсон, после уничтожения «Бога» культа The Order, забирает с собой маленькую девочку. Главной героиней игры является молодая девушка по имени Хизер, сталкивающаяся с погружением в мир собственных страхов как в неназванном городе, так и ",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -2549,6 +2801,9 @@ export const GAMES = [
     desc: "Silent Hill: Alchemilla — это отечественная небольшая разработка, попытка воссоздать атмосферу Silent Hill на движке Source.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "",
+    trailerPreview: "",
+    steamId: "",
     extraTrailers: [],
     translations: [
     {
@@ -2577,6 +2832,9 @@ export const GAMES = [
     desc: "Стелс-экшн от третьего лица в сеттинге Великой Отечественной Войны. Игра за оперативника СМЕРШ. Используйте маскировку, устраняйте противника при помощи оружия или подстраивайте несчастные случаи. Двух похожих прохождений не будет.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/4431400/887631893/b795032f0ba7bcd00caaab183e4b7436968cfd4a/1778748646/hls_264_master.m3u8?t=1780158938",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257336580/d42a25d0275b31741858456a3b607dd6e772dd2c/movie_600x337.jpg?t=1780158938",
+    steamId: "4431400",
     extraTrailers: [],
     translations: [
     {
@@ -2605,6 +2863,9 @@ export const GAMES = [
     desc: "SOMA — это научно-фантастический хоррор от студии Frictional Games, создателей игры «Amnesia: Призрак прошлого». Вас ждет пугающая история, ставящая непростые вопросы: что такое сознание, личность и что значит быть человеком?",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/282140/135981/736c3004f24ebe33781b0a0479d5045708150f04/1750489206/hls_264_master.m3u8?t=1512140282",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256702525/movie.293x165.jpg?t=1512140282",
+    steamId: "282140",
     extraTrailers: [],
     translations: [
     {
@@ -2632,7 +2893,10 @@ export const GAMES = [
     tags: ["экшены","фанатская озвучка"],
     desc: "Из кровавых полей игровой площадки для четвероклашек грядет герой, которому судьба предначертала стать спасителем Южного Парка. Создатели «Южного Парка» Трей Паркер и Мэтт Стоун приготовили для вас величайшую миссию — стать крутым.",
     source: "gamesvoice",
-    trailerId: null,
+    trailerId: "fhLL4lTJaWM",
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/213670/17176/7958372ea00bf828dd392d866a49813cc18e3cde/1750480987/hls_264_master.m3u8?t=1447360355",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2030892/movie.293x165.jpg?t=1447360355",
+    steamId: "213670",
     extraTrailers: [],
     translations: [
     {
@@ -2660,8 +2924,11 @@ export const GAMES = [
     tags: ["экшены","фанатская озвучка"],
     desc: "История Кэла Кестиса продолжается в игре STAR WARS Jedi: Survivor — приключенческом экшне галактического масштаба с видом от третьего лица.",
     source: "gamesvoice",
-    trailerId: null,
-    extraTrailers: [],
+    trailerId: "nY13WYEY6OA",
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/1774580/586184/f723655828cd2d57318ebe145cc974c851241494/1750734365/hls_264_master.m3u8?t=1689016714",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256957450/movie.293x165.jpg?t=1689016714",
+    steamId: "1774580",
+    extraTrailers: [{"id":"NvM5XIzBaUo","label":"Трейлер"},{"id":"UIXw2xCzwns","label":"Трейлер"}],
     translations: [
     {
       type: "both",
@@ -2689,6 +2956,9 @@ export const GAMES = [
     desc: "Subnautica — это приключенческая игра, действие которой разворачивается под поверхностью инопланетного океана. Вас ждет огромный открытый мир, полный чудес и опасностей!",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/264710/143519/33594902d34e588ce90d9905c30aa902198fea59/1750490623/hls_264_master.m3u8?t=1516828564",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256706800/movie.293x165.jpg?t=1516828564",
+    steamId: "264710",
     extraTrailers: [],
     translations: [
     {
@@ -2717,6 +2987,9 @@ export const GAMES = [
     desc: "Отправляйтесь в ледяное подводное приключение на чужой планете. Действие Below Zero разворачивается через два года после событий оригинальной игры Subnautica. Выживайте с суровых условиях — стройте жилища, создавайте инструменты и погружайтесь в глубины океана.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/848450/361258/82151770fcaf7d6667a364a76c0f16b836513514/1750588821/hls_264_master.m3u8?t=1618322274",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/256830049/movie.293x165.jpg?t=1618322274",
+    steamId: "848450",
     extraTrailers: [],
     translations: [
     {
@@ -2745,6 +3018,9 @@ export const GAMES = [
     desc: "Действие происходит в 2114 году. Вы выходите из анабиоза на борту звездолета Von Braun и не можете вспомнить ни кто вы, ни где находитесь, а вокруг очевидно произошло что-то ужасное. Гибридные мутанты и смертоносные роботы бродят по пустым залам, а крики выживших членов команды эхом отдаются в холодных коридорах корабл",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/866570/1030519241/db376ea6dcafe17722f718118e94e5c00e8a7d20/1750591118/hls_264_master.m3u8?t=1749556100",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257154401/d3a9af7cba8013b9e9f1f43cff06215517551d96/movie_600x337.jpg?t=1749556100",
+    steamId: "866570",
     extraTrailers: [],
     translations: [
     {
@@ -2773,6 +3049,9 @@ export const GAMES = [
     desc: "В таинственном научном комплексе, расположенном в Антарктиде, царит атмосфера ужаса и смерти. Игроку предстоит в одиночку исследовать зловещее место, разгадать загадки и постараться выжить, не поддаваясь панике перед пугающей неизвестностью.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/3254050/550828033/da41eb193fd928aefd708fff6155e1a0778c938e/1766561726/hls_264_master.m3u8?t=1766562303",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257254903/902a0456c81c531bce0c2df0f85044562f1a8e2d/movie_600x337.jpg?t=1766562303",
+    steamId: "3254050",
     extraTrailers: [],
     translations: [
     {
@@ -2801,6 +3080,9 @@ export const GAMES = [
     desc: "События игры разворачиваются в медленно угасающем городе древнейшей цивилизации. Главный герой — отшельник, проживающий в канализациях, который испытывает сильную жажду к знаниям.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/297350/25965/33b2bc201a4020b914d106f3e6857dd805cf5c74/1751260255/hls_264_master.m3u8?t=1447364008",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2034783/movie.293x165.jpg?t=1447364008",
+    steamId: "297350",
     extraTrailers: [],
     translations: [
     {
@@ -2829,6 +3111,9 @@ export const GAMES = [
     desc: "Исследователь паранормальных явлений Пол Просперо, обладающий сверхъестественными способностями, получает письмо от 12-летнего Итана Картера, исчезнувшего по неизвестным причинам. Прочитав письмо, Просперо решает отправиться в маленькую шахтерскую деревушку штата Висконсин, где жил Итан, чтобы разобраться в том, что та",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/258520/27008/eec91a23e89bd60b476d8962c29b359c8ee94d46/1750497330/hls_264_master.m3u8?t=1447364660",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2035311/movie.293x165.jpg?t=1447364660",
+    steamId: "258520",
     extraTrailers: [],
     translations: [
     {
@@ -2857,6 +3142,9 @@ export const GAMES = [
     desc: "Откройте для себя тщательно восстановленные оригинальные приключения Лары Крофт! Впервые в истории вы сможете сыграть в полную версию игры со всеми дополнениями и секретными уровнями в этом завершенном сборнике для современных платформ.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2478970/619401979/91fad9fea22b8fc06a635da0a0bb7479d0110485/1772768667/hls_264_master.m3u8?t=1773331350",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257298686/ee6a959da891bcaae6ab7b4905c0dc0e0c15d23b/movie_600x337.jpg?t=1773331350",
+    steamId: "2478970",
     extraTrailers: [],
     translations: [
     {
@@ -2885,6 +3173,9 @@ export const GAMES = [
     desc: "Ее наследие живо! Отправляйтесь в приключения с обновленными играми из серии Tomb Raider, собранными в коллекцию Darkness Trilogy.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2525380/819871/dd45a51be3d6606622f08efd8fedcae51549beda/1750816366/hls_264_master.m3u8?t=1739548679",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257092994/33b71212daec9829e1f09e3cbf0255ad625ef7d6/movie_600x337.jpg?t=1739548679",
+    steamId: "2525380",
     extraTrailers: [],
     translations: [
     {
@@ -2913,6 +3204,9 @@ export const GAMES = [
     desc: "Tracery of Fate is a dark fantasy cooperative/solo VR game in magic post-apocalyptic world.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/1710670/802391/199dcea2a16a06cda8c2bda9428c5ebb2571b9bf/1751022453/hls_264_master.m3u8?t=1734618518",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257083535/01e0d1c031634414ea7825f1d39b5380f3cddbdc/movie_600x337.jpg?t=1734618518",
+    steamId: "1710670",
     extraTrailers: [],
     translations: [
     {
@@ -2941,6 +3235,9 @@ export const GAMES = [
     desc: "Transistor — научно-фантастическая игра в жанре Action RPG от создателей Bastion, в которой вам предстоит путешествовать по завораживающему футуристическому городу, защищая свою жизнь при помощи невероятного оружия неизвестного происхождения.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/237930/20996/8b1943f7505da5232c4f37f167006e1a2b9f80f7/1750483205/hls_264_master.m3u8?t=1447361955",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2032455/movie.293x165.jpg?t=1447361955",
+    steamId: "237930",
     extraTrailers: [],
     translations: [
     {
@@ -2969,6 +3266,9 @@ export const GAMES = [
     desc: "Станьте членом экипажа Межпространственного Экспресса! Откройте для себя мир, полный загадочных существ и локаций. Улучшайте и кастомизируйте свой поезд, собирайте новые материалы и создавайте новое оружие. Играйте в одиночку или онлайн до 4 человек.",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/1159690/168142397/41eb3648bb8b8e3a5b5d219ea1445d50e3a69599/1762536882/hls_264_master.m3u8?t=1762539786",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257228304/7b4af6e070ad8a9006f1307981d33a509f201756/movie_600x337.jpg?t=1762539786",
+    steamId: "1159690",
     extraTrailers: [],
     translations: [
     {
@@ -2996,7 +3296,10 @@ export const GAMES = [
     tags: ["экшены","официальный перевод"],
     desc: "Эпическая 2D соулслайк метроидвания в мрачном славянском фэнтези, с ручной анимацией. Исследуйте заколдованный мир, полный тайн и врагов. Ваш выбор ведёт к нескольким концовкам: стать богатырем, оборотнем или присоединиться к тьме.",
     source: "gamesvoice",
-    trailerId: null,
+    trailerId: "7x-1dXE0fik",
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2499040/1548327592/3f9d37574326710129327508aae3c2a66481a172/1787316402/hls_264_master.m3u8?t=1787320417",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257405108/287c6f5928d8b03d36e4ac54616b2c373cea3436/movie_600x337.jpg?t=1787320417",
+    steamId: "2499040",
     extraTrailers: [],
     translations: [
     {
@@ -3025,6 +3328,9 @@ export const GAMES = [
     desc: "Игра ЯР — это душевное приключение, вдохновлённое славянскими мифами и легендами, которое подарит вам яркие впечатления. Мир игры наполнен множеством событий, как светлых, так и мрачных. Сразитесь с невиданными прежде врагами. Освободите землю от нашествия нечисти и разгадайте тайну, кто и зачем решил захватить добрый ",
     source: "gamesvoice",
     trailerId: null,
+    trailerHls: "https://video.akamai.steamstatic.com/store_trailers/2669860/1150749916/42fbfeaf91e8251bedf8b6ab03b832be166c06be/1775419548/hls_264_master.m3u8?t=1775423807",
+    trailerPreview: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257314943/1f73d92bcc33ea2bdeb5586593006e94299147fd/movie_600x337.jpg?t=1775423807",
+    steamId: "2669860",
     extraTrailers: [],
     translations: [
     {

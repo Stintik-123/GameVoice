@@ -8,6 +8,7 @@ import { createCatalog } from './catalog.js';
 import { createRouter } from './router.js';
 import { cardHTML, miniCardHTML, translationHTML, statsHTML, fullTitle, coverStyle, pluralVariants } from './render.js';
 import { escapeHTML } from './search.js';
+import { setHeroVideo as setHeroVideoEl, playTrailer, trailerSource, resetPlayer } from './hero-video.js';
 
 const REPO = 'Stintik-123/GameVoice';
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -54,22 +55,7 @@ function startHero() {
 }
 
 function setHeroVideo(game) {
-  const wrap = $('#heroVideo');
-  if (!wrap) return;
-  if (!isDesktopVideo || reduceMotion || !game || !game.trailerId) {
-    wrap.classList.remove('is-on');
-    wrap.innerHTML = '';
-    delete wrap.dataset.id;
-    return;
-  }
-  if (wrap.dataset.id === game.trailerId) {
-    wrap.classList.add('is-on');
-    return;
-  }
-  wrap.dataset.id = game.trailerId;
-  wrap.classList.add('is-on');
-  const id = game.trailerId;
-  wrap.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=${id}" title="" allow="autoplay; encrypted-media" tabindex="-1"></iframe>`;
+  setHeroVideoEl($('#heroVideo'), game, { allow: isDesktopVideo && !reduceMotion });
 }
 
 function renderHero(game, fromCarousel) {
@@ -101,6 +87,7 @@ function renderHero(game, fromCarousel) {
     tags.innerHTML = (game.tags || []).map((t) => `<span>#${escapeHTML(t)}</span>`).join('');
   }
   if (bg) {
+    // под видео — баннер игры; пока трейлер грузится, он и есть фон
     const img = game.heroImage || game.cover;
     bg.style.cssText = img
       ? `background-image:url(${img});background-size:cover;background-position:center;`
@@ -116,7 +103,7 @@ function renderHero(game, fromCarousel) {
     pager.textContent = `${index + 1} / ${catalog.games.length}`;
   }
   const trailerBtn = $('#heroTrailerBtn');
-  if (trailerBtn) trailerBtn.hidden = !game.trailerId;
+  if (trailerBtn) trailerBtn.hidden = !trailerSource(game);
   setHeroVideo(game);
   if (!fromCarousel) startHero();
 }
@@ -273,8 +260,7 @@ function closeModal(modal) {
   }
   modal.classList.remove('open');
   if (modal.id === 'trailerModal') {
-    const frame = $('#videoFrame');
-    if (frame) frame.innerHTML = '';
+    resetPlayer($('#videoFrame'));
   }
   if (!$$('.modal.open').length) document.body.style.overflow = '';
   if (lastFocused && lastFocused.focus) lastFocused.focus();
@@ -286,34 +272,54 @@ function closeAllModals() {
 }
 
 function openTrailer(game) {
-  if (!game || !game.trailerId) return;
+  if (!game) return;
+  const src = trailerSource(game);
+  if (!src) return;
   const modal = $('#trailerModal');
   const title = $('#trailerTitle');
   const tabs = $('#videoTabs');
   const frame = $('#videoFrame');
-  if (!modal || !tabs || !frame) return;
+  if (!modal || !frame) return;
 
   if (title) title.textContent = 'Трейлер — ' + game.title;
-  const all = [{ id: game.trailerId, label: 'Основной' }, ...(game.extraTrailers || [])];
-  tabs.innerHTML = all
-    .map(
-      (item, i) =>
-        `<button type="button" data-id="${item.id}" class="${i === 0 ? 'active' : ''}">${escapeHTML(item.label)}</button>`
-    )
-    .join('');
 
-  const setFrame = (id) => {
-    frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" title="Трейлер ${escapeHTML(game.title)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+  // вкладки только когда есть дополнительные ролики
+  const extras = game.extraTrailers || [];
+  if (tabs) {
+    tabs.innerHTML = extras.length
+      ? extras
+          .map(
+            (item, i) =>
+              `<button type="button" data-id="${escapeHTML(item.id)}" class="${i === 0 ? 'active' : ''}">${escapeHTML(item.label || 'Трейлер ' + (i + 2))}</button>`
+          )
+          .join('')
+      : '';
+  }
+
+  const setFrame = (item) => {
+    if (item.kind === 'hls') {
+      playTrailer(frame, { trailerHls: item.src, trailerPreview: item.poster });
+    } else {
+      resetPlayer(frame);
+      frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${item.src}?autoplay=1&rel=0" title="Трейлер ${escapeHTML(game.title)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+    }
   };
-  setFrame(all[0].id);
 
-  $$('#videoTabs button').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      $$('#videoTabs button').forEach((x) => x.classList.remove('active'));
-      btn.classList.add('active');
-      setFrame(btn.dataset.id);
+  setFrame(src);
+
+  if (tabs) {
+    $$('#videoTabs button').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        $$('#videoTabs button').forEach((x) => x.classList.remove('active'));
+        btn.classList.add('active');
+        const id = btn.dataset.id;
+        const extra = extras.find((x) => x.id === id);
+        if (extra) {
+          setFrame({ kind: 'youtube', src: extra.id, poster: '' });
+        }
+      });
     });
-  });
+  }
   openModal(modal);
 }
 

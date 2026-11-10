@@ -15,9 +15,31 @@ import { CURATED } from '../js/data-curated.js';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PRODUCTS = path.join(ROOT, 'data', 'gamesvoice-products.json');
 const LINK_STATUS = path.join(ROOT, 'data', 'link-status.json');
+const STEAM_TRAILERS = path.join(ROOT, 'data', 'steam-trailers.json');
 const OUT = path.join(ROOT, 'js', 'data.js');
 
 const PRODUCT_PAGE = 'https://gamesvoice.ru/product/';
+
+/* ------------------------------ трейлеры ---------------------------------- */
+
+/** Достаёт YouTube-видео из media: [{ youtube: [{ link, preview }] }]. */
+function youtubeFrom(media) {
+  const out = [];
+  for (const block of media || []) {
+    for (const y of block.youtube || []) {
+      const id = youtubeId(y.link);
+      if (id && !out.some((v) => v.id === id)) out.push({ id, preview: y.preview || '' });
+    }
+  }
+  return out;
+}
+
+/** Идентификатор ролика из ссылки youtube.com/embed/<id> или watch?v=<id>. */
+function youtubeId(link) {
+  const s = String(link || '');
+  const embed = s.match(/(?:embed\/|youtu\.be\/|v=)([A-Za-z0-9_-]{6,})/);
+  return embed ? embed[1] : '';
+}
 
 /* --------------------------------- утилиты -------------------------------- */
 
@@ -181,6 +203,7 @@ function readJson(file, fallback) {
 
 const linkStatus = readJson(LINK_STATUS, { links: {} });
 const aliveCache = linkStatus.links || {};
+const steamTrailers = (readJson(STEAM_TRAILERS, { trailers: {} }).trailers) || {};
 
 function isAlive(url) {
   if (!url) return false;
@@ -210,6 +233,11 @@ for (const p of products) {
   const type = TYPE_BY_FLAGS(p);
   const updated = String(p.published_at || '').slice(0, 7);
   const status = p.is_develop ? 'progress' : 'done';
+  const trailers = youtubeFrom(p.media);
+  const steam = steamTrailers[alias];
+  // приоритет: HLS-трейлер Steam (фон в hero), затем YouTube
+  const trailerHls = steam && steam.hls ? steam.hls : '';
+  const trailerPoster = (steam && steam.poster) || (trailers.length ? trailers[0].preview : '');
 
   const tags = [];
   if (genre) tags.push(genre.toLowerCase());
@@ -240,7 +268,14 @@ for (const p of products) {
     developer,
     platforms: platformsFromStores(p.stores),
     cover: p.preview || null,
-    heroImage: (p.banners && (p.banners.desktop || p.banners.mobile)) || null,
+    // баннер GamesVoice — с вшитым текстом, поэтому отдаём его только если
+    // нет Steam-арта (его подставит js/steam-covers.js)
+    heroImage: steam ? null : (p.banners && (p.banners.desktop || p.banners.mobile)) || null,
+    trailerId: trailers.length ? trailers[0].id : '',
+    trailerHls: trailerHls,
+    trailerPreview: trailerPoster,
+    extraTrailers: trailers.slice(1).map((t) => ({ id: t.id, label: 'Трейлер' })),
+    steamId: steam ? steam.appId : '',
     tags: tags.filter(Boolean),
     desc: firstParagraph(p.description),
     source: 'gamesvoice',
@@ -312,6 +347,9 @@ const body = built
     desc: ${JSON.stringify(g.desc || '')},
     source: ${JSON.stringify(g.source || 'gamesvoice')},
     trailerId: ${JSON.stringify(g.trailerId || null)},
+    trailerHls: ${JSON.stringify(g.trailerHls || '')},
+    trailerPreview: ${JSON.stringify(g.trailerPreview || '')},
+    steamId: ${JSON.stringify(g.steamId || '')},
     extraTrailers: ${JSON.stringify(g.extraTrailers || [])},
     translations: [
 ${t}
@@ -329,4 +367,5 @@ console.log(`Каталог собран: ${built.length} игр, из них с
 console.log(`  ручных: ${built.filter((g) => g.source.startsWith('curated')).length}, из API: ${built.filter((g) => g.source === 'gamesvoice').length}`);
 console.log(`  жанров: ${new Set(built.map((g) => g.genre).filter(Boolean)).size}`);
 console.log(`  с обложкой: ${built.filter((g) => g.cover).length}`);
+console.log(`  с трейлером: ${built.filter((g) => g.trailerHls || g.trailerId).length}`);
 console.log(`  записано в ${path.relative(ROOT, OUT)}`);

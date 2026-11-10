@@ -262,6 +262,19 @@
   pointer-events: none;
 }
 
+.hero-video__el {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw;
+  min-width: 177.78vh;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  pointer-events: none;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;

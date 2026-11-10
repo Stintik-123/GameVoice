@@ -32,7 +32,8 @@
 │   └── *.jpg               # фото для блоков «О проекте» и «Обновления»
 ├── data/
 │   ├── gamesvoice-products.json  # сырой ответ API GamesVoice (90 проектов)
-│   └── link-status.json          # результат проверки ссылок
+│   ├── link-status.json          # результат проверки ссылок
+│   └── steam-trailers.json       # трейлеры Steam (HLS-манифесты)
 └── js/
     ├── app.js              # Точка входа: инициализация, hero, модалки, тема
     ├── router.js           # parseHash → home / catalog / favorites / about / game
@@ -40,9 +41,11 @@
     ├── catalog.js          # createCatalog → byId / filter / genres / counts
     ├── search.js           # translit + skeleton, buildIndex, matches, highlight
     ├── render.js           # Рендер карточек, переводов, статистики
+    ├── hero-video.js       # Фоновое видео в hero: HLS (Steam) или YouTube
     ├── steam-covers.js     # Обложки и герой-фоны по Steam appid
     ├── data-curated.js     # 13 ручных карточек (описания, авторы, трейлеры)
-    └── data.js             # Генерируется: 102 игры (ручные + API)
+    ├── data.js             # Генерируется: 102 игры (ручные + API)
+    └── vendor/hls.min.js   # hls.js для HLS-трейлеров Steam
 ```
 
 ## Возможности
@@ -54,7 +57,9 @@
 - Виды каталога: сетка · список · лента (carousel), выбор запоминается
 - Избранное и история просмотров (localStorage)
 - Deep-link `#cyberpunk` / `#bg3` открывает карточку игры
-- Hero-баннер с ротацией и фоновым muted-трейлером YouTube (десктоп, не при reduced-motion)
+- Hero-баннер с ротацией и фоновым трейлером: HLS-ролики Steam (79 игр)
+  через hls.js, YouTube-embed для ручных карточек. Видео идёт на десктопе
+  и выключается при `prefers-reduced-motion`
 - Клавиши: `/` — поиск, `Esc` — закрыть модалку/меню
 - Модалки с автофокусом, возвратом фокуса и focus trap
 - FAQ; предложение игры → issue на GitHub
@@ -80,9 +85,14 @@ npm run serve        # http://localhost:8099
    (`api.gamesvoice.ru/api/products`), даёт обложки, ссылки на скачивание,
    магазины и статус проекта.
 
+Трейлеры берутся из Steam Store API: у 80 игр есть Steam-магазин, у 79 из них
+нашёлся ролик. Steam отдаёт только DASH/HLS-манифесты, поэтому видео играется
+через `js/vendor/hls.min.js` (нативная поддержка HLS — в Safari).
+
 ```bash
 npm run fetch:api      # обновить data/gamesvoice-products.json
 npm run check:links    # перепроверить ссылки → data/link-status.json
+npm run fetch:trailers # забрать трейлеры Steam → data/steam-trailers.json
 npm run build:catalog  # пересобрать js/data.js
 ```
 
@@ -90,7 +100,8 @@ npm run build:catalog  # пересобрать js/data.js
 считаются блокировкой бота, а не поломкой ссылки.
 
 Поля игры: `id`, `title`, `subtitle`, `year`, `genre`, `developer`, `platforms`,
-`tags`, `trailerId`, `extraTrailers`, `desc`, `translations`.
+`tags`, `trailerId`, `trailerHls`, `trailerPreview`, `steamId`,
+`extraTrailers`, `desc`, `translations`.
 
 Поля перевода: `type` (text/voice/both/subtitles), `status` (done/progress/abandoned),
 `author`, `version`, `updated` (YYYY-MM или YYYY-MM-DD), `name`, `body`, `links`.
