@@ -1,79 +1,102 @@
-/* hero accent locked to one red */
 :root, [data-theme], html {
-  --hero-red: #c1272d;
+  --hero-red: #f87171;
 }
+:root[data-theme="light"] {
+  --hero-red: #dc2626;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --hero-red: #f87171;
+  }
+}
+
 /* Steam covers + hero buttons + badges */
 .game-card-cover.has-cover { background-color: #111; }
 .game-card-cover.has-cover::before { opacity: 0; content: none; }
 .game-card-cover.has-cover::after {
+  content: '';
   background-image: none;
-  background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,.65) 100%);
+  background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, .55) 100%);
   opacity: 1;
 }
+
 .card-badges {
   position: absolute; left: 8px; bottom: 8px; z-index: 2;
   display: flex; flex-wrap: wrap; gap: 4px;
 }
+
 .card-badge {
-  font-family: var(--font-mono); font-size: .58rem; font-weight: 700;
+  font-family: var(--font-mono); font-size: .58rem; font-weight: 600;
   letter-spacing: .06em; text-transform: uppercase;
-  padding: 3px 7px; border: 1px solid rgba(239,230,211,.45);
-  background: rgba(10,10,10,.72); color: #efe6d3;
+  padding: 3px 8px; border-radius: var(--radius-xs);
+  border: 1px solid rgba(255, 255, 255, .3);
+  background: rgba(11, 11, 14, .7); color: #fafafa;
 }
-.card-badge.voice { border-color: var(--hero-red); background: rgba(193,39,45,.88); color: #fff; }
+
+.card-badge.voice { border-color: transparent; background: rgba(220, 38, 38, .9); color: #fff; }
+
 .mini-cover.has-cover {
   background-size: cover !important; background-position: center !important;
   color: transparent !important; font-size: 0 !important; overflow: hidden;
 }
 
+/* hero palette lock */
 .hero,
 .hero .hero-title,
 .hero .hero-desc,
 .hero .hero-meta,
 .hero .hero-meta span,
 .hero .hero-tags span {
-  color: #efe6d3 !important;
+  color: #fafafa !important;
 }
+
 .hero .hero-meta b {
   color: var(--hero-red) !important;
 }
+
 .hero .hero-badge {
-  color: #efe6d3 !important;
-  border-color: #efe6d3 !important;
+  color: #fafafa !important;
+  border-color: rgba(255, 255, 255, .25) !important;
 }
+
 .hero .hero-dots button {
-  border-color: rgba(239, 230, 211, .55) !important;
+  border-color: rgba(255, 255, 255, .45) !important;
   background: transparent !important;
 }
+
 .hero .hero-dots button[aria-selected="true"] {
   background: var(--hero-red) !important;
   border-color: var(--hero-red) !important;
 }
 
 .hero-actions .btn {
-  border-color: rgba(239, 230, 211, .55) !important;
-  background: rgba(239, 230, 211, .96) !important;
-  color: #0a0a0a !important;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, .45) !important;
+  border-color: transparent !important;
+  background: rgba(250, 250, 250, .96) !important;
+  color: #0b0b0e !important;
+  box-shadow: var(--shadow-md) !important;
 }
+
 .hero-actions .btn:hover {
   background: #fff !important;
-  color: #0a0a0a !important;
-  box-shadow: 5px 5px 0 rgba(193, 39, 45, .75) !important;
+  color: #0b0b0e !important;
+  transform: translateY(-1px) !important;
 }
+
 .hero-actions .btn-primary {
-  background: var(--hero-red) !important;
-  color: #efe6d3 !important;
-  border-color: rgba(239, 230, 211, .35) !important;
+  background: #dc2626 !important;
+  color: #fff !important;
+  border-color: transparent !important;
 }
+
 .hero-actions .btn-primary:hover {
-  background: #8a1a1f !important;
+  background: #b91c1c !important;
   color: #fff !important;
 }
+
 .hero-actions .btn[aria-pressed="true"] {
-  background: var(--hero-red) !important;
-  color: #efe6d3 !important;
-  border-color: var(--hero-red) !important;
+  background: #dc2626 !important;
+  color: #fff !important;
+  border-color: transparent !important;
 }
 
 @media (max-width: 899px) {
@@ -82,11 +105,11 @@
 
 /* Select chevron visible in dark theme */
 [data-theme="dark"] .selects select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23efe6d3' stroke-width='2.5' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%2384848f' stroke-width='2.5' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
 }
 @media (prefers-color-scheme: dark) {
   html:not([data-theme="light"]) .selects select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23efe6d3' stroke-width='2.5' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%2384848f' stroke-width='2.5' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
   }
 }
 
