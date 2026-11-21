@@ -13,5 +13,6 @@ jobs:
       - name: Run lychee
         uses: lycheeverse/lychee-action@v2
         with:
-          # 403 и 429 — магазины режут ботов, а не битые ссылки
-          args: --no-progress --max-concurrency 4 --accept 403,429 urls.txt
+          # --accept заменяет список по умолчанию, поэтому 2xx указаны явно.
+          # 403 и 429 — магазины режут ботов, а не битые ссылки.
+          args: --no-progress --max-concurrency 4 --accept 200..=299,403,429 urls.txt
