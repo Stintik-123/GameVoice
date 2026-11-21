@@ -1123,7 +1123,7 @@ export const GAMES = [
       updated: "2026-07",
       name: "NikiStudio — Эпизоды 1–3",
       body: "<p><strong>Что озвучено:</strong> Полный профессиональный дубляж эпизодов 1, 2 и 3</p><p>Работа над следующими эпизодами продолжается.</p>",
-      links: "<a href=\"https://www.zoneofgames.ru/files/11155.html\" class=\"btn\" target=\"_blank\" rel=\"noopener\">Zone of Games (1–3)</a><a href=\"https://www.playground.ru/dispatch/file/dispatch_rusifikator_zvuka_epizod_1_nikistudio-1813525\" class=\"btn\" target=\"_blank\" rel=\"noopener\">Playground — эп. 1</a><a href=\"https://www.playground.ru/dispatch/file/dispatch_rusifikator_zvuka_epizod_2_nikistudio-1840434\" class=\"btn\" target=\"_blank\" rel=\"noopener\">Эп. 2</a>"
+      links: "<a href=\"https://www.playground.ru/dispatch/file/dispatch_rusifikator_zvuka_epizod_1_nikistudio-1813525\" class=\"btn\" target=\"_blank\" rel=\"noopener\">Playground — эп. 1</a><a href=\"https://www.playground.ru/dispatch/file/dispatch_rusifikator_zvuka_epizod_2_nikistudio-1840434\" class=\"btn\" target=\"_blank\" rel=\"noopener\">Эп. 2</a>"
     },
     {
       type: "voice",

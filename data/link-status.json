@@ -1,7 +1,7 @@
 {
  "checked": "2026-11-10T11:42:15.794Z",
  "total": 462,
- "alive": 461,
+ "alive": 460,
  "links": {
   "https://u320.s3.cloudplace.ru:9000/s3-voicegames/games/": {
    "ok": false,
@@ -940,10 +940,10 @@
    "checked": "2026-11-10T11:41:56.892Z"
   },
   "https://www.zoneofgames.ru/files/11155.html": {
-   "ok": true,
-   "status": 200,
+   "ok": false,
+   "status": 0,
    "blocked": false,
-   "checked": "2026-11-10T11:41:56.909Z"
+   "checked": "2026-11-21T14:18:00.123Z"
   },
   "https://store.steampowered.com/app/73060/Defenders_of_Ardania/": {
    "ok": true,

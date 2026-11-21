@@ -9,6 +9,7 @@
     "fetch:api": "node scripts/fetch-gamesvoice.mjs",
     "fetch:trailers": "node scripts/fetch-steam-trailers.mjs",
     "check:links": "node scripts/check-links.mjs",
+    "extract:links": "node scripts/extract-links.mjs",
     "build:catalog": "node scripts/build-catalog.mjs",
     "check:site": "node scripts/check-site.mjs",
     "check:local": "node scripts/check-local-links.mjs",
