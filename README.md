@@ -1,127 +1,56 @@
-# GameVoice — каталог русификаторов и озвучек
+<div align="center">
 
-Статичный сайт (HTML/CSS/JS, без сборки) — каталог русских локализаций игр
-в стиле самиздат/broadsheet: тёплая бумага, типографская краска, газетные заголовки.
+<img src="images/og.png" width="100%" alt="GameVoice — каталог русификаторов и озвучек" />
 
-**Live:** [stintik-123.github.io/GameVoice](https://stintik-123.github.io/GameVoice/)
-**Репозиторий:** [github.com/Stintik-123/GameVoice](https://github.com/Stintik-123/GameVoice)
+# GameVoice
 
-В каталоге **102 игры** (13 вручную собранных + 89 из открытого API GamesVoice),
-**461 рабочая ссылка** на скачивание озвучек, русификаторы и магазины.
+**Каталог русских локализаций и озвучек игр: 102 игры, 461 проверенная ссылка**
 
-## Структура
+[![Открыть каталог](https://img.shields.io/badge/Открыть_каталог-8B0000?style=for-the-badge&logoColor=white)](https://stintik-123.github.io/GameVoice/)
 
-```
-/
-├── index.html              # Разметка, модалки, подключение шрифтов/скриптов (module)
-├── manifest.webmanifest    # PWA
-├── package.json            # npm-команды для сборки каталога и проверок
-├── robots.txt
-├── sitemap.xml
-├── favicon.svg
-├── apple-touch-icon.png    # Генерируется scripts/make-assets.mjs
-├── css/
-│   ├── tokens.css          # Дизайн-токены: цвета, светлая/тёмная темы
-│   ├── base.css            # Reset, типографика, базовые состояния
-│   ├── layout.css          # Header, hero, секции, футер, адаптив
-│   ├── components.css      # Карточки, фильтры, модалки, тосты
-│   ├── covers.css          # Steam-обложки, бейджи, герой-оверлеи
-│   └── updates.css         # Блок «Обновления»
-├── images/
-│   ├── og.png              # Open Graph 1200×630 (генерируется)
-│   └── *.jpg               # фото для блоков «О проекте» и «Обновления»
-├── data/
-│   ├── gamesvoice-products.json  # сырой ответ API GamesVoice (90 проектов)
-│   ├── link-status.json          # результат проверки ссылок
-│   └── steam-trailers.json       # трейлеры Steam (HLS-манифесты)
-└── js/
-    ├── app.js              # Точка входа: инициализация, hero, модалки, тема
-    ├── router.js           # parseHash → home / catalog / favorites / about / game
-    ├── store.js            # Состояние: фильтры, сортировка, избранное, тема
-    ├── catalog.js          # createCatalog → byId / filter / genres / counts
-    ├── search.js           # translit + skeleton, buildIndex, matches, highlight
-    ├── render.js           # Рендер карточек, переводов, статистики
-    ├── hero-video.js       # Фоновое видео в hero: HLS (Steam) или YouTube
-    ├── steam-covers.js     # Обложки и герой-фоны по Steam appid
-    ├── data-curated.js     # 13 ручных карточек (описания, авторы, трейлеры)
-    ├── data.js             # Генерируется: 102 игры (ручные + API)
-    └── vendor/hls.min.js   # hls.js для HLS-трейлеров Steam
-```
+</div>
 
-## Возможности
+---
 
-- Поиск (`/`) по названию, студии, жанру, году и тегам с подсветкой совпадений;
-  работает транслит и «фонетический скелет» — «киберпанк» находит «Cyberpunk»
-- Фильтры: тип (чипы со счётчиками) / жанр / статус + сортировка
-  (дата обновления · год · число вариантов · алфавит), сброс в один клик
-- Виды каталога: сетка · список · лента (carousel), выбор запоминается
-- Избранное и история просмотров (localStorage)
-- Deep-link `#cyberpunk` / `#bg3` открывает карточку игры
-- Hero-баннер с ротацией и фоновым трейлером: HLS-ролики Steam (79 игр)
-  через hls.js, YouTube-embed для ручных карточек. Видео идёт на десктопе
-  и выключается при `prefers-reduced-motion`
-- Клавиши: `/` — поиск, `Esc` — закрыть модалку/меню
-- Модалки с автофокусом, возвратом фокуса и focus trap
-- FAQ; предложение игры → issue на GitHub
-- Светлая/тёмная тема с учётом системной настройки; PWA-манифест
-- Fallback обложек (буква названия), если Steam-картинка недоступна
+GameVoice — это место, где можно за минуту найти, скачать и установить русскую озвучку или русификатор для своей игры. Никаких форумов из 40 страниц и мёртвых ссылок: каждая ссылка в каталоге автоматически перепроверяется, мёртвые стираются.
 
-## Запуск
+**[Играть по-русски → stintik-123.github.io/GameVoice](https://stintik-123.github.io/GameVoice/)**
+
+## Почему это удобно
+
+- **102 игры** — 13 карточек собраны вручную (описания, авторы переводов, трейлеры), ещё 89 подтягиваются из открытого API GamesVoice
+- **Никаких мёртвых ссылок** — ссылки автоматически перепроверяются, нерабочие исчезают из каталога
+- **Честный поиск** — пишите «киберпанк» и найдёте Cyberpunk 2077: поиск понимает транслит и опечатки
+- **Фильтры и вид** — тип локализации (текст / озвучка / субтитры), жанр, статус перевода; сетка, список или лента
+- **Избранное** — отслеживайте нужные игры, всё хранится локально в браузере
+- **Живые трейлеры** — фон главной страницы играет Steam-ролики найденной игры
+- **PWA** — сайт можно установить как приложение и пользоваться с телефона
+- **Честные карточки** — у каждой игры автор перевода, версия, дата обновления и статус: готово, в процессе или заброшено
+
+## Как пользоваться
+
+1. Откройте [каталог](https://stintik-123.github.io/GameVoice/)
+2. Найдите игру через поиск (клавиша `/`) или фильтры
+3. В карточке выберите нужный вариант локализации и ссылку на скачивание
+4. Готово — инструкция по установке есть в самой карточке
+
+Не нашли свою игру? [Откройте issue](https://github.com/Stintik-123/GameVoice/issues) — добавим.
+
+## Для разработчиков
+
+Витрина без сборки: HTML/CSS + ES-модули. Данные живут в `js/data.js` и собираются из двух источников — ручных карточек (`js/data-curated.js`) и открытого API GamesVoice (`data/gamesvoice-products.json`).
 
 ```bash
-npm install          # только для dev-инструментов (playwright)
-npm run serve        # http://localhost:8099
-```
-
-Любой статический сервер подходит (Live Server, `npx serve`, GitHub Pages).
-
-## Данные
-
-Каталог собирается скриптом из двух источников:
-
-1. `js/data-curated.js` — 13 карточек, собранных вручную: описания, авторы,
-   трейлеры, ссылки на Playground/GamesVoice. Ручные записи главнее.
-2. `data/gamesvoice-products.json` — открытый API GamesVoice
-   (`api.gamesvoice.ru/api/products`), даёт обложки, ссылки на скачивание,
-   магазины и статус проекта.
-
-Трейлеры берутся из Steam Store API: у 80 игр есть Steam-магазин, у 79 из них
-нашёлся ролик. Steam отдаёт только DASH/HLS-манифесты, поэтому видео играется
-через `js/vendor/hls.min.js` (нативная поддержка HLS — в Safari).
-
-```bash
-npm run fetch:api      # обновить data/gamesvoice-products.json
-npm run check:links    # перепроверить ссылки → data/link-status.json
-npm run fetch:trailers # забрать трейлеры Steam → data/steam-trailers.json
+npm install            # dev-зависимости (playwright)
+npm run serve          # http://localhost:8099
+npm run fetch:api      # обновить данные из API GamesVoice
+npm run check:links    # перепроверить все ссылки
 npm run build:catalog  # пересобрать js/data.js
+npm run check:site     # 15 e2e-проверок
 ```
 
-Мёртвые ссылки (404/таймаут) вырезаются из карточек; ответы 401/403/405/429
-считаются блокировкой бота, а не поломкой ссылки.
+Мёртвые ссылки перепроверяются еженедельно GitHub Actions (`link-check.yml`, lychee): 404 и таймауты вырезаются из карточек, а 401/403/429 считаются блокировкой бота, а не поломкой ссылки.
 
-Поля игры: `id`, `title`, `subtitle`, `year`, `genre`, `developer`, `platforms`,
-`tags`, `trailerId`, `trailerHls`, `trailerPreview`, `steamId`,
-`extraTrailers`, `desc`, `translations`.
+## Лицензия
 
-Поля перевода: `type` (text/voice/both/subtitles), `status` (done/progress/abandoned),
-`author`, `version`, `updated` (YYYY-MM или YYYY-MM-DD), `name`, `body`, `links`.
-
-Длинные блоки «Установка», «Команда и актёры» и «Частые вопросы» сворачиваются
-в `<details>` — карточка не превращается в простыню.
-
-Обложки и герой-фоны подгружаются автоматически из Steam CDN по appid
-(`js/steam-covers.js`); там же можно задать `g.cover` / `g.heroImage` вручную.
-
-## Разработка
-
-JS — ES-модули: `app.js` (точка входа) → `router` / `store` / `catalog` /
-`search` / `render`. Стили — `css/*`, сборки нет: правьте исходники и
-обновляйте страницу.
-
-```bash
-npm run check:site   # 15 e2e-проверок (playwright): поиск, фильтры, модалки, тема
-npm run shots        # скриншоты в .shots/ для визуальной проверки
-npm run assets       # пересобрать images/og.png и apple-touch-icon.png
-```
-
-Еженедельная проверка ссылок из `js/data.js`: `.github/workflows/link-check.yml` (lychee).
+[MIT](LICENSE)
