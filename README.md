@@ -58,3 +58,11 @@ npm run check:site     # 15 e2e-проверок
 ## Лицензия
 
 [MIT](LICENSE)
+
+## Star History
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Stintik-123/GameVoice&type=Date&theme=dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Stintik-123/GameVoice&type=Date" />
+  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Stintik-123/GameVoice&type=Date" />
+</picture>
